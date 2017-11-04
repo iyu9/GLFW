@@ -19,11 +19,11 @@ extern GLuint shader_program;
 
 void CustomInit()
 {
-  //GLUtils::CheckRenderTexture();
+  GLUtils::CheckRenderTexture();
   //CompileAndLinkShader();
 
-  bmp = new BMP("sample.bmp");
-  glBindTexture(GL_TEXTURE_2D, bmp->texture);
+  //bmp = new BMP("sample.bmp");
+  //glBindTexture(GL_TEXTURE_2D, bmp->texture);
 }
 
 void MainLoop()
@@ -38,7 +38,7 @@ void MainLoop()
 
   //2dTexture
   glColor3f(1, 1, 1);
-  GLUtils::DrawTexture(-0.8f + pos.x, -0.8f + pos.y, 1.6f, 1.6f);
+  GLUtils::DrawTexture(-1.0f + pos.x, -1.0f + pos.y, 2.0f, 2.0f);
   glFlush();
 }
 

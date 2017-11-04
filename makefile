@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp -framework OpenGL -lglfw
+	g++ -o RunApp main.cpp -framework OpenGL -lglfw

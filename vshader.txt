@@ -1,5 +1,4 @@
-void main(void)
-{
+void main() {
   gl_Position = gl_ModelViewMatrix * gl_Vertex;
   gl_FrontColor = vec4(1.0) - gl_Color;
-};
+}

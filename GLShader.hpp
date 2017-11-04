@@ -70,6 +70,7 @@ void Link(GLuint prog)
 
 void CompileAndLinkShader()
 {
+// For Use Windows
 /*
   //glewの初期化
   GLenum err = glewInit();

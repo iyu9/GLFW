@@ -1,3 +1,4 @@
+//Use for Windows 
 //#include <gl/glew.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -20,7 +21,7 @@ extern GLuint shader_program;
 void CustomInit()
 {
   GLUtils::CheckRenderTexture();
-  //CompileAndLinkShader();
+  CompileAndLinkShader();
 
   //bmp = new BMP("sample.bmp");
   //glBindTexture(GL_TEXTURE_2D, bmp->texture);
@@ -30,15 +31,16 @@ void MainLoop()
 {
   glClear(GL_COLOR_BUFFER_BIT);
 
-  //2dRect
-  //glUseProgram(shader_program);
-  //glColor3f(1, 1, 1);
-  //GLUtils::DrawRect(-0.25f + pos.x, -0.25f + pos.y, 0.5f, 0.5f);
-  //glUseProgram(0);
-
   //2dTexture
   glColor3f(1, 1, 1);
   GLUtils::DrawTexture(-1.0f + pos.x, -1.0f + pos.y, 2.0f, 2.0f);
+    
+  //2dRect
+  glColor3f(1, 1, 1);
+  glUseProgram(shader_program);
+    GLUtils::DrawRect(-0.25f + pos.x, -0.25f + pos.y, 0.5f, 0.5f);
+  glUseProgram(0);
+    
   glFlush();
 }
 

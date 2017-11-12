@@ -1,25 +1,76 @@
+#ifndef __GLVEC_HPP__
+#define __GLVEC_HPP__
+
 struct GLPoint
 {
-  double x;
+  GLfloat x;
 };
 
 struct GLVec2
 {
-  double x;
-  double y;
+  GLfloat x;
+  GLfloat y;
 };
 
 struct GLVec3
 {
-  double x;
-  double y;
-  double z;
+  GLfloat x;
+  GLfloat y;
+  GLfloat z;
 };
 
 struct GLVec4
 {
-  double x;
-  double y;
-  double z;
-  double w;
+  GLfloat x;
+  GLfloat y;
+  GLfloat z;
+  GLfloat w;
 };
+
+class GLObject
+{
+    int id;
+    int type;
+    int order;
+    char* name;
+    GLuint textureID;
+    
+public:
+    GLObject(){}
+    
+    bool Render()
+    {
+        return false;
+    }
+};
+
+class GLScene
+{
+    int size;
+    GLObject* objects[100];
+    
+public:
+    GLScene()
+    {
+        size = 0;
+    }
+    
+    void Push(GLObject* obj)
+    {
+        objects[size] = obj;
+        size++;
+    }
+
+    void Pop()
+    {
+        objects[size] = NULL;
+        size--;
+    }
+    
+    bool Render()
+    {
+        return false;
+    }
+};
+
+#endif

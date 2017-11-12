@@ -1,3 +1,6 @@
+#ifndef __GLSHADER_HPP__
+#define __GLSHADER_HPP__
+
 GLuint shader_program;
 
 void ReadShaderFileCompile(GLuint Shader, const char *File)
@@ -10,7 +13,7 @@ void ReadShaderFileCompile(GLuint Shader, const char *File)
   fp = fopen(File, "rb");
   if (fp == NULL)
   {
-    printf("ファイルを開くことができません %s\n", File);
+    printf("Cannot Open ShaderFile %s\n", File);
   }
 
   fseek(fp, 0, SEEK_END);
@@ -19,7 +22,7 @@ void ReadShaderFileCompile(GLuint Shader, const char *File)
   buf = (GLchar *)malloc(size);
   if (buf == NULL)
   {
-    printf("メモリが確保できませんでした \n");
+    printf("Cannot Allocate ShaderFile Memory \n");
   }
 
   fseek(fp, 0, SEEK_SET);
@@ -33,7 +36,7 @@ void ReadShaderFileCompile(GLuint Shader, const char *File)
 
   if (compiled == GL_FALSE)
   {
-    printf("コンパイルできませんでした: %s \n ", File);
+    printf("Cannot Compile Shader: %s ¥n", File);
     glGetProgramiv(Shader, GL_INFO_LOG_LENGTH, &size);
     if (size > 0)
     {
@@ -56,7 +59,7 @@ void Link(GLuint prog)
 
   if (linked == GL_FALSE)
   {
-    printf("リンクできませんでした!! \n");
+    printf("Cannot Link Shader \n");
     glGetProgramiv(prog, GL_INFO_LOG_LENGTH, &size);
     if (size > 0)
     {
@@ -70,16 +73,16 @@ void Link(GLuint prog)
 
 void CompileAndLinkShader()
 {
-// For Use Windows
-/*
-  //glewの初期化
+#ifdef Windows
+  //init GLEW
   GLenum err = glewInit();
   if (err != GLEW_OK)
   {
     printf("Error: %s\n", glewGetErrorString(err));
   }
-*/
-  // GPU,OpenGL情報
+#endif
+    
+  // GPU, OpenGLInfo
   printf("VENDOR= %s \n", glGetString(GL_VENDOR));
   printf("GPU= %s \n", glGetString(GL_RENDERER));
   printf("OpenGL= %s \n", glGetString(GL_VERSION));
@@ -100,3 +103,4 @@ void CompileAndLinkShader()
 
   Link(shader_program);
 }
+#endif

@@ -1,9 +1,9 @@
 class BMP
 {
 public:
-  unsigned long sizeX;  //横
-  unsigned long sizeY;  //縦
-  char *Data;           //画像データ格納
+  unsigned long sizeX;
+  unsigned long sizeY;
+  char *Data;
   bool Load(const char *filename);
   GLuint texture;
   void SetTexture();
@@ -19,67 +19,66 @@ BMP::BMP(const char *FileName)
 bool BMP::Load(const char *FileName)
 {
   FILE *File;
-  unsigned long size;// イメージのバイトサイズ
-  unsigned long i;// カウンタ
-  unsigned short int planes;        //デバイス面数
-  unsigned short int bpp;            // ピクセル数
-  char temp;                         // カラー関係作業用
+  unsigned long size;
+  unsigned long i;
+  unsigned short int planes;
+  unsigned short int bpp;
+  char temp;
 
-  //ファイルオープン
   if ((File = fopen(FileName, "rb")) == NULL){
-    printf("ファイルがありません");
+    printf("No File");
     return false;
   }
 
-  //ビットマップの幅データ部分へ移動
+  //Seek BMP Width
   fseek(File, 18, SEEK_CUR);
 
-  //横幅を読み込む
   if ((i = fread(&sizeX, 4, 1, File)) != 1) {
-    printf("読み込みエラー");
+    printf("Read Width Error");
     return false;
   }
 
-  //縦幅を読み込む
   if ((i = fread(&sizeY, 4, 1, File)) != 1) {
-    printf("読み込みエラー");
+    printf("Read Height Error");
     return false;
   }
 
-  //画像サイズの計算
-  size = sizeX * sizeY * 3;//プレーン数を読み込む
-  if ((fread(&planes, 2, 1, File)) != 1) {   //bmpは「1」になる
-    printf("プレーン数が読み込めません");
+  //Calc BMP Image Size
+  size = sizeX * sizeY * 3;
+  if ((fread(&planes, 2, 1, File)) != 1) {
+    printf("NOT READ PLANE NUM");
     return false;
   }
   if (planes != 1) {
-    printf("プレーン数が1以外です");
+    printf("PLANE NOT 1");
     return false;
   }
 
-  //ピクセル値を読み込む
+  //Read Pixel
   if ((i = fread(&bpp, 2, 1, File)) != 1) {
-    printf("ビット数が読めません");
+    printf("NOT Read BMP Pixel Nums");
     return false;
   }
-  if (bpp != 24) {//24bppでなければエラー
-    printf("24ビット画像ではありません");
+  if (bpp != 24) {
+    printf("NOT 24bit BMP Image");
     return false;
   }
 
-  //24ビット飛ばして、カラーデータ(RGB)部分へ
-  fseek(File, 24, SEEK_CUR);    //データ読み込み
+  //Read RGB
+  fseek(File, 24, SEEK_CUR);
   printf("memory allocated = %lu", size);
   Data = (char *)malloc(size);
   if (Data == NULL) {
-    printf("メモリが確保できません");
+    printf("Cannnot Allocate BMP Memory");
     return false;
   }
   if ((i = fread(Data, size, 1, File)) != 1) {
-    printf("データが読めません");
+    printf("Cannot Read BMP Data");
     return false;
   }
-  for (i = 0; i<size; i += 3) { //bgr -> rgb
+    
+  //BGR convert RGB
+  for (i = 0; i < size; i += 3) {
     temp = Data[i];
     Data[i] = Data[i + 2];
     Data[i + 2] = temp;

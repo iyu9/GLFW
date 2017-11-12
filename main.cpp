@@ -1,5 +1,7 @@
-//Use for Windows 
-//#include <gl/glew.h>
+#ifdef WINDOWS
+    #include <gl/glew.h>
+#endif
+
 #include <GLFW/glfw3.h>
 #include <iostream>
 
@@ -9,13 +11,13 @@
 #include "GLBuiltInCallback.hpp"
 #include "GLBmpLoader.hpp"
 
-const int g_windowWidth = 200;
-const int g_windowHeight = 200;
+GLScene sceneManager;
+const GLVec2 g_winSize = {200, 200};
 
 GLVec2 pos;
 BMP *bmp;
 
-//GLSLより
+//from GLShader.hpp
 extern GLuint shader_program;
 
 void CustomInit()
@@ -54,7 +56,7 @@ int main()
   }
 
   GLFWwindow *window =
-    glfwCreateWindow(g_windowWidth, g_windowHeight, "SAMPLE", NULL, NULL);
+    glfwCreateWindow(g_winSize.x, g_winSize.y, "SAMPLE", NULL, NULL);
 
   if (!window)
   {

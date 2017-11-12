@@ -1,3 +1,6 @@
+#ifndef __GLUTILS_HPP__
+#define __GLUTILS_HPP__
+
 namespace GLUtils
 {
   #define TEST_TEX_HEIGHT 16
@@ -81,3 +84,4 @@ namespace GLUtils
     glUseProgram(0);
   }
 };
+#endif

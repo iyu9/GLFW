@@ -4,6 +4,14 @@
 #include "GLUtils.hpp"
 using namespace GLUtils;
 
+namespace RenderType
+{
+    const int Rect = 0;
+    const int Texture = 1;
+    const int Polygon = 2;
+    const int Shader = 3;
+};
+
 struct GLPoint
 {
   GLfloat x;
@@ -30,6 +38,14 @@ struct GLVec4
   GLfloat w;
 };
 
+struct GLColor
+{
+  GLfloat r;
+  GLfloat g;
+  GLfloat b;
+  GLfloat a;
+};
+
 class GLObject
 {
     int id;
@@ -38,28 +54,46 @@ class GLObject
     char* name;
     GLuint textureID;
     
-    GLVec2 size;
-    GLVec2 position;
+    GLVec2 siz;
+    GLVec2 pos;
+    GLColor color;
     
 public:
-    GLObject(GLVec2 _size, GLVec2 _pos)
+    GLObject(GLVec2 _pos, GLVec2 _siz)
     {
-        size = _size;
-        position = _pos;
+        siz = _siz;
+        pos = _pos;
+    }
+    
+    void SetType(GLint _type)
+    {
+        type = _type;
+    }
+    
+    void SetTexture(GLuint _textureID)
+    {
+        type = RenderType::Texture;
+        textureID = _textureID;
     }
     
     bool Render()
     {
-        const int RENDER_RECT = 0;
-        const int RENDER_POLYGON = 1;
-        
         switch(type)
         {
-            case RENDER_RECT:
-                DrawRect(position.x, position.y, size.x, size.y);
+            case RenderType::Rect:
+                DrawRect(pos.x, pos.y, siz.x, siz.y);
+                break;
+
+            case RenderType::Texture:
+                DrawTexture(pos.x, pos.y, siz.x, siz.y);
                 break;
                 
-            case RENDER_POLYGON:
+            case RenderType::Shader:
+                DrawShader(pos.x, pos.y, siz.x, siz.y);
+                break;
+                
+            case RenderType::Polygon:
+                //TBD
                 break;
         }
         
@@ -69,30 +103,30 @@ public:
 
 class GLScene
 {
-    int size;
+    int siz;
     GLObject* objects[100];
     
 public:
     GLScene()
     {
-        size = 0;
+        siz = 0;
     }
     
     void Push(GLObject* obj)
     {
-        objects[size] = obj;
-        size++;
+        objects[siz] = obj;
+        siz++;
     }
 
     void Pop()
     {
-        objects[size] = NULL;
-        size--;
+        objects[siz] = NULL;
+        siz--;
     }
     
     bool Render()
     {
-        for (int idx = 0; idx < size; idx++)
+        for (int idx = 0; idx < siz; idx++)
         {
             objects[idx]->Render();
         }

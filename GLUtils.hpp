@@ -31,7 +31,7 @@ namespace GLUtils
       0, GL_RGBA, GL_UNSIGNED_BYTE, image);
   }
 
-  static void DrawTexture(float x, float y, float w, float h)
+  static void DrawTexture(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     glEnable(GL_TEXTURE_2D);
       glBegin(GL_QUADS);
@@ -43,7 +43,7 @@ namespace GLUtils
     glDisable(GL_TEXTURE_2D);
   }
 
-  static void DrawRect(float x, float y, float w, float h)
+  static void DrawRect(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     glBegin(GL_POLYGON);
       glVertex2d(x, y);
@@ -53,7 +53,7 @@ namespace GLUtils
     glEnd();
   }
 
-  static void DrawLine(float start_x, float start_y, float end_x, float end_y, int width)
+  static void DrawLine(GLfloat start_x, GLfloat start_y, GLfloat end_x, GLfloat end_y, GLint width)
   {
     glLineWidth(width);
 
@@ -63,7 +63,7 @@ namespace GLUtils
     glEnd();
   }
 
-  static void DrawPoint(float x, float y, int width)
+  static void DrawPoint(GLfloat x, GLfloat y, GLint width)
   {
     glLineWidth(width);
 
@@ -72,16 +72,40 @@ namespace GLUtils
     glEnd();
   }
 
-  static void DrawText(float start_x, float start_y, float end_x, float end_y)
-  {
-    //TWD
-  }
-
-  static void DrawShader(float x, float y, float w, float h)
+  static void DrawShader(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     glUseProgram(shader_program);
       DrawRect(x, y, w, h);
     glUseProgram(0);
   }
+    
+/*
+  static void DrawTexture(GLVec2 pos, GLVec2 size)
+  {
+      DrawTexture(pos.x, pos.y, size.x, size.y);
+  }
+    
+  static void DrawRect(GLVec2 pos, GLVec2 size)
+  {
+      DrawRect(pos.x, pos.y, size.x, size.y);
+  }
+    
+  static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)
+  {
+      DrawLine(start_pos.x, start_pos.y, end_pos.x, end_pos.y, width);
+  }
+
+  static void DrawPoint(GLVec2 pos, GLint width)
+  {
+      DrawPoint(pos.x, pos.y, width);
+  }
+    
+  static void DrawShader(GLVec2 pos, GLVec2 size)
+  {
+      DrawShader(pos.x, pos.y, size.z, size.y);
+  }
+*/
+    
 };
 #endif
+

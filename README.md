@@ -1,5 +1,6 @@
-# OpenGLプログラミングメモ
+# OpenGL Programing memo
 
-# 予定
+# Future
 
-## OpenAL追加
+## Add SceneManage
+## Add Audio

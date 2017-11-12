@@ -1,3 +1,6 @@
+#ifndef __GLBUILTINCALLBACK_HPP__
+#define __GLBUILTINCALLBACK_HPP__
+
 extern GLVec2 pos;
 
 static void error_callback(int error, const char* description)
@@ -54,3 +57,5 @@ static void key_callback(GLFWwindow* window, int key, int scanmode, int action, 
     pos.y += 0.01f;
   }
 }
+
+#endif

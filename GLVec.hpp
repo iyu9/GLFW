@@ -1,6 +1,9 @@
 #ifndef __GLVEC_HPP__
 #define __GLVEC_HPP__
 
+#include "GLUtils.hpp"
+using namespace GLUtils;
+
 struct GLPoint
 {
   GLfloat x;
@@ -35,11 +38,31 @@ class GLObject
     char* name;
     GLuint textureID;
     
+    GLVec2 size;
+    GLVec2 position;
+    
 public:
-    GLObject(){}
+    GLObject(GLVec2 _size, GLVec2 _pos)
+    {
+        size = _size;
+        position = _pos;
+    }
     
     bool Render()
     {
+        const int RENDER_RECT = 0;
+        const int RENDER_POLYGON = 1;
+        
+        switch(type)
+        {
+            case RENDER_RECT:
+                DrawRect(position.x, position.y, size.x, size.y);
+                break;
+                
+            case RENDER_POLYGON:
+                break;
+        }
+        
         return false;
     }
 };
@@ -69,6 +92,10 @@ public:
     
     bool Render()
     {
+        for (int idx = 0; idx < size; idx++)
+        {
+            objects[idx]->Render();
+        }
         return false;
     }
 };

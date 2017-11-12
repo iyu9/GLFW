@@ -5,13 +5,13 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#include "GLVec.hpp"
 #include "GLShader.hpp"
+#include "GLVec.hpp"
 #include "GLUtils.hpp"
 #include "GLBuiltInCallback.hpp"
 #include "GLBmpLoader.hpp"
 
-GLScene sceneManager;
+GLScene currentScene;
 const GLVec2 g_winSize = {200, 200};
 
 GLVec2 pos;
@@ -22,28 +22,21 @@ extern GLuint shader_program;
 
 void CustomInit()
 {
-  GLUtils::CheckRenderTexture();
-  CompileAndLinkShader();
+    GLUtils::CheckRenderTexture();
+    CompileAndLinkShader();
 
-  //bmp = new BMP("sample.bmp");
-  //glBindTexture(GL_TEXTURE_2D, bmp->texture);
+    //bmp = new BMP("sample.bmp");
+    //glBindTexture(GL_TEXTURE_2D, bmp->texture);
+    
+    GLObject *obj = new GLObject(pos, g_winSize);
+    currentScene.Push(obj);
 }
 
 void MainLoop()
 {
-  glClear(GL_COLOR_BUFFER_BIT);
-
-  //2dTexture
-  glColor3f(1, 1, 1);
-  GLUtils::DrawTexture(-1.0f + pos.x, -1.0f + pos.y, 2.0f, 2.0f);
-    
-  //2dRect
-  glColor3f(1, 1, 1);
-  glUseProgram(shader_program);
-    GLUtils::DrawRect(-0.25f + pos.x, -0.25f + pos.y, 0.5f, 0.5f);
-  glUseProgram(0);
-    
-  glFlush();
+    glClear(GL_COLOR_BUFFER_BIT);
+        currentScene.Render();
+    glFlush();
 }
 
 int main()

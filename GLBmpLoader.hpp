@@ -1,3 +1,6 @@
+#ifndef __GLBMPLOADER_HPP__
+#define __GLBMPLOADER_HPP__
+
 class BMP
 {
 public:
@@ -94,3 +97,5 @@ void BMP::SetTexture()
   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   glTexImage2D(GL_TEXTURE_2D, 0, 3, sizeX, sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, Data);
 }
+
+#endif

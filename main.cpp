@@ -1,13 +1,19 @@
-#ifdef WINDOWS
-    #include <gl/glew.h>
-#endif
+//#ifdef WINDOWS
+    #include <GL/glew.h>
+//#endif
+
+//Ignore fopen warning
+#pragma warning(disable : 4996) 
 
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-#include "GLShader.hpp"
-#include "GLVec.hpp"
 #include "GLUtils.hpp"
+
+#include "GLVec.hpp"
+#include "GLObject.hpp"
+#include "GLScene.hpp"
+#include "GLShader.hpp"
 #include "GLBuiltInCallback.hpp"
 #include "GLBmpLoader.hpp"
 
@@ -23,7 +29,7 @@ extern GLuint shader_program;
 void CustomInit()
 {
     GLUtils::CheckRenderTexture();
-    CompileAndLinkShader();
+    //CompileAndLinkShader();
 
     bmp = new BMP("sample.bmp");
     

@@ -74,9 +74,9 @@ namespace GLUtils
 
   static void DrawShader(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
-    glUseProgram(shader_program);
+    //glUseProgram(shader_program);
       DrawRect(x, y, w, h);
-    glUseProgram(0);
+    //glUseProgram(0);
   }
     
 /*

@@ -1,6 +1,7 @@
 #ifndef __GLSHADER_HPP__
 #define __GLSHADER_HPP__
 
+/*
 GLuint shader_program;
 
 void ReadShaderFileCompile(GLuint Shader, const char *File)
@@ -103,4 +104,5 @@ void CompileAndLinkShader()
 
   Link(shader_program);
 }
+*/
 #endif

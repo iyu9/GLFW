@@ -8,6 +8,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+//for GL Custom Components
 #include "GLUtils.hpp"
 
 #include "GLVec.hpp"
@@ -16,6 +17,10 @@
 #include "GLShader.hpp"
 #include "GLBuiltInCallback.hpp"
 #include "GLBmpLoader.hpp"
+
+//for Entity Scene
+#include "TitleView.hpp"
+#include "MainView.hpp"
 
 GLScene currentScene;
 const GLVec2 g_winSize = {200, 200};

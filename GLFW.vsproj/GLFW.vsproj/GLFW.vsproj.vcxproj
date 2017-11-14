@@ -87,6 +87,7 @@
     <Text Include="..\..\vshader.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\ConfigView.hpp" />
     <ClInclude Include="..\..\GLBmpLoader.hpp" />
     <ClInclude Include="..\..\GLBuiltInCallback.hpp" />
     <ClInclude Include="..\..\GLObject.hpp" />
@@ -94,6 +95,8 @@
     <ClInclude Include="..\..\GLShader.hpp" />
     <ClInclude Include="..\..\GLUtils.hpp" />
     <ClInclude Include="..\..\GLVec.hpp" />
+    <ClInclude Include="..\..\MainView.hpp" />
+    <ClInclude Include="..\..\TitleView.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp" />

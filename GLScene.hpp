@@ -18,10 +18,18 @@ public:
     siz++;
   }
 
-  void Pop()
+  void Pop(GLObject* obj)
   {
-    objects[siz] = NULL;
-    siz--;
+    for (int idx = 0; idx < siz; idx++)
+    {
+      if (obj == objects[idx])
+      {
+        GLObject *removeObj = objects[idx];
+        delete removeObj;
+        removeObj = NULL;
+        siz--;
+      }
+    }
   }
 
   bool Render()
@@ -31,6 +39,16 @@ public:
       objects[idx]->Render();
     }
     return false;
+  }
+
+  virtual void Start()
+  {
+    
+  }
+
+  virtual void Update()
+  {
+    
   }
 };
 #endif

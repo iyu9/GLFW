@@ -12,6 +12,14 @@ public:
     siz = 0;
   }
 
+  void Search(const char* name)
+  {
+    for (int idx = 0; idx < siz; idx++)
+    {
+      //TBD
+    }
+  }
+
   void Push(GLObject* obj)
   {
     objects[siz] = obj;
@@ -41,14 +49,7 @@ public:
     return false;
   }
 
-  virtual void Start()
-  {
-    
-  }
-
-  virtual void Update()
-  {
-    
-  }
+  virtual void Start(){}
+  virtual void Update(){}
 };
 #endif

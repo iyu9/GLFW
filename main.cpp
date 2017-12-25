@@ -1,6 +1,12 @@
-//#ifdef WINDOWS
-//    #include <GL/glew.h>
-//#endif
+#ifdef WIN32
+    #include <GL/glew.h>
+#endif
+
+//-------------------------------
+// Note: Project Use File Path Setting:
+//  Windows: ../../<FILE>
+//  Mac: ./<FILE>
+//-------------------------------
 
 //Ignore fopen warning
 #pragma warning(disable : 4996) 
@@ -26,7 +32,7 @@
 extern GLuint shader_program;
 
 GLScene currentScene;
-const GLVec2 g_winSize = {200, 200};
+const GLVec2 g_winSize = {300, 300};
 
 GLVec2 pos;
 BMP *bmp;
@@ -37,14 +43,15 @@ GLObject* obj2;
 void CustomInit()
 {
     GLUtils::CheckRenderTexture();
-    //CompileAndLinkShader();
+    CompileAndLinkShader();
 
-    bmp = new BMP("sample.bmp");
+    bmp = new BMP("../../sample.bmp");
     
     GLVec2 pos1 = {0.0, 0.0};
     GLVec2 siz1 = {1.0, 1.0};
     
     obj1 = new GLObject(pos1, siz1);
+    obj1->SetTexture(bmp->texture);
     currentScene.Push(obj1);
 
     GLVec2 pos2 = {-1.0, -1.0};
@@ -81,7 +88,7 @@ int main()
   }
 
   glfwSetErrorCallback(error_callback);
-  GLFWwindow *window = glfwCreateWindow(640, 480, "game", NULL, NULL);
+  GLFWwindow *window = glfwCreateWindow(g_winSize.x, g_winSize.y, "GLFW App", NULL, NULL);
 
   if (!window)
   {

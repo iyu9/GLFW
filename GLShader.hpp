@@ -1,7 +1,6 @@
 #ifndef __GLSHADER_HPP__
 #define __GLSHADER_HPP__
 
-/*
 GLuint shader_program;
 
 void ReadShaderFileCompile(GLuint Shader, const char *File)
@@ -74,8 +73,8 @@ void Link(GLuint prog)
 
 void CompileAndLinkShader()
 {
-#ifdef Windows
-  //init GLEW
+#ifdef WIN32
+  //Init GLEW
   GLenum err = glewInit();
   if (err != GLEW_OK)
   {
@@ -90,10 +89,10 @@ void CompileAndLinkShader()
   printf("GLSL= %s \n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 
   GLuint vshader = glCreateShader(GL_VERTEX_SHADER);
-  ReadShaderFileCompile(vshader, "vshader.txt");
+  ReadShaderFileCompile(vshader, "../../vshader.txt");
 
   GLuint fshader = glCreateShader(GL_FRAGMENT_SHADER);
-  ReadShaderFileCompile(fshader, "fshader.txt");
+  ReadShaderFileCompile(fshader, "../../fshader.txt");
 
   shader_program = glCreateProgram();
   glAttachShader(shader_program, vshader);
@@ -104,5 +103,4 @@ void CompileAndLinkShader()
 
   Link(shader_program);
 }
-*/
 #endif

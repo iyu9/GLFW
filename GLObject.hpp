@@ -44,15 +44,15 @@ public:
     switch (type)
     {
     case RenderType::Rect:
-      GLUtils::DrawRect(pos.x, pos.y, siz.x, siz.y);
+      GLUtils::DrawRect(pos, siz);
       break;
 
     case RenderType::Texture:
-      GLUtils::DrawTexture(pos.x, pos.y, siz.x, siz.y);
+      GLUtils::DrawTexture(pos, siz);
       break;
 
     case RenderType::Shader:
-      GLUtils::DrawShader(pos.x, pos.y, siz.x, siz.y);
+      GLUtils::DrawShader(pos, siz);
       break;
 
     case RenderType::Polygon:

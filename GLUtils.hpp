@@ -3,8 +3,8 @@
 
 namespace GLUtils
 {
-  #define TEST_TEX_HEIGHT 16
-  #define TEST_TEX_WIDTH 16
+#define TEST_TEX_HEIGHT 64
+#define TEST_TEX_WIDTH  64
 
   GLubyte image[TEST_TEX_HEIGHT][TEST_TEX_WIDTH][4];
 
@@ -34,22 +34,22 @@ namespace GLUtils
   static void DrawTexture(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     glEnable(GL_TEXTURE_2D);
-      glBegin(GL_QUADS);
-        glTexCoord2f(0.0, 0.0); glVertex3f(x, y, 0.0);
-        glTexCoord2f(0.0, 1.0); glVertex3f(x, y + h, 0.0);
-        glTexCoord2f(1.0, 1.0); glVertex3f(x + w, y + h, 0.0);
-        glTexCoord2f(1.0, 0.0); glVertex3f(x + w, y, 0.0);
-      glEnd();
+    glBegin(GL_QUADS);
+    glTexCoord2f(0.0, 0.0); glVertex3f(x, y, 0.0);
+    glTexCoord2f(0.0, 1.0); glVertex3f(x, y + h, 0.0);
+    glTexCoord2f(1.0, 1.0); glVertex3f(x + w, y + h, 0.0);
+    glTexCoord2f(1.0, 0.0); glVertex3f(x + w, y, 0.0);
+    glEnd();
     glDisable(GL_TEXTURE_2D);
   }
 
   static void DrawRect(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     glBegin(GL_POLYGON);
-      glVertex2d(x, y);
-      glVertex2d(x + w, y);
-      glVertex2d(x + w, y + h);
-      glVertex2d(x, y + h);
+    glVertex2d(x, y);
+    glVertex2d(x + w, y);
+    glVertex2d(x + w, y + h);
+    glVertex2d(x, y + h);
     glEnd();
   }
 
@@ -58,8 +58,8 @@ namespace GLUtils
     glLineWidth(width);
 
     glBegin(GL_LINES);
-      glVertex2d(start_x, start_y);
-      glVertex2d(end_x, end_y);
+    glVertex2d(start_x, start_y);
+    glVertex2d(end_x, end_y);
     glEnd();
   }
 
@@ -68,44 +68,42 @@ namespace GLUtils
     glLineWidth(width);
 
     glBegin(GL_POINTS);
-      glVertex2d(x, y);
+    glVertex2d(x, y);
     glEnd();
   }
 
   static void DrawShader(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
   {
     //glUseProgram(shader_program);
-      DrawRect(x, y, w, h);
+    DrawRect(x, y, w, h);
     //glUseProgram(0);
   }
-    
-/*
+
+  //for Custom Classes
   static void DrawTexture(GLVec2 pos, GLVec2 size)
   {
-      DrawTexture(pos.x, pos.y, size.x, size.y);
+    DrawTexture(pos.x, pos.y, size.x, size.y);
   }
-    
+
   static void DrawRect(GLVec2 pos, GLVec2 size)
   {
-      DrawRect(pos.x, pos.y, size.x, size.y);
+    DrawRect(pos.x, pos.y, size.x, size.y);
   }
-    
+
   static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)
   {
-      DrawLine(start_pos.x, start_pos.y, end_pos.x, end_pos.y, width);
+    DrawLine(start_pos.x, start_pos.y, end_pos.x, end_pos.y, width);
   }
 
   static void DrawPoint(GLVec2 pos, GLint width)
   {
-      DrawPoint(pos.x, pos.y, width);
+    DrawPoint(pos.x, pos.y, width);
   }
-    
+
   static void DrawShader(GLVec2 pos, GLVec2 size)
   {
-      DrawShader(pos.x, pos.y, size.z, size.y);
+    DrawShader(pos.x, pos.y, size.x, size.y);
   }
-*/
-    
 };
 #endif
 

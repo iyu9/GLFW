@@ -69,7 +69,7 @@ bool BMP::Load(const char *FileName)
 
   //Read RGB
   fseek(File, 24, SEEK_CUR);
-  printf("memory allocated = %lu", size);
+  printf("memory allocated = %lu Bytes", size);
   Data = (char *)malloc(size);
   if (Data == NULL) {
     printf("Cannnot Allocate BMP Memory");

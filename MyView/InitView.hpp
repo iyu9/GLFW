@@ -18,11 +18,7 @@ public:
   {
     GLScene::Start();
 
-    #if WIN32
-      bmp = new BMP("../../Resources/sample.bmp");
-    #else
-      bmp = new BMP("Resources/sample.bmp");
-    #endif
+    bmp = new BMP("Resources/sample.bmp");
 
     GLVec2 pos1 = { -0.5, -0.5 };
     GLVec2 siz1 = { 1.0, 1.0 };

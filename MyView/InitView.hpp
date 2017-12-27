@@ -19,9 +19,9 @@ public:
     GLScene::Start();
 
     #if WIN32
-      bmp = new BMP("../../sample.bmp");
+      bmp = new BMP("../../Resources/sample.bmp");
     #else
-      bmp = new BMP("sample.bmp");
+      bmp = new BMP("Resources/sample.bmp");
     #endif
 
     GLVec2 pos1 = { -0.5, -0.5 };
@@ -38,22 +38,24 @@ public:
 
     if (siz <= 0) { return; }
 
-    //input sample
+    GLdouble deltaTime = g_timer.GetDelta();
+    g_timer.Update();
+
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
-      actor->pos.x += 0.01;
+      actor->pos.x += deltaTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_LEFT))
     {
-      actor->pos.x -= 0.01;
+      actor->pos.x -= deltaTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_UP))
     {
-      actor->pos.y += 0.01;
+      actor->pos.y += deltaTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
-      actor->pos.y -= 0.01;
+      actor->pos.y -= deltaTime;
     }
   }
 

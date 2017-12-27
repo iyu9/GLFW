@@ -24,11 +24,13 @@
 #include "GLShader.hpp"
 #include "GLBuiltInCallback.hpp"
 #include "GLBmpLoader.hpp"
+#include "GLTimer.hpp"
 
-//for Entity Scene
-#include "InitView.hpp"
-#include "TitleView.hpp"
-#include "MainView.hpp"
+//for include Real Scenes
+#include "MyView/InitView.hpp"
+#include "MyView/TitleView.hpp"
+#include "MyView/ConfigView.hpp"
+#include "MyView/MainView.hpp"
 
 //from GLShader.hpp
 extern GLuint shader_program;
@@ -49,7 +51,6 @@ void CustomDelete()
 void MainLoop()
 {
   glClear(GL_COLOR_BUFFER_BIT);
-    glColor3d(1, 1, 1);
     currentScene->Render();
   glFlush();
 }
@@ -65,7 +66,7 @@ int main()
   }
 
   glfwSetErrorCallback(error_callback);
-  GLFWwindow *window = glfwCreateWindow(g_winSize.x, g_winSize.y, "GLFW App", NULL, NULL);
+  GLFWwindow *window = glfwCreateWindow(g_winSize.x, g_winSize.y, "App", NULL, NULL);
 
   if (!window)
   {

@@ -158,33 +158,34 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="..\..\fshader.txt" />
-    <Text Include="..\..\vshader.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\ConfigView.hpp" />
     <ClInclude Include="..\..\GLBmpLoader.hpp" />
     <ClInclude Include="..\..\GLBuiltInCallback.hpp" />
     <ClInclude Include="..\..\GLInput.hpp" />
     <ClInclude Include="..\..\GLObject.hpp" />
     <ClInclude Include="..\..\GLScene.hpp" />
     <ClInclude Include="..\..\GLShader.hpp" />
+    <ClInclude Include="..\..\GLTimer.hpp" />
     <ClInclude Include="..\..\GLUtils.hpp" />
     <ClInclude Include="..\..\GLVec.hpp" />
-    <ClInclude Include="..\..\InitView.hpp" />
-    <ClInclude Include="..\..\MainView.hpp" />
-    <ClInclude Include="..\..\TemplateView.hpp" />
-    <ClInclude Include="..\..\TitleView.hpp" />
+    <ClInclude Include="..\..\MyView\ConfigView.hpp" />
+    <ClInclude Include="..\..\MyView\InitView.hpp" />
+    <ClInclude Include="..\..\MyView\MainView.hpp" />
+    <ClInclude Include="..\..\MyView\TitleView.hpp" />
+    <ClInclude Include="..\..\MyView\_TemplateView.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\sample.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\..\.gitignore" />
     <None Include="..\..\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Resources\sample.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Shaders\fshader.txt" />
+    <Text Include="..\..\Shaders\vshader.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

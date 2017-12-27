@@ -3,36 +3,57 @@
 
 struct GLPoint
 {
-  GLfloat x;
+  GLdouble x;
 };
 
 struct GLVec2
 {
-  GLfloat x;
-  GLfloat y;
+  GLdouble x;
+  GLdouble y;
 };
 
 struct GLVec3
 {
-  GLfloat x;
-  GLfloat y;
-  GLfloat z;
+  GLdouble x;
+  GLdouble y;
+  GLdouble z;
 };
 
 struct GLVec4
 {
-  GLfloat x;
-  GLfloat y;
-  GLfloat z;
-  GLfloat w;
+  GLdouble x;
+  GLdouble y;
+  GLdouble z;
+  GLdouble w;
 };
 
 struct GLColor
 {
-  GLfloat r;
-  GLfloat g;
-  GLfloat b;
-  GLfloat a;
+  GLdouble r;
+  GLdouble g;
+  GLdouble b;
+  GLdouble a;
+};
+
+struct GLIntVec2
+{
+  GLint x;
+  GLint y;
+};
+
+struct GLIntVec3
+{
+  GLint x;
+  GLint y;
+  GLint z;
+};
+
+struct GLIntVec4
+{
+  GLint x;
+  GLint y;
+  GLint z;
+  GLint w;
 };
 
 #endif

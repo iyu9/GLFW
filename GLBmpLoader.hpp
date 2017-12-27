@@ -23,7 +23,7 @@ bool BMP::Load(const char *FileName)
 {
   FILE *File;
   unsigned long size;
-  unsigned long i;
+  size_t i;
   unsigned short int planes;
   unsigned short int bpp;
   char temp;

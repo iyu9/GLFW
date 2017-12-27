@@ -58,7 +58,10 @@ public:
 
   virtual void Release()
   {
-    delete[] objects;
+    for (int idx = 0; idx < siz; idx++)
+    {
+      delete objects[idx];
+    }
   }
 };
 #endif

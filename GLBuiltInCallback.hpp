@@ -1,8 +1,6 @@
 #ifndef __GLBUILTINCALLBACK_HPP__
 #define __GLBUILTINCALLBACK_HPP__
 
-extern GLVec2 pos;
-
 static void error_callback(int error, const char* description)
 {
   std::cout << "error_description = " << description << std::endl;
@@ -68,37 +66,37 @@ static void key_callback(GLFWwindow* window, int key, int scanmode, int action, 
   //Default Keys
   if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.x -= 0.01f;
+    //pos.x -= 0.01f;
   }
   if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.x += 0.01f;
+    //pos.x += 0.01f;
   }
   if (key == GLFW_KEY_DOWN && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.y -= 0.01f;
+    //pos.y -= 0.01f;
   }
   if (key == GLFW_KEY_UP && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.y += 0.01f;
+    //pos.y += 0.01f;
   }
 
   //Default Keys
   if (key == GLFW_KEY_A && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.x -= 0.01f;
+    //pos.x -= 0.01f;
   }
   if (key == GLFW_KEY_D && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.x += 0.01f;
+    //pos.x += 0.01f;
   }
   if (key == GLFW_KEY_S && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.y -= 0.01f;
+    //pos.y -= 0.01f;
   }
   if (key == GLFW_KEY_W && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    pos.y += 0.01f;
+    //pos.y += 0.01f;
   }
 }
 

@@ -31,19 +31,19 @@ namespace GLUtils
       0, GL_RGBA, GL_UNSIGNED_BYTE, image);
   }
 
-  static void DrawTexture(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
+  static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
     glEnable(GL_TEXTURE_2D);
     glBegin(GL_QUADS);
-    glTexCoord2f(0.0, 0.0); glVertex3f(x, y, 0.0);
-    glTexCoord2f(0.0, 1.0); glVertex3f(x, y + h, 0.0);
-    glTexCoord2f(1.0, 1.0); glVertex3f(x + w, y + h, 0.0);
-    glTexCoord2f(1.0, 0.0); glVertex3f(x + w, y, 0.0);
+    glTexCoord2d(0.0, 0.0); glVertex3d(x, y, 0.0);
+    glTexCoord2d(0.0, 1.0); glVertex3d(x, y + h, 0.0);
+    glTexCoord2d(1.0, 1.0); glVertex3d(x + w, y + h, 0.0);
+    glTexCoord2d(1.0, 0.0); glVertex3d(x + w, y, 0.0);
     glEnd();
     glDisable(GL_TEXTURE_2D);
   }
 
-  static void DrawRect(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
+  static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
     glBegin(GL_POLYGON);
     glVertex2d(x, y);
@@ -53,9 +53,9 @@ namespace GLUtils
     glEnd();
   }
 
-  static void DrawLine(GLfloat start_x, GLfloat start_y, GLfloat end_x, GLfloat end_y, GLint width)
+  static void DrawLine(GLdouble start_x, GLdouble start_y, GLdouble end_x, GLdouble end_y, GLdouble width)
   {
-    glLineWidth(width);
+    glLineWidth((GLfloat)width);
 
     glBegin(GL_LINES);
     glVertex2d(start_x, start_y);
@@ -63,16 +63,96 @@ namespace GLUtils
     glEnd();
   }
 
-  static void DrawPoint(GLfloat x, GLfloat y, GLint width)
+  static void DrawPoint(GLdouble x, GLdouble y, GLdouble width)
   {
-    glLineWidth(width);
+    glLineWidth((GLfloat)width);
 
     glBegin(GL_POINTS);
     glVertex2d(x, y);
     glEnd();
   }
 
-  static void DrawShader(GLfloat x, GLfloat y, GLfloat w, GLfloat h)
+  static void DrawCube(GLdouble x, GLdouble y, GLdouble z, GLdouble w, GLdouble h, GLdouble u)
+  {
+    GLVec3 vertices[8] = 
+    {
+      {x, y, z},
+      {x + w, y, z},
+      {x + w, y + h, z},
+      {x, y + h, z},
+
+      {x, y, z + u},
+      {x + w, y, z + u},
+      {x + w, y + h, z + u},
+      {x, y + h, z + u},
+    };
+
+    glBegin(GL_TRIANGLES);
+
+    //forward
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+
+    //rightside
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+
+    //leftside
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+
+    //backward
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+
+    //upper
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+
+    //lower
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+
+    glEnd();
+  }
+
+  static void DrawShader(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
     //glUseProgram(shader_program);
     DrawRect(x, y, w, h);
@@ -80,14 +160,14 @@ namespace GLUtils
   }
 
   //for Custom Classes
-  static void DrawTexture(GLVec2 pos, GLVec2 size)
+  static void DrawTexture(GLVec2 pos, GLVec2 siz)
   {
-    DrawTexture(pos.x, pos.y, size.x, size.y);
+    DrawTexture(pos.x, pos.y, siz.x, siz.y);
   }
 
-  static void DrawRect(GLVec2 pos, GLVec2 size)
+  static void DrawRect(GLVec2 pos, GLVec2 siz)
   {
-    DrawRect(pos.x, pos.y, size.x, size.y);
+    DrawRect(pos.x, pos.y, siz.x, siz.y);
   }
 
   static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)
@@ -100,9 +180,14 @@ namespace GLUtils
     DrawPoint(pos.x, pos.y, width);
   }
 
-  static void DrawShader(GLVec2 pos, GLVec2 size)
+  static void DrawShader(GLVec2 pos, GLVec2 siz)
   {
-    DrawShader(pos.x, pos.y, size.x, size.y);
+    DrawShader(pos.x, pos.y, siz.x, siz.y);
+  }
+
+  static void DrawCube(GLVec3 pos, GLVec3 siz)
+  {
+    DrawCube(pos.x, pos.y, pos.z, siz.x, siz.y, siz.z);
   }
 };
 #endif

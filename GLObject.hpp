@@ -7,6 +7,7 @@ namespace RenderType
   const int Texture = 1;
   const int Polygon = 2;
   const int Shader = 3;
+  const int Cube = 4;
 };
 
 class GLObject
@@ -55,12 +56,16 @@ public:
       GLUtils::DrawShader(pos, siz);
       break;
 
+    case RenderType::Cube:
+      GLUtils::DrawCube(pos.x, pos.y, -1, siz.x, siz.y, 0.5);
+      break;
+
     case RenderType::Polygon:
       //TBD
       break;
     }
 
-    return false;
+    return true;
   }
 };
 

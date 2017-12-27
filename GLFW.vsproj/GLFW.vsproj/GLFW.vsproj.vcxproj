@@ -77,7 +77,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>C:\Users\mobiledev\Desktop\glew-2.1.0-win32\glew-2.1.0\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\mobiledev\Desktop\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
-    <ExecutablePath>C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj;$(ExecutablePath)</ExecutablePath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

@@ -170,6 +170,7 @@
     <ClInclude Include="..\..\GLShader.hpp" />
     <ClInclude Include="..\..\GLUtils.hpp" />
     <ClInclude Include="..\..\GLVec.hpp" />
+    <ClInclude Include="..\..\InitView.hpp" />
     <ClInclude Include="..\..\MainView.hpp" />
     <ClInclude Include="..\..\TitleView.hpp" />
   </ItemGroup>

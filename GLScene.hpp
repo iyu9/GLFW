@@ -3,6 +3,7 @@
 
 class GLScene
 {
+protected:
   int siz;
   GLObject* objects[100];
 
@@ -10,6 +11,7 @@ public:
   GLScene()
   {
     siz = 0;
+    Start();
   }
 
   void Search(const char* name)
@@ -40,16 +42,23 @@ public:
     }
   }
 
-  bool Render()
+  virtual bool Render()
   {
     for (int idx = 0; idx < siz; idx++)
     {
       objects[idx]->Render();
     }
+
+    Update();
     return false;
   }
 
   virtual void Start(){}
   virtual void Update(){}
+
+  virtual void Release()
+  {
+    delete[] objects;
+  }
 };
 #endif

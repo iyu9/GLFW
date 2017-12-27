@@ -17,11 +17,11 @@ class GLObject
   char* name;
   GLuint textureID;
 
+public:
   GLVec2 siz;
   GLVec2 pos;
   GLColor color;
 
-public:
   GLObject(GLVec2 _pos, GLVec2 _siz)
   {
     siz = _siz;

@@ -17,7 +17,7 @@
 
 + ”wŒi‰æ‘œ‚¨Ø‚èæ
 
-###”wŒiÊ^•âŠ®‚Ì‰ï
+### ”wŒiÊ^•âŠ®‚Ì‰ï
 http://masato.ciao.jp/haikei/furemu.html
 
 ¦‚¨Ø‚èæ‚Ì—˜—p‹K–ñ‚É€‚¶‚Ü‚·B

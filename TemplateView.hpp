@@ -1,5 +1,5 @@
-#ifndef __TemplateVIEW_HPP__
-#define __TemplateVIEW_HPP__
+#ifndef __TEMPLATEVIEW_HPP__
+#define __TEMPLATEVIEW_HPP__
 
 class TemplateView : public GLScene
 {

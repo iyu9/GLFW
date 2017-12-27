@@ -4,7 +4,7 @@
 class InitView : public GLScene
 {
 private:
-  GLObject* obj1;
+  GLObject* actor;
   BMP* bmp;
 
 public:
@@ -27,9 +27,9 @@ public:
     GLVec2 pos1 = { -0.5, -0.5 };
     GLVec2 siz1 = { 1.0, 1.0 };
 
-    obj1 = new GLObject(pos1, siz1);
-    obj1->SetTexture(bmp->texture);
-    Push(obj1);
+    actor = new GLObject(pos1, siz1);
+    actor->SetTexture(bmp->texture);
+    Push(actor);
   }
 
   void Update() override
@@ -37,17 +37,31 @@ public:
     GLScene::Update();
 
     if (siz <= 0) { return; }
-    obj1->pos.x += 0.01;
 
-    if (obj1->pos.x > 1) { obj1->pos.x = -2; }
-    if (obj1->pos.y > 1) { obj1->pos.y = -1; }
+    //input sample
+    if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
+    {
+      actor->pos.x += 0.01;
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_LEFT))
+    {
+      actor->pos.x -= 0.01;
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_UP))
+    {
+      actor->pos.y += 0.01;
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_DOWN))
+    {
+      actor->pos.y -= 0.01;
+    }
   }
 
   void Release() override
   {
     GLScene::Release();
 
-    delete obj1;
+    delete actor;
     delete bmp;
   }
 };

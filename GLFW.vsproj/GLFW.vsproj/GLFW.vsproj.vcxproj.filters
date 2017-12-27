@@ -56,6 +56,12 @@
     <ClInclude Include="..\..\InitView.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\TemplateView.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLInput.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp">
@@ -69,6 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\README.md">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="..\..\.gitignore">
       <Filter>リソース ファイル</Filter>
     </None>
   </ItemGroup>

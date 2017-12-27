@@ -18,6 +18,7 @@
 #include "GLVec.hpp"
 #include "GLUtils.hpp"
 
+#include "GLInput.hpp"
 #include "GLObject.hpp"
 #include "GLScene.hpp"
 #include "GLShader.hpp"

@@ -57,6 +57,8 @@ static void cursor_pos_callback(GLFWwindow* window, double x, double y)
 
 static void key_callback(GLFWwindow* window, int key, int scanmode, int action, int mods)
 {
+  g_keyInput.ScanKeyState(key, action);
+
   //Special Keys
   if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
   {
@@ -66,7 +68,7 @@ static void key_callback(GLFWwindow* window, int key, int scanmode, int action, 
   //Default Keys
   if (key == GLFW_KEY_LEFT && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {
-    //pos.x -= 0.01f;
+    //pos.x += -0.01f;
   }
   if (key == GLFW_KEY_RIGHT && (action == GLFW_PRESS || action == GLFW_REPEAT))
   {

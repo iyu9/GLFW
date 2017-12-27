@@ -47,8 +47,12 @@ void CustomInit()
     GLUtils::CheckRenderTexture();
     CompileAndLinkShader();
 
+#if WIN32
     bmp = new BMP("../../sample.bmp");
-    
+#else
+    bmp = new BMP("sample.bmp");
+#endif
+
     GLVec2 pos1 = {0.0, 0.0};
     GLVec2 siz1 = {1.0, 1.0};
     

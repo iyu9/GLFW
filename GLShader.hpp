@@ -89,10 +89,18 @@ void CompileAndLinkShader()
   printf("GLSL= %s \n", glGetString(GL_SHADING_LANGUAGE_VERSION));
 
   GLuint vshader = glCreateShader(GL_VERTEX_SHADER);
+#ifdef WIN32
   ReadShaderFileCompile(vshader, "../../vshader.txt");
+#else
+  ReadShaderFileCompile(vshader, "vshader.txt");
+#endif
 
   GLuint fshader = glCreateShader(GL_FRAGMENT_SHADER);
+#ifdef WIN32
   ReadShaderFileCompile(fshader, "../../fshader.txt");
+#else
+  ReadShaderFileCompile(fshader, "fshader.txt");
+#endif
 
   shader_program = glCreateProgram();
   glAttachShader(shader_program, vshader);

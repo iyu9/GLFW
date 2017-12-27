@@ -9,7 +9,7 @@
 - GLFW.xcode以下のプロジェクトファイルを開く
 - またはmake実行, ./RunApp
 
-### linux:
+### Linux:
 - 今後make対応予定
 
 

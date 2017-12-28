@@ -1,0 +1,159 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BMP	GLBmpLoader.hpp	/^BMP::BMP(const char *FileName)$/;"	f	class:BMP
+BMP	GLBmpLoader.hpp	/^class BMP$/;"	c
+CheckRenderTexture	GLUtils.hpp	/^  static void CheckRenderTexture()$/;"	f	namespace:GLUtils
+CompileAndLinkShader	GLShader.hpp	/^void CompileAndLinkShader()$/;"	f
+ConfigView	MyView/ConfigView.hpp	/^  ConfigView(){}$/;"	f	class:ConfigView
+ConfigView	MyView/ConfigView.hpp	/^class ConfigView : public GLScene$/;"	c
+Cube	GLObject.hpp	/^  const int Cube = 4;$/;"	m	namespace:RenderType
+Data	GLBmpLoader.hpp	/^  char *Data;$/;"	m	class:BMP
+DrawCube	GLUtils.hpp	/^  static void DrawCube(GLVec3 pos, GLVec3 siz)$/;"	f	namespace:GLUtils
+DrawCube	GLUtils.hpp	/^  static void DrawCube(GLdouble x, GLdouble y, GLdouble z, GLdouble w, GLdouble h, GLdouble u)$/;"	f	namespace:GLUtils
+DrawLine	GLUtils.hpp	/^  static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)$/;"	f	namespace:GLUtils
+DrawLine	GLUtils.hpp	/^  static void DrawLine(GLdouble start_x, GLdouble start_y, GLdouble end_x, GLdouble end_y, GLdouble width)$/;"	f	namespace:GLUtils
+DrawPoint	GLUtils.hpp	/^  static void DrawPoint(GLVec2 pos, GLint width)$/;"	f	namespace:GLUtils
+DrawPoint	GLUtils.hpp	/^  static void DrawPoint(GLdouble x, GLdouble y, GLdouble width)$/;"	f	namespace:GLUtils
+DrawRect	GLUtils.hpp	/^  static void DrawRect(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawRect	GLUtils.hpp	/^  static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+DrawShader	GLUtils.hpp	/^  static void DrawShader(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawShader	GLUtils.hpp	/^  static void DrawShader(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+DrawTexture	GLUtils.hpp	/^  static void DrawTexture(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawTexture	GLUtils.hpp	/^  static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+GLColor	GLVec.hpp	/^struct GLColor$/;"	s
+GLInput	GLInput.hpp	/^  GLInput()$/;"	f	class:GLInput
+GLInput	GLInput.hpp	/^class GLInput$/;"	c
+GLIntVec2	GLVec.hpp	/^struct GLIntVec2$/;"	s
+GLIntVec3	GLVec.hpp	/^struct GLIntVec3$/;"	s
+GLIntVec4	GLVec.hpp	/^struct GLIntVec4$/;"	s
+GLObject	GLObject.hpp	/^  GLObject(GLVec2 _pos, GLVec2 _siz)$/;"	f	class:GLObject
+GLObject	GLObject.hpp	/^class GLObject$/;"	c
+GLPoint	GLVec.hpp	/^struct GLPoint$/;"	s
+GLScene	GLScene.hpp	/^  GLScene()$/;"	f	class:GLScene
+GLScene	GLScene.hpp	/^class GLScene$/;"	c
+GLTimer	GLTimer.hpp	/^  GLTimer()$/;"	f	class:GLTimer
+GLTimer	GLTimer.hpp	/^class GLTimer$/;"	c
+GLUtils	GLUtils.hpp	/^namespace GLUtils$/;"	n
+GLVec2	GLVec.hpp	/^struct GLVec2$/;"	s
+GLVec3	GLVec.hpp	/^struct GLVec3$/;"	s
+GLVec4	GLVec.hpp	/^struct GLVec4$/;"	s
+GetDelta	GLTimer.hpp	/^  GLdouble GetDelta()$/;"	f	class:GLTimer
+GetKey	GLInput.hpp	/^  bool GetKey(GLint key)$/;"	f	class:GLInput
+GetKeyDown	GLInput.hpp	/^  bool GetKeyDown(GLint key)$/;"	f	class:GLInput
+GetKeyRepeat	GLInput.hpp	/^  bool GetKeyRepeat(GLint key)$/;"	f	class:GLInput
+GetKeyUp	GLInput.hpp	/^  bool GetKeyUp(GLint key)$/;"	f	class:GLInput
+GetTime	GLTimer.hpp	/^  GLdouble GetTime()$/;"	f	class:GLTimer
+InitView	MyView/InitView.hpp	/^  InitView() : GLScene()$/;"	f	class:InitView
+InitView	MyView/InitView.hpp	/^class InitView : public GLScene$/;"	c
+Link	GLShader.hpp	/^void Link(GLuint prog)$/;"	f
+Load	GLBmpLoader.hpp	/^bool BMP::Load(const char *FileName)$/;"	f	class:BMP
+MainLoop	main.cpp	/^void MainLoop()$/;"	f
+MainView	MyView/MainView.hpp	/^  MainView(){}$/;"	f	class:MainView
+MainView	MyView/MainView.hpp	/^class MainView : public GLScene$/;"	c
+MessageWait	main.cpp	/^void MessageWait()$/;"	f
+Polygon	GLObject.hpp	/^  const int Polygon = 2;$/;"	m	namespace:RenderType
+Pop	GLScene.hpp	/^  void Pop(GLObject* obj)$/;"	f	class:GLScene
+Push	GLScene.hpp	/^  void Push(GLObject* obj)$/;"	f	class:GLScene
+ReadShaderFileCompile	GLShader.hpp	/^void ReadShaderFileCompile(GLuint Shader, const char *File)$/;"	f
+Rect	GLObject.hpp	/^  const int Rect = 0;$/;"	m	namespace:RenderType
+Release	GLScene.hpp	/^  virtual void Release()$/;"	f	class:GLScene
+Render	GLObject.hpp	/^  bool Render()$/;"	f	class:GLObject
+Render	GLScene.hpp	/^  virtual bool Render()$/;"	f	class:GLScene
+RenderType	GLObject.hpp	/^namespace RenderType$/;"	n
+ScanKeyState	GLInput.hpp	/^  void ScanKeyState(GLint key, GLint action)$/;"	f	class:GLInput
+ScanMouseState	GLInput.hpp	/^  void ScanMouseState(GLdouble x, GLdouble y)$/;"	f	class:GLInput
+Search	GLScene.hpp	/^  void Search(const char* name)$/;"	f	class:GLScene
+SetTexture	GLBmpLoader.hpp	/^void BMP::SetTexture()$/;"	f	class:BMP
+SetTexture	GLObject.hpp	/^  void SetTexture(GLuint _textureID)$/;"	f	class:GLObject
+SetType	GLObject.hpp	/^  void SetType(GLint _type)$/;"	f	class:GLObject
+Shader	GLObject.hpp	/^  const int Shader = 3;$/;"	m	namespace:RenderType
+Start	GLScene.hpp	/^  virtual void Start(){}$/;"	f	class:GLScene
+Start	MyView/ConfigView.hpp	/^  void Start(){}$/;"	f	class:ConfigView
+Start	MyView/MainView.hpp	/^  void Start(){}$/;"	f	class:MainView
+Start	MyView/TitleView.hpp	/^  void Start(){}$/;"	f	class:TitleView
+Start	MyView/_TemplateView.hpp	/^  void Start(){}$/;"	f	class:_TemplateView
+TEST_TEX_HEIGHT	GLUtils.hpp	6;"	d
+TEST_TEX_WIDTH	GLUtils.hpp	7;"	d
+Texture	GLObject.hpp	/^  const int Texture = 1;$/;"	m	namespace:RenderType
+TitleView	MyView/TitleView.hpp	/^  TitleView(){}$/;"	f	class:TitleView
+TitleView	MyView/TitleView.hpp	/^class TitleView : public GLScene$/;"	c
+Update	GLScene.hpp	/^  virtual void Update(){}$/;"	f	class:GLScene
+Update	GLTimer.hpp	/^  void Update()$/;"	f	class:GLTimer
+Update	MyView/ConfigView.hpp	/^  void Update(){}$/;"	f	class:ConfigView
+Update	MyView/MainView.hpp	/^  void Update(){}$/;"	f	class:MainView
+Update	MyView/TitleView.hpp	/^  void Update(){}$/;"	f	class:TitleView
+Update	MyView/_TemplateView.hpp	/^  void Update(){}$/;"	f	class:_TemplateView
+_TemplateView	MyView/_TemplateView.hpp	/^  _TemplateView(){}$/;"	f	class:_TemplateView
+_TemplateView	MyView/_TemplateView.hpp	/^class _TemplateView : public GLScene$/;"	c
+__CONFIGVIEW_HPP__	MyView/ConfigView.hpp	2;"	d
+__GLBMPLOADER_HPP__	GLBmpLoader.hpp	2;"	d
+__GLBUILTINCALLBACK_HPP__	GLBuiltInCallback.hpp	2;"	d
+__GLINPUT_HPP__	GLInput.hpp	2;"	d
+__GLOBJECT_HPP__	GLObject.hpp	2;"	d
+__GLSCENE_HPP__	GLScene.hpp	2;"	d
+__GLSHADER_HPP__	GLShader.hpp	2;"	d
+__GLTIMER_HPP__	GLTimer.hpp	2;"	d
+__GLUTILS_HPP__	GLUtils.hpp	2;"	d
+__GLVEC_HPP__	GLVec.hpp	2;"	d
+__INITVIEW_HPP__	MyView/InitView.hpp	2;"	d
+__MAINVIEW_HPP__	MyView/MainView.hpp	2;"	d
+__TEMPLATEVIEW_HPP__	MyView/_TemplateView.hpp	2;"	d
+__TITLEVIEW_HPP__	MyView/TitleView.hpp	2;"	d
+a	GLVec.hpp	/^  GLdouble a;$/;"	m	struct:GLColor
+actor	MyView/InitView.hpp	/^  GLObject* actor;$/;"	m	class:InitView
+b	GLVec.hpp	/^  GLdouble b;$/;"	m	struct:GLColor
+bmp	MyView/InitView.hpp	/^  BMP* bmp;$/;"	m	class:InitView
+color	GLObject.hpp	/^  GLColor color;$/;"	m	class:GLObject
+currentScene	main.cpp	/^GLScene* currentScene;$/;"	v
+currentState	GLInput.hpp	/^  int currentState;$/;"	m	class:GLInput
+cursor_pos_callback	GLBuiltInCallback.hpp	/^static void cursor_pos_callback(GLFWwindow* window, double x, double y)$/;"	f
+deltaTime	GLTimer.hpp	/^  GLdouble deltaTime;$/;"	m	class:GLTimer
+error_callback	GLBuiltInCallback.hpp	/^static void error_callback(int error, const char* description)$/;"	f
+g	GLVec.hpp	/^  GLdouble g;$/;"	m	struct:GLColor
+g_keyInput	GLInput.hpp	/^GLInput g_keyInput;$/;"	v
+g_timer	GLTimer.hpp	/^GLTimer g_timer;$/;"	v
+g_winSize	main.cpp	/^const GLIntVec2 g_winSize = {300, 300};$/;"	v
+id	GLObject.hpp	/^  int id;$/;"	m	class:GLObject
+image	GLUtils.hpp	/^  GLubyte image[TEST_TEX_HEIGHT][TEST_TEX_WIDTH][4];$/;"	m	namespace:GLUtils
+keyState	GLInput.hpp	/^  GLint keyState[GLFW_KEY_LAST];$/;"	m	class:GLInput
+key_callback	GLBuiltInCallback.hpp	/^static void key_callback(GLFWwindow* window, int key, int scanmode, int action, int mods)$/;"	f
+main	main.cpp	/^int main()$/;"	f
+mouse_x	GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
+mouse_y	GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
+name	GLObject.hpp	/^  char* name;$/;"	m	class:GLObject
+objects	GLScene.hpp	/^  GLObject* objects[100];$/;"	m	class:GLScene
+order	GLObject.hpp	/^  int order;$/;"	m	class:GLObject
+pos	GLObject.hpp	/^  GLVec2 pos;$/;"	m	class:GLObject
+prevGetTime	GLTimer.hpp	/^  GLdouble prevGetTime;$/;"	m	class:GLTimer
+r	GLVec.hpp	/^  GLdouble r;$/;"	m	struct:GLColor
+shader_program	GLShader.hpp	/^GLuint shader_program;$/;"	v
+siz	GLObject.hpp	/^  GLVec2 siz;$/;"	m	class:GLObject
+siz	GLScene.hpp	/^  int siz;$/;"	m	class:GLScene
+sizeX	GLBmpLoader.hpp	/^  unsigned long sizeX;$/;"	m	class:BMP
+sizeY	GLBmpLoader.hpp	/^  unsigned long sizeY;$/;"	m	class:BMP
+texture	GLBmpLoader.hpp	/^  GLuint texture;$/;"	m	class:BMP
+textureID	GLObject.hpp	/^  GLuint textureID;$/;"	m	class:GLObject
+type	GLObject.hpp	/^  int type;$/;"	m	class:GLObject
+w	GLVec.hpp	/^  GLdouble w;$/;"	m	struct:GLVec4
+w	GLVec.hpp	/^  GLint w;$/;"	m	struct:GLIntVec4
+x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLPoint
+x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec2
+x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec3
+x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec4
+x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec2
+x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec3
+x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec4
+y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec2
+y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec3
+y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec4
+y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec2
+y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec3
+y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec4
+z	GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec3
+z	GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec4
+z	GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec3
+z	GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec4

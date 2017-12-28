@@ -7,6 +7,8 @@ private:
   GLint keyState[GLFW_KEY_LAST];
   int currentState;
 
+  GLdouble mouse_x, mouse_y;
+
 public:
   GLInput()
   {
@@ -19,6 +21,11 @@ public:
   void ScanKeyState(GLint key, GLint action)
   {
     keyState[key] = action;
+  }
+
+  void ScanMouseState(GLdouble x, GLdouble y)
+  {
+    mouse_x = x; mouse_y = y;
   }
 
   bool GetKey(GLint key)

@@ -25,6 +25,11 @@ public:
   {
     return deltaTime;
   }
+
+  GLdouble GetTime()
+  {
+    return glfwGetTime();
+  }
 };
 
 GLTimer g_timer;

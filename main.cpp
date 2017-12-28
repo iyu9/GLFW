@@ -1,20 +1,13 @@
 #ifdef WIN32
+  #pragma warning(disable : 4996) //ignore fopen_s warning
   #include <GL/glew.h>
 #endif
 
-//---------------------------------------
-// Note: File Path Setting:
-//  Windows: ../../<FILE>
-//  Mac: ./<FILE>
-//---------------------------------------
-
-//Ignore fopen warning
-#pragma warning(disable : 4996) 
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <string>
 
-//for GL Custom Components
+//include My GL Classes
 #include "GLVec.hpp"
 #include "GLUtils.hpp"
 
@@ -26,26 +19,19 @@
 #include "GLBmpLoader.hpp"
 #include "GLTimer.hpp"
 
-//for include Real Scenes
+//include My Scenes
 #include "MyView/InitView.hpp"
 #include "MyView/TitleView.hpp"
 #include "MyView/ConfigView.hpp"
 #include "MyView/MainView.hpp"
 
-//from GLShader.hpp
-extern GLuint shader_program;
-
 GLScene* currentScene;
-const GLIntVec2 g_winSize = { 300, 300 };
+const GLIntVec2 g_winSize = {300, 300};
 
-void CustomInit()
+void MessageWait()
 {
-  currentScene = new InitView();
-}
-
-void CustomDelete()
-{
-  delete currentScene;
+  std::string str;
+  std::cin >> str;
 }
 
 void MainLoop()
@@ -60,8 +46,7 @@ int main()
   if (!glfwInit())
   {
     std::cout << "init failed";
-    std::string str;
-    std::cin >> str;
+    MessageWait();
     return 1;
   }
 
@@ -71,8 +56,7 @@ int main()
   if (!window)
   {
     std::cout << "create window failed";
-    std::string str;
-    std::cin >> str;
+    MessageWait();
     glfwTerminate();
     return 1;
   }
@@ -82,7 +66,7 @@ int main()
   glfwSetKeyCallback(window, key_callback);
   glfwSetCursorPosCallback(window, cursor_pos_callback);
 
-  CustomInit();
+  currentScene = new InitView();
 
   while (!glfwWindowShouldClose(window))
   {
@@ -92,7 +76,7 @@ int main()
     glfwPollEvents();
   }
 
-  CustomDelete();
+  delete currentScene;
 
   glfwTerminate();
   return 0;

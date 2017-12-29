@@ -1,0 +1,2 @@
+all:
+	g++ -std=c++11 `pkg-config --cflags --libs glfw3 glu` -o RunApp main.cpp

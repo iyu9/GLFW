@@ -17,7 +17,7 @@
 - またはmake実行, ./RunApp
 
 ### Linux:
-- 今後make対応予定
+- make -f makefile_linux
 
 
 ## 著作権表示について

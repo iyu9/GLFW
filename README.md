@@ -1,24 +1,31 @@
-## ���s���@
+- シーンにオブジェクト配置
+- BMPテクスチャ読み込み
+- GLFWのためXPF対応
+- ゲーム用各便利クラス
+
+コードベースで書く個人用途上ラッパーです。
+
+## 実行方法
 
 ### Windows:
 
-1. GLFW.vsproj�ȉ��̃v���W�F�N�g�t�@�C�����J��
-2. glfw, glew��dll, lib�Q�Ƃɒ��ӂ��Ď��s
+1. GLFW.vsproj以下のプロジェクトファイルを開く
+2. glfw, glewのdll, lib参照に注意して実行
 
 ### Mac:
-- GLFW.xcode�ȉ��̃v���W�F�N�g�t�@�C�����J��
-- �܂���make���s, ./RunApp
+- GLFW.xcode以下のプロジェクトファイルを開く
+- またはmake実行, ./RunApp
 
 ### Linux:
-- ����make�Ή��\��
+- 今後make対応予定
 
 
-## ���쌠�\���ɂ���
+## 著作権表示について
 
-+ �w�i�摜���؂��
++ 背景画像お借り先
 
-### �w�i�ʐ^�⊮�̉�
+### 背景写真補完の会
 http://masato.ciao.jp/haikei/furemu.html
 
-�����؂��̗��p�K��ɏ����܂��B  
-���L�ڂ��ꂽ�f�ނ̓񎟔z�z���֎~�������܂��B  
+※お借り先の利用規約に準じます。  
+※記載された素材の二次配布を禁止いたします。  

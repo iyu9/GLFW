@@ -7,6 +7,9 @@ private:
   GLObject* actor;
   BMP* bmp;
 
+  double deltaTime;
+  Player plInfo;
+
 public:
   InitView() : GLScene()
   {
@@ -34,9 +37,20 @@ public:
 
     if (siz <= 0) { return; }
 
-    GLdouble deltaTime = g_timer.GetDelta();
     g_timer.Update();
+    deltaTime = g_timer.GetDelta();
 
+	//scrolled
+	actor->pos.y = (actor->pos.y > 1) ? -1 : actor->pos.y;
+	actor->pos.y = (actor->pos.y < -1) ? 1 : actor->pos.y;
+	actor->pos.x = (actor->pos.x > 1) ? -1 : actor->pos.x;
+	actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
+
+	UpdateKeysInput();
+  }
+
+  void UpdateKeysInput()
+  {
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
       actor->pos.x += deltaTime;
@@ -52,7 +66,7 @@ public:
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
       actor->pos.y -= deltaTime;
-    }
+	}
   }
 
   void Release() override

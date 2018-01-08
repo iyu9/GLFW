@@ -19,6 +19,9 @@
 #include "GLBmpLoader.hpp"
 #include "GLTimer.hpp"
 
+//include My Classes
+#include "GameLogic/Player.hpp"
+
 //include My Scenes
 #include "MyView/InitView.hpp"
 #include "MyView/TitleView.hpp"

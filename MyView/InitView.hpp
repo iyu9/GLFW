@@ -1,6 +1,8 @@
 #ifndef __INITVIEW_HPP__
 #define __INITVIEW_HPP__
 
+#include "../GameLogic/Physics.hpp"
+
 class InitView : public GLScene
 {
 private:
@@ -9,6 +11,7 @@ private:
 
   double deltaTime;
   Player plInfo;
+  Physics phy;
 
 public:
   InitView() : GLScene()

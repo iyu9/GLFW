@@ -37,12 +37,4 @@ public:
   }
 };
 
-#ifdef UNIT_TEST
-int main ()
-{
-  Physics p;
-  return 0;  
-}
-#endif
-
 #endif

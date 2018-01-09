@@ -50,9 +50,8 @@ public:
 	actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
 
 	//physics test
-	phy.Update();
-	std::cout << "phy.x = " << phy.x << std::endl;
-	std::cout << "phy.y = " << phy.y << std::endl;
+	phy.Update(deltaTime);
+	std::cout << "phy.x, phy.y = " << phy.x << ", " << phy.y << std::endl;
 
 	UpdateKeysInput();
   }

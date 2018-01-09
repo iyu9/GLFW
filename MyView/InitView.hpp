@@ -49,6 +49,11 @@ public:
 	actor->pos.x = (actor->pos.x > 1) ? -1 : actor->pos.x;
 	actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
 
+	//physics test
+	phy.y = 1;
+	phy.Update();
+	actor->pos.y = phy.y;
+
 	UpdateKeysInput();
   }
 

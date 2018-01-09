@@ -7,5 +7,5 @@ run:
 
 git:
 	git add -A
-	git commit -m "update from make"
+	git commit -m "auto commit from makefile"
 	git push

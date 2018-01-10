@@ -1,4 +1,4 @@
-﻿2018/01/10 11:18:40 にビルドを開始しました。
+﻿2018/01/10 14:55:14 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\GLFW.vsproj\GLFW.vsproj.vcxproj" (Build ターゲット)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ..\..\main.cpp
@@ -10,4 +10,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:00.80
+経過時間 00:00:00.77

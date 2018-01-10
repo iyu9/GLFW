@@ -7,16 +7,41 @@ class Status
 {
 public:
   int lv;
+  int lv_max;
   int hp;
   int hp_max;
   int mp;
   int max_mp;
   int cond;
 
+  int atk_max;
+  int def_max;
+  int spd_max;
+  int luk_max;
+  int mov_max;
+
   int atk;
   int def;
   int spd;
   int luk;
+  int mov;
+};
+
+class Equipment
+{
+public:
+  int weapon;
+  int helmet;
+  int armor;
+  int shield;
+  int accesary;
+};
+
+class Skill
+{
+public:
+  int id;
+  int atk;
 };
 
 class Player
@@ -25,6 +50,7 @@ public:
   int id;
   std::string name;
   Status status;
+  Equipment equipment;
   int x, y;
 
   Player(){}

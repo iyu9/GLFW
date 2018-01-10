@@ -33,9 +33,9 @@ public:
     return menues[idx];
   }
 
-  void OnClickMenu()
+  void SelectMenu()
   {
-    //hogehoge
+    //current idx
   }
 };
 

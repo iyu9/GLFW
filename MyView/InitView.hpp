@@ -42,6 +42,7 @@ public:
 
     if (siz <= 0) { return; }
 
+    //for check log
     g_timer.Update();
     frameTime = g_timer.GetFrameTime();
 
@@ -52,10 +53,11 @@ public:
     actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
 
     //physics test
-    physics.Update(frameTime);
-    std::cout << "phy.x, phy.y = " << physics.x << ", " << physics.y << std::endl;
-
+    physics.Update();
+    std::cout << "(x, y) = " << "(" << physics.x << ", " << physics.y << ")" << std::endl;
+    std::cout << "(vx, vy) = " << "(" << physics.vx << ", " << physics.vy << ")" << std::endl;
     actor->pos.y = physics.y;
+    actor->pos.x = physics.x;
 
     //std::cout << "(pos.x, pos.y) = " << "(" << actor->pos.x << ", " << actor->pos.y << ")" << std::endl;
 
@@ -64,6 +66,7 @@ public:
 
   void UpdateKeysInput()
   {
+    //directions
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
       actor->pos.x += frameTime;
@@ -79,6 +82,24 @@ public:
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
       actor->pos.y -= frameTime;
+    }
+
+    //keys
+    if (g_keyInput.GetKey(GLFW_KEY_Z))
+    {
+      physics.Jump();
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_X))
+    {
+      physics.AddVelocity(Dir2D::LEFT);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_C))
+    {
+      physics.AddVelocity(Dir2D::DOWN);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_V))
+    {
+      physics.AddVelocity(Dir2D::RIGHT);
     }
   }
 

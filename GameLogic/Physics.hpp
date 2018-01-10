@@ -3,20 +3,26 @@
 
 namespace PhysicsDef
 {
-  const double GRV = 0.001;
-  const double FLOOR = -1000000;
-  const double JUMP_VY = 0.001;
-};
+  const double GRV    = 0.001;
+  const double N = 0.05;
 
-namespace Direction2D
-{
-  const int UP = 0;
-  const int RIGHT = 1;
-  const int LEFT = 2;
-  const int DOWN = 3;
-};
+  const double WALL_L = -1;
+  const double WALL_R = 1;
+  const double FLOOR  = -1;
+  const double JUMP_V = 10;
 
+  const double ADD_VELOCITY = 0.01;
+};
 using namespace PhysicsDef;
+
+namespace Dir2D
+{
+  const int UP    = 0x001;
+  const int RIGHT = 0x002;
+  const int LEFT  = 0x004;
+  const int DOWN  = 0x008;
+};
+using namespace Dir2D;
 
 class Physics
 {
@@ -33,23 +39,30 @@ private:
     //Finish falling
     if (y <= FLOOR)
     {
-      t = 0; y = FLOOR; vy = 0;
+      t = 0; vy = 0;
+      y = FLOOR;
       is_fall = false;
     }
   }
 
-  void Fall(double deltaFrame)
+  void UpdateMoving()
   {
-    if (is_fall)
+    if (vy != 0)
     {
-      t += deltaFrame;
-      vy -= GRV * t;
-      y += vy * t;
+      vy -= GRV;
+      y += vy;
+    }
+
+    if (vx != 0)
+    {
+      vx *= (1 - N);
+      x += vx;
     }
   }
 
 public:
   bool is_fall;
+  bool is_jump;
 
   double t;
   double x, y;
@@ -59,17 +72,38 @@ public:
   Physics()
   {
     is_fall = false;
+    is_jump = false;
   }
 
   void Jump()
   {
-    vy = PhysicsDef::JUMP_VY;
+    vy = JUMP_V;
+    is_jump = true;
   }
 
-  void Update(double deltaFrame)
+  void AddVelocity(const int dir)
+  {
+    switch (dir)
+    {
+    case UP:
+      vy = ADD_VELOCITY;
+      break;
+    case DOWN:
+      vy = -ADD_VELOCITY;
+      break;
+    case LEFT:
+      vx = -ADD_VELOCITY;
+      break;
+    case RIGHT:
+      vx = ADD_VELOCITY;
+      break;
+    }
+  }
+
+  void Update()
   {
     CheckFall();
-    Fall(deltaFrame);
+    UpdateMoving();
   }
 };
 

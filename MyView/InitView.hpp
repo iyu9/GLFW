@@ -2,21 +2,24 @@
 #define __INITVIEW_HPP__
 
 //Check GameLogic
+#include "../GameLogic/Player.hpp"
 #include "../GameLogic/Physics.hpp"
 #include "../GameLogic/MessageWindow.hpp"
 
 class InitView : public GLScene
 {
 private:
-  GLObject* actor;
   GLObject* bg;
+  GLObject* actor;
 
   BMP* bmp_bg;
   BMP* bmp_chara;
 
-  double frameTime;
   Player player;
   Physics physics;
+  MessageWindow msgwin;
+
+  double frameTime;
 
 public:
   InitView() : GLScene()
@@ -29,16 +32,18 @@ public:
   {
     GLScene::Start();
 
-    bmp_bg = new BMP("Resources/sample.bmp");
+    //bmp_bg = new BMP("Resources/sample.bmp");
     bmp_chara = new BMP("Resources/player.bmp");
 
     //add Background to scene
+    /*
     GLVec2 pos_bg = { 0, 0 };
     GLVec2 siz_bg = { 2, 2 };
 
     bg = new GLObject(pos_bg, siz_bg);
     bg->SetTexture(bmp_bg->texture);
     Push(bg);
+    */
 
     //add Actor to scene
     GLVec2 pos_actor = { 0, 0 };
@@ -80,19 +85,19 @@ public:
     //directions
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
-      actor->pos.x += frameTime;
+      actor->pos.x += 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_LEFT))
     {
-      actor->pos.x -= frameTime;
+      actor->pos.x -= 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_UP))
     {
-      actor->pos.y += frameTime;
+      actor->pos.y += 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
-      actor->pos.y -= frameTime;
+      actor->pos.y -= 2 * frameTime;
     }
 
     //keys

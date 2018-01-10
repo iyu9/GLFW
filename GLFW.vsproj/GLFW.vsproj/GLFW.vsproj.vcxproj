@@ -188,6 +188,7 @@
     <None Include="..\..\README.md" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\Resources\player.bmp" />
     <Image Include="..\..\Resources\sample.bmp" />
   </ItemGroup>
   <ItemGroup>

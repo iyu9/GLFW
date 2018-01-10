@@ -19,9 +19,6 @@
 #include "GLBmpLoader.hpp"
 #include "GLTimer.hpp"
 
-//include My Classes
-#include "GameLogic/Player.hpp"
-
 //include My Scenes
 #include "MyView/InitView.hpp"
 #include "MyView/TitleView.hpp"
@@ -30,6 +27,7 @@
 
 GLScene* currentScene;
 const GLIntVec2 g_winSize = {300, 300};
+const GLIntVec2 g_winPos  = {720, 420};
 
 void MessageWait()
 {
@@ -68,6 +66,7 @@ int main()
 
   glfwSetKeyCallback(window, key_callback);
   glfwSetCursorPosCallback(window, cursor_pos_callback);
+  glfwSetWindowPos(window, g_winPos.x, g_winPos.y);
 
   currentScene = new InitView();
 

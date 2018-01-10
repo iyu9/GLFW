@@ -31,9 +31,9 @@ class Equipment
 {
 public:
   int weapon;
-  int helmet;
-  int armor;
   int shield;
+  int armor;
+  int helmet;
   int accesary;
 };
 

@@ -108,6 +108,9 @@
     <Image Include="..\..\Resources\sample.bmp">
       <Filter>リソース ファイル\Resources</Filter>
     </Image>
+    <Image Include="..\..\Resources\player.bmp">
+      <Filter>リソース ファイル\Resources</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\Shaders\fshader.txt">

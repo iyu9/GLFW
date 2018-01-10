@@ -8,10 +8,12 @@ namespace PhysicsDef
 
   const double WALL_L = -1;
   const double WALL_R = 1;
-  const double FLOOR  = -1;
+  const double FLOOR  = -0.5;
   const double JUMP_V = 0.05;
 
   const double ADD_VELOCITY = 0.01;
+
+  const int JMP_LIM = 9;
 };
 using namespace PhysicsDef;
 
@@ -40,6 +42,7 @@ private:
       t = 0; vy = 0;
       y = FLOOR;
       is_fall = false;
+      jmp_cnt = 0;
     }
   }
 
@@ -62,6 +65,8 @@ public:
   bool is_fall;
   bool is_jump;
 
+  int jmp_cnt;
+
   double t;
   double x, y;
   double vx, vy;
@@ -75,8 +80,13 @@ public:
 
   void Jump()
   {
-    y += 0.01;
-    vy = JUMP_V;
+    if (jmp_cnt <= JMP_LIM)
+    {
+      jmp_cnt++;
+
+      y += 0.01;
+      vy = JUMP_V;
+    }
   }
 
   void AddVelocity(const int dir)

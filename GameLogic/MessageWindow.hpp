@@ -1,6 +1,7 @@
 #ifndef __MESSAGE_WINDOW_HPP__
 #define __MESSAGE_WINDOW_HPP__
 
+#include <string>
 #define MSG_MAX 100
 
 namespace MWOption
@@ -11,6 +12,25 @@ namespace MWOption
 
 class MessageWindow
 {
+private:
+  bool IsEndMessageWindow()
+  {
+    return (msg_idx >= msg_siz);
+  }
+
+  bool IsEndCharIndex()
+  {
+    return (char_idx >= messages[msg_idx].size());
+  }
+
+  void NextSubString()
+  {
+    if (char_idx + 1 <= messages[msg_idx].size())
+    {
+      char_idx++;
+    }
+  }
+
 public:
   int msg_idx;
   int msg_siz;
@@ -25,14 +45,6 @@ public:
   std::string GetMessage()
   {
     return messages[msg_idx];
-  }
-
-  void NextSubString()
-  {
-    if (char_idx + 1 <= messages[msg_idx].size())
-    {
-      char_idx++;
-    }
   }
 
   void NextMessage()
@@ -56,16 +68,6 @@ public:
     timer = 0;
     char_idx = 0;
     msg_idx = msg_idx_;
-  }
-
-  bool IsEndMessageWindow()
-  {
-    return (msg_idx >= msg_siz);
-  }
-
-  bool IsEndCharIndex()
-  {
-    return (char_idx >= messages[msg_idx].size());
   }
 
   void Update(double frameTime)

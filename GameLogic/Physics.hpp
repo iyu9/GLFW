@@ -3,9 +3,9 @@
 
 namespace PhysicsDef
 {
-  const double GRV = 9.8;
+  const double GRV = 0.001;
   const double FLOOR = -1000000;
-  const double JUMP_VY = 9.8;
+  const double JUMP_VY = 0.001;
 };
 
 namespace Direction2D

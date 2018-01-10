@@ -1,7 +1,7 @@
 #ifndef __PLAYER_HPP__
 #define __PLAYER_HPP__
 
-#define PLAYER_LIST_MAX 9
+#define PLAYER_LIST_MAX 5
 
 class Status
 {
@@ -23,30 +23,15 @@ class Player
 {
 public:
   int id;
-  char* name;
+  std::string name;
   Status status;
   int x, y;
 
   Player(){}
-  Player(int id_, char* name_)
+  Player(int id_, std::string name_)
   {
     id = id_;
     name = name_;
-  }
-
-  int GetId()
-  {
-    return id;
-  }
-
-  const char* GetName()
-  {
-    return name;
-  }
-
-  Status GetStatus()
-  {
-    return status;
   }
 };
 
@@ -73,4 +58,5 @@ public:
     return true;
   }
 };
+
 #endif

@@ -1,7 +1,7 @@
 #ifndef __INITVIEW_HPP__
 #define __INITVIEW_HPP__
 
-//TEST
+//Check GameLogic
 #include "../GameLogic/Physics.hpp"
 #include "../GameLogic/MessageWindow.hpp"
 
@@ -11,7 +11,7 @@ private:
   GLObject* actor;
   BMP* bmp;
 
-  double deltaTime;
+  double frameTime;
   Player player;
   Physics physics;
 
@@ -43,7 +43,7 @@ public:
     if (siz <= 0) { return; }
 
     g_timer.Update();
-    deltaTime = g_timer.GetDelta();
+    frameTime = g_timer.GetFrameTime();
 
     //scrolled
     actor->pos.y = (actor->pos.y > 1) ? -1 : actor->pos.y;
@@ -52,8 +52,11 @@ public:
     actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
 
     //physics test
-    physics.Update(deltaTime);
+    physics.Update(frameTime);
     std::cout << "phy.x, phy.y = " << physics.x << ", " << physics.y << std::endl;
+
+    actor->pos.y = physics.y;
+
     //std::cout << "(pos.x, pos.y) = " << "(" << actor->pos.x << ", " << actor->pos.y << ")" << std::endl;
 
     UpdateKeysInput();
@@ -63,19 +66,19 @@ public:
   {
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
-      actor->pos.x += deltaTime;
+      actor->pos.x += frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_LEFT))
     {
-      actor->pos.x -= deltaTime;
+      actor->pos.x -= frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_UP))
     {
-      actor->pos.y += deltaTime;
+      actor->pos.y += frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
-      actor->pos.y -= deltaTime;
+      actor->pos.y -= frameTime;
     }
   }
 

@@ -1,6 +1,7 @@
 #ifndef __GRIDMAP_HPP__
 #define __GRIDMAP_HPP__
 
+#include <string>
 #define MAX_MAP_W 99
 #define MAX_MAP_H 99
 
@@ -16,7 +17,7 @@ class GridMap
 {
 public:
   int id;
-  char* name;
+  std::string name;
 
   int siz_x, siz_y;
   int pos_x, pos_y;

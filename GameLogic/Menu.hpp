@@ -3,12 +3,14 @@
 
 #define MENU_MAX 9
 
+#include <string>
+
 class Menu
 {
 public:
   int idx;
   int siz;
-  char* menues[MENU_MAX];
+  std::string menues[MENU_MAX];
   void* callback[MENU_MAX];
 
   Menu(int siz_)
@@ -26,7 +28,7 @@ public:
     idx = (idx - 1 < 0) ? siz : idx--;
   }
 
-  const char* GetName()
+  std::string GetName()
   {
     return menues[idx];
   }

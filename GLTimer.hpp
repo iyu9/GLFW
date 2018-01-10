@@ -5,7 +5,7 @@ class GLTimer
 {
 private:
   GLdouble prevGetTime;
-  GLdouble deltaTime;
+  GLdouble frameTime;
 
 public:
   GLTimer()
@@ -16,14 +16,14 @@ public:
   void Update()
   {
     GLdouble currentGetTime = glfwGetTime();
-    deltaTime = currentGetTime - prevGetTime;
+    frameTime = currentGetTime - prevGetTime;
 
     prevGetTime = glfwGetTime();
   }
 
-  GLdouble GetDelta()
+  GLdouble GetFrameTime()
   {
-    return deltaTime;
+    return frameTime;
   }
 
   GLdouble GetTime()

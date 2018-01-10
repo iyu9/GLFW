@@ -1,2 +1,11 @@
 all:
 	g++ -std=c++11 `pkg-config --cflags --libs glfw3 glu` -o RunApp main.cpp
+
+run:
+	g++ -std=c++11 `pkg-config --cflags --libs glfw3 glu` -o RunApp main.cpp
+	./RunApp
+
+git:
+	git add -A
+	git commit -m "auto commit from makefile"
+	git push

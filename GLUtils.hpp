@@ -22,6 +22,8 @@ namespace GLUtils
       }
     }
 
+    glPushMatrix();
+
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
@@ -29,28 +31,36 @@ namespace GLUtils
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, TEST_TEX_WIDTH, TEST_TEX_HEIGHT,
       0, GL_RGBA, GL_UNSIGNED_BYTE, image);
+
+    glPopMatrix();
   }
 
   static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
     glEnable(GL_TEXTURE_2D);
+    glPushMatrix();
     glBegin(GL_QUADS);
     glTexCoord2d(0.0, 0.0); glVertex3d(x, y, 0.0);
     glTexCoord2d(0.0, 1.0); glVertex3d(x, y + h, 0.0);
     glTexCoord2d(1.0, 1.0); glVertex3d(x + w, y + h, 0.0);
     glTexCoord2d(1.0, 0.0); glVertex3d(x + w, y, 0.0);
     glEnd();
+    glPopMatrix();
     glDisable(GL_TEXTURE_2D);
   }
 
   static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
+    glPushMatrix();
+
     glBegin(GL_POLYGON);
     glVertex2d(x, y);
     glVertex2d(x + w, y);
     glVertex2d(x + w, y + h);
     glVertex2d(x, y + h);
     glEnd();
+
+    glPopMatrix();
   }
 
   static void DrawLine(GLdouble start_x, GLdouble start_y, GLdouble end_x, GLdouble end_y, GLdouble width)
@@ -86,6 +96,8 @@ namespace GLUtils
       {x + w, y + h, z + u},
       {x, y + h, z + u},
     };
+
+    glPushMatrix();
 
     glBegin(GL_TRIANGLES);
 
@@ -150,6 +162,7 @@ namespace GLUtils
     glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
 
     glEnd();
+    glPopMatrix();
   }
 
   static void DrawShader(GLdouble x, GLdouble y, GLdouble w, GLdouble h)

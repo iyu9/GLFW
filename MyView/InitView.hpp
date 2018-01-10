@@ -9,7 +9,10 @@ class InitView : public GLScene
 {
 private:
   GLObject* actor;
-  BMP* bmp;
+  GLObject* bg;
+
+  BMP* bmp_bg;
+  BMP* bmp_chara;
 
   double frameTime;
   Player player;
@@ -26,13 +29,23 @@ public:
   {
     GLScene::Start();
 
-    bmp = new BMP("Resources/player.bmp");
+    bmp_bg = new BMP("Resources/sample.bmp");
+    bmp_chara = new BMP("Resources/player.bmp");
 
-    GLVec2 pos1 = { 0, 0 };
-    GLVec2 siz1 = { 1, 1 };
+    //add Background to scene
+    GLVec2 pos_bg = { 0, 0 };
+    GLVec2 siz_bg = { 2, 2 };
 
-    actor = new GLObject(pos1, siz1);
-    actor->SetTexture(bmp->texture);
+    bg = new GLObject(pos_bg, siz_bg);
+    bg->SetTexture(bmp_bg->texture);
+    Push(bg);
+
+    //add Actor to scene
+    GLVec2 pos_actor = { 0, 0 };
+    GLVec2 siz_actor = { 1, 1 };
+
+    actor = new GLObject(pos_actor, siz_actor);
+    actor->SetTexture(bmp_chara->texture);
     Push(actor);
   }
 
@@ -106,7 +119,7 @@ public:
     GLScene::Release();
 
     delete actor;
-    delete bmp;
+    delete bmp_chara;
   }
 };
 

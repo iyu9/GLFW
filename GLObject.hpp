@@ -49,6 +49,7 @@ public:
       break;
 
     case RenderType::Texture:
+      glBindTexture(GL_TEXTURE_2D, textureID);
       GLUtils::DrawTexture(pos, siz);
       break;
 

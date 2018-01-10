@@ -97,6 +97,12 @@
     <None Include="..\..\.gitignore">
       <Filter>リソース ファイル</Filter>
     </None>
+    <None Include="..\..\makefile">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="..\..\makefile_linux">
+      <Filter>リソース ファイル</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\Resources\sample.bmp">

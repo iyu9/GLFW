@@ -1,7 +1,9 @@
 #ifndef __INITVIEW_HPP__
 #define __INITVIEW_HPP__
 
+//TEST
 #include "../GameLogic/Physics.hpp"
+#include "../GameLogic/MessageWindow.hpp"
 
 class InitView : public GLScene
 {
@@ -10,8 +12,8 @@ private:
   BMP* bmp;
 
   double deltaTime;
-  Player plInfo;
-  Physics phy;
+  Player player;
+  Physics physics;
 
 public:
   InitView() : GLScene()
@@ -26,8 +28,8 @@ public:
 
     bmp = new BMP("Resources/sample.bmp");
 
-    GLVec2 pos1 = { -0.5, -0.5 };
-    GLVec2 siz1 = { 1.0, 1.0 };
+    GLVec2 pos1 = { 0, 0 };
+    GLVec2 siz1 = { 1, 1 };
 
     actor = new GLObject(pos1, siz1);
     actor->SetTexture(bmp->texture);
@@ -43,17 +45,18 @@ public:
     g_timer.Update();
     deltaTime = g_timer.GetDelta();
 
-	//scrolled
-	actor->pos.y = (actor->pos.y > 1) ? -1 : actor->pos.y;
-	actor->pos.y = (actor->pos.y < -1) ? 1 : actor->pos.y;
-	actor->pos.x = (actor->pos.x > 1) ? -1 : actor->pos.x;
-	actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
+    //scrolled
+    actor->pos.y = (actor->pos.y > 1) ? -1 : actor->pos.y;
+    actor->pos.y = (actor->pos.y < -1) ? 1 : actor->pos.y;
+    actor->pos.x = (actor->pos.x > 1) ? -1 : actor->pos.x;
+    actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
 
-	//physics test
-	phy.Update(deltaTime);
-	std::cout << "phy.x, phy.y = " << phy.x << ", " << phy.y << std::endl;
+    //physics test
+    physics.Update(deltaTime);
+    std::cout << "phy.x, phy.y = " << physics.x << ", " << physics.y << std::endl;
+    //std::cout << "(pos.x, pos.y) = " << "(" << actor->pos.x << ", " << actor->pos.y << ")" << std::endl;
 
-	UpdateKeysInput();
+    UpdateKeysInput();
   }
 
   void UpdateKeysInput()
@@ -73,7 +76,7 @@ public:
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
       actor->pos.y -= deltaTime;
-	}
+    }
   }
 
   void Release() override

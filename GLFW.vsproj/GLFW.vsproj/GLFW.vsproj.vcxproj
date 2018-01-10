@@ -158,6 +158,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\GameLogic\GridMap.hpp" />
+    <ClInclude Include="..\..\GameLogic\Menu.hpp" />
+    <ClInclude Include="..\..\GameLogic\MessageWindow.hpp" />
+    <ClInclude Include="..\..\GameLogic\Physics.hpp" />
+    <ClInclude Include="..\..\GameLogic\Player.hpp" />
     <ClInclude Include="..\..\GLBmpLoader.hpp" />
     <ClInclude Include="..\..\GLBuiltInCallback.hpp" />
     <ClInclude Include="..\..\GLInput.hpp" />

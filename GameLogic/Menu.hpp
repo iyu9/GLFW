@@ -11,29 +11,29 @@ public:
   char* menues[MENU_MAX];
   void* callback[MENU_MAX];
 
-  Menu (int siz_)
+  Menu(int siz_)
   {
-	siz = siz_;
+    siz = siz_;
   }
 
   void Next()
   {
-	idx = (idx+1 >= siz) ? 0 : idx++;
+    idx = (idx + 1 >= siz) ? 0 : idx++;
   }
 
   void Prev()
   {
-	idx = (idx-1 < 0) ? siz : idx--;
+    idx = (idx - 1 < 0) ? siz : idx--;
   }
 
   const char* GetName()
   {
-	return menues[idx];	
+    return menues[idx];
   }
 
   void OnClickMenu()
   {
-	//hogehoge
+    //hogehoge
   }
 };
 

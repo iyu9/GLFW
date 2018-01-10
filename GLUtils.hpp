@@ -162,12 +162,12 @@ namespace GLUtils
   //for Custom Classes
   static void DrawTexture(GLVec2 pos, GLVec2 siz)
   {
-    DrawTexture(pos.x, pos.y, siz.x, siz.y);
+    DrawTexture(pos.x - (0.5 * siz.x), pos.y - (0.5 * siz.y), siz.x, siz.y);
   }
 
   static void DrawRect(GLVec2 pos, GLVec2 siz)
   {
-    DrawRect(pos.x, pos.y, siz.x, siz.y);
+    DrawRect(pos.x - (0.5 * siz.x), pos.y - (0.5 * siz.y), siz.x, siz.y);
   }
 
   static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)

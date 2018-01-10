@@ -4,38 +4,41 @@
 #define MAX_MAP_W 99
 #define MAX_MAP_H 99
 
-//map tip type
-const int WALL = -1;
-const int NONE = 0;
-const int UP_STAIRS = 1;
-const int DW_STAIRS = 2;
+namespace MapChip
+{
+  const int WALL = -1;
+  const int NONE = 0;
+  const int UP_STAIRS = 1;
+  const int DW_STAIRS = 2;
+};
 
 class GridMap
 {
 public:
   int id;
   char* name;
-  IntVector2 siz;
-  IntVector2 pos;
+
+  int siz_x, siz_y;
+  int pos_x, pos_y;
   int map[MAX_MAP_W][MAX_MAP_H];
 
   void CleanMap()
   {
-	for (int j = 0; j < siz.y; j++)
-	{
-	  for (int i = 0; i < siz.x; i++)
-	  {
-	    map[i][j] = 0;
-	  }  
-	}
+    for (int j = 0; j < siz_y; j++)
+    {
+      for (int i = 0; i < siz_x; i++)
+      {
+        map[i][j] = 0;
+      }
+    }
   }
 
-  GridMap(int siz_x, int siz_y, int pos_x, int pos_y)
+  GridMap(int siz_x_, int siz_y_, int pos_x_, int pos_y_)
   {
-	siz.x = siz_x; siz.y = siz_y;
-	pos.x = pos_x; pos.y = pos_y;
-
-	ClearMap();
+    siz_x = siz_x_; siz_y = siz_y_;
+    pos_x = pos_x_; pos_y = pos_y_;
+    
+    CleanMap();
   }
 };
 

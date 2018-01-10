@@ -1,18 +1,53 @@
 #ifndef __PHYSICS_HPP__
 #define __PHYSICS_HPP__
 
-const double GRV = 9.8;
-
-namespace Direction
+namespace PhysicsDef
 {
-  const int UP    = 0;
-  const int RIGHT = 1;
-  const int LEFT  = 2;
-  const int DOWN  = 3;
+  const double GRV = 9.8;
+  const double FLOOR = -1000000;
+  const double JUMP_VY = 9.8;
 };
+
+namespace Direction2D
+{
+  const int UP = 0;
+  const int RIGHT = 1;
+  const int LEFT = 2;
+  const int DOWN = 3;
+};
+
+using namespace PhysicsDef;
 
 class Physics
 {
+private:
+  void CheckFall()
+  {
+    //Start falling
+    if (!is_fall && y > FLOOR)
+    {
+      t = 0;
+      is_fall = true;
+    }
+
+    //Finish falling
+    if (y <= FLOOR)
+    {
+      t = 0; y = FLOOR; vy = 0;
+      is_fall = false;
+    }
+  }
+
+  void Fall(double deltaFrame)
+  {
+    if (is_fall)
+    {
+      t += deltaFrame;
+      vy -= GRV * t;
+      y += vy * t;
+    }
+  }
+
 public:
   bool is_fall;
 
@@ -23,48 +58,18 @@ public:
 
   Physics()
   {
-	is_fall = false;
+    is_fall = false;
   }
 
-  bool CheckFallStart()
+  void Jump()
   {
-	if (!is_fall && y > 0 && vy == 0)
-	{
-	  t = 0;
-	  is_fall = true;
-	  return true;
-	}
-	return false;
-  }
-
-  bool CheckFallEnd()
-  {
-	if (is_fall && y == 0 && vy < 0)
-	{
-	  t = 0;
-	  y = 0;
-	  vy = 0;
-	  is_fall = false;
-	  return true;
-	}
-	return false;
-  }
-
-  void Fall(double deltaFrame)
-  {
-	if (is_fall)
-	{
-	  t += deltaFrame;
-	  vy = vy - GRV * t;
-	  y = y - vy * t;
-	}
+    vy = PhysicsDef::JUMP_VY;
   }
 
   void Update(double deltaFrame)
   {
-	CheckFallStart();
-	Fall(deltaFrame);
-	CheckFallEnd();
+    CheckFall();
+    Fall(deltaFrame);
   }
 };
 

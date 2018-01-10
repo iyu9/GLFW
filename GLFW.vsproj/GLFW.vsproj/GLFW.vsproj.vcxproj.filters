@@ -22,6 +22,9 @@
     <Filter Include="リソース ファイル\Resources">
       <UniqueIdentifier>{cd8d7d96-42da-4f56-acbf-a96a2de78986}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\GameLogic">
+      <UniqueIdentifier>{a3e3016e-de8f-436a-b547-642423230a9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\GLBmpLoader.hpp">
@@ -65,6 +68,21 @@
     </ClInclude>
     <ClInclude Include="..\..\GLTimer.hpp">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameLogic\Player.hpp">
+      <Filter>ヘッダー ファイル\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameLogic\GridMap.hpp">
+      <Filter>ヘッダー ファイル\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameLogic\Menu.hpp">
+      <Filter>ヘッダー ファイル\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameLogic\Physics.hpp">
+      <Filter>ヘッダー ファイル\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GameLogic\MessageWindow.hpp">
+      <Filter>ヘッダー ファイル\GameLogic</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

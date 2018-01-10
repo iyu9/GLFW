@@ -9,7 +9,7 @@ namespace PhysicsDef
   const double WALL_L = -1;
   const double WALL_R = 1;
   const double FLOOR  = -1;
-  const double JUMP_V = 10;
+  const double JUMP_V = 0.05;
 
   const double ADD_VELOCITY = 0.01;
 };
@@ -29,14 +29,12 @@ class Physics
 private:
   void CheckFall()
   {
-    //Start falling
-    if (!is_fall && y > FLOOR)
+    if (y > FLOOR)
     {
       t = 0;
       is_fall = true;
     }
 
-    //Finish falling
     if (y <= FLOOR)
     {
       t = 0; vy = 0;
@@ -77,8 +75,8 @@ public:
 
   void Jump()
   {
+    y += 0.01;
     vy = JUMP_V;
-    is_jump = true;
   }
 
   void AddVelocity(const int dir)

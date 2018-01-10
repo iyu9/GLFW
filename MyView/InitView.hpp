@@ -26,7 +26,7 @@ public:
   {
     GLScene::Start();
 
-    bmp = new BMP("Resources/sample.bmp");
+    bmp = new BMP("Resources/player.bmp");
 
     GLVec2 pos1 = { 0, 0 };
     GLVec2 siz1 = { 1, 1 };
@@ -57,8 +57,6 @@ public:
     std::cout << "(x, y) = " << "(" << physics.x << ", " << physics.y << ")" << std::endl;
     std::cout << "(vx, vy) = " << "(" << physics.vx << ", " << physics.vy << ")" << std::endl;
     actor->pos.y = physics.y;
-    actor->pos.x = physics.x;
-
     //std::cout << "(pos.x, pos.y) = " << "(" << actor->pos.x << ", " << actor->pos.y << ")" << std::endl;
 
     UpdateKeysInput();

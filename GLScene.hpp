@@ -4,47 +4,47 @@
 class GLScene
 {
 protected:
-  int siz;
+  int object_cnt;
   GLObject* objects[100];
 
 public:
   GLScene()
   {
-    siz = 0;
+    object_cnt = 0;
     Start();
   }
 
   void Search(const char* name)
   {
-    for (int idx = 0; idx < siz; idx++)
+    for (int idx = 0; idx < object_cnt; idx++)
     {
       //TBD...
     }
   }
 
-  void Push(GLObject* obj)
+  void AddScene(GLObject* obj)
   {
-    objects[siz] = obj;
-    siz++;
+    objects[object_cnt] = obj;
+    object_cnt++;
   }
 
   void Pop(GLObject* obj)
   {
-    for (int idx = 0; idx < siz; idx++)
+    for (int idx = 0; idx < object_cnt; idx++)
     {
       if (obj == objects[idx])
       {
         GLObject *removeObj = objects[idx];
         delete removeObj;
         removeObj = NULL;
-        siz--;
+        object_cnt--;
       }
     }
   }
 
   virtual bool Render()
   {
-    for (int idx = 0; idx < siz; idx++)
+    for (int idx = 0; idx < object_cnt; idx++)
     {
       objects[idx]->Render();
     }
@@ -58,7 +58,7 @@ public:
 
   virtual void Release()
   {
-    for (int idx = 0; idx < siz; idx++)
+    for (int idx = 0; idx < object_cnt; idx++)
     {
       delete objects[idx];
     }

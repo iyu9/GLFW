@@ -192,6 +192,7 @@
     <Image Include="..\..\Resources\sample.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\CMakeLists.txt" />
     <Text Include="..\..\Shaders\fshader.txt" />
     <Text Include="..\..\Shaders\vshader.txt" />
   </ItemGroup>

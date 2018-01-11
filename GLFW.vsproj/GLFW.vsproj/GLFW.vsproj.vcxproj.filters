@@ -119,5 +119,8 @@
     <Text Include="..\..\Shaders\vshader.txt">
       <Filter>リソース ファイル\Shaders</Filter>
     </Text>
+    <Text Include="..\..\CMakeLists.txt">
+      <Filter>リソース ファイル</Filter>
+    </Text>
   </ItemGroup>
 </Project>

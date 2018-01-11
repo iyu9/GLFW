@@ -1,7 +1,7 @@
 #ifndef __INITVIEW_HPP__
 #define __INITVIEW_HPP__
 
-//Check GameLogic
+//Use GameLogic
 #include "../GameLogic/Player.hpp"
 #include "../GameLogic/Physics.hpp"
 #include "../GameLogic/MessageWindow.hpp"
@@ -10,14 +10,18 @@ class InitView : public GLScene
 {
 private:
   GLObject* bg;
-  GLObject* actor;
+  GLObject* player;
+  GLObject* enemy1;
+  GLObject* enemy2;
 
   BMP* bmp_bg;
   BMP* bmp_chara;
 
-  Player player;
+  Player playerInfo;
+  Player enemyInfo;
+
   Physics physics;
-  MessageWindow msgwin;
+  MessageWindow msgwindow;
 
   double frameTime;
 
@@ -49,33 +53,52 @@ public:
     GLVec2 pos_actor = { 0, 0 };
     GLVec2 siz_actor = { 1, 1 };
 
-    actor = new GLObject(pos_actor, siz_actor);
-    actor->SetTexture(bmp_chara->texture);
-    Push(actor);
+    player = new GLObject(pos_actor, siz_actor);
+    player->SetTexture(bmp_chara->texture);
+    AddScene(player);
+
+    //add Enemy1 to scene
+    GLVec2 pos_enemy1 = { -1, 0 };
+    GLVec2 siz_enemy1 = { 0.5, 0.5 };
+
+    enemy1 = new GLObject(pos_enemy1, siz_enemy1);
+    enemy1->SetTexture(bmp_chara->texture);
+    AddScene(enemy1);
+
+    //add Enemy2 to scene
+    enemy2 = new GLObject(pos_enemy1, siz_enemy1);
+    enemy2->SetTexture(bmp_chara->texture);
+    AddScene(enemy2);
   }
 
   void Update() override
   {
     GLScene::Update();
 
-    if (siz <= 0) { return; }
+    if (object_cnt <= 0)
+    {
+      return;
+    }
 
     //for check log
     g_timer.Update();
     frameTime = g_timer.GetFrameTime();
 
-    //scrolled
-    actor->pos.y = (actor->pos.y > 1) ? -1 : actor->pos.y;
-    actor->pos.y = (actor->pos.y < -1) ? 1 : actor->pos.y;
-    actor->pos.x = (actor->pos.x > 1) ? -1 : actor->pos.x;
-    actor->pos.x = (actor->pos.x < -1) ? 1 : actor->pos.x;
+    //player scrolled
+    player->pos.y = (player->pos.y > 1) ? -1 : player->pos.y;
+    player->pos.y = (player->pos.y < -1) ? 1 : player->pos.y;
+    player->pos.x = (player->pos.x > 1) ? -1 : player->pos.x;
+    player->pos.x = (player->pos.x < -1) ? 1 : player->pos.x;
 
-    //physics test
+    //enemies scrolled
+    enemy1->pos.x = (enemy1->pos.x > 1) ? -1 : enemy1->pos.x + (2 * frameTime);
+    enemy2->pos.y = (enemy2->pos.y > 1) ? -1 : enemy2->pos.y + (2 * frameTime);
+
+    //physics gravity test
     physics.Update();
     std::cout << "(x, y) = " << "(" << physics.x << ", " << physics.y << ")" << std::endl;
     std::cout << "(vx, vy) = " << "(" << physics.vx << ", " << physics.vy << ")" << std::endl;
-    actor->pos.y = physics.y;
-    //std::cout << "(pos.x, pos.y) = " << "(" << actor->pos.x << ", " << actor->pos.y << ")" << std::endl;
+    player->pos.y = physics.y;
 
     UpdateKeysInput();
   }
@@ -85,22 +108,22 @@ public:
     //directions
     if (g_keyInput.GetKey(GLFW_KEY_RIGHT))
     {
-      actor->pos.x += 2 * frameTime;
+      player->pos.x += 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_LEFT))
     {
-      actor->pos.x -= 2 * frameTime;
+      player->pos.x -= 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_UP))
     {
-      actor->pos.y += 2 * frameTime;
+      player->pos.y += 2 * frameTime;
     }
     if (g_keyInput.GetKey(GLFW_KEY_DOWN))
     {
-      actor->pos.y -= 2 * frameTime;
+      player->pos.y -= 2 * frameTime;
     }
 
-    //keys
+    //actions
     if (g_keyInput.GetKey(GLFW_KEY_Z))
     {
       physics.Jump();
@@ -123,7 +146,10 @@ public:
   {
     GLScene::Release();
 
-    delete actor;
+    delete player;
+    delete enemy1;
+    delete enemy2;
+
     delete bmp_chara;
   }
 };

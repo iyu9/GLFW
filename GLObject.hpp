@@ -12,13 +12,15 @@ namespace RenderType
 
 class GLObject
 {
+public:
   int id;
   int type;
   int order;
   char* name;
   GLuint textureID;
 
-public:
+  bool is_visible;
+
   GLVec2 siz;
   GLVec2 pos;
   GLColor color;
@@ -27,6 +29,7 @@ public:
   {
     siz = _siz;
     pos = _pos;
+    is_visible = true;
   }
 
   void SetType(GLint _type)
@@ -42,6 +45,11 @@ public:
 
   bool Render()
   {
+    if (!is_visible)
+    {
+      return false;
+    }
+
     switch (type)
     {
     case RenderType::Rect:

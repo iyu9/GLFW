@@ -59,6 +59,11 @@ public:
     id = id_;
     name = name_;
   }
+
+  void SetTemplate(int type)
+  {
+    //
+  }
 };
 
 class PlayerList

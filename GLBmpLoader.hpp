@@ -11,12 +11,22 @@ public:
   GLuint texture;
   void SetTexture();
   BMP(const char *FileName);
+  ~BMP();
+  void Release();
 };
 
 BMP::BMP(const char *FileName)
 {
   Load(FileName);
   SetTexture();
+}
+
+BMP::~BMP()
+{
+  if (Data != NULL)
+  {
+    delete[] Data;
+  }
 }
 
 bool BMP::Load(const char *FileName)
@@ -96,6 +106,11 @@ void BMP::SetTexture()
   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   glTexImage2D(GL_TEXTURE_2D, 0, 3, sizeX, sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, Data);
+}
+
+void BMP::Release()
+{
+  delete[] Data;
 }
 
 #endif

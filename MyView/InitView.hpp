@@ -150,6 +150,7 @@ public:
     delete enemy1;
     delete enemy2;
 
+    delete bmp_bg;
     delete bmp_chara;
   }
 };

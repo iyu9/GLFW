@@ -6,6 +6,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <string>
+#include "./Common/common.hpp"
 
 //include My GL Classes
 #include "GLVec.hpp"
@@ -46,7 +47,7 @@ int main()
 {
   if (!glfwInit())
   {
-    std::cout << "init failed";
+    LOG("init failed");
     MessageWait();
     return 1;
   }
@@ -56,7 +57,7 @@ int main()
 
   if (!window)
   {
-    std::cout << "create window failed";
+    LOG("create window failed");
     MessageWait();
     glfwTerminate();
     return 1;

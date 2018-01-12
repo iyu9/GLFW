@@ -146,7 +146,7 @@ public:
       physics.Jump();
     }
 
-    //rotate
+    //check angle
     if (g_keyInput.GetKey(GLFW_KEY_W))
     {
       glRotatef(1, 0, 1, 0);
@@ -157,11 +157,19 @@ public:
     }
     if (g_keyInput.GetKey(GLFW_KEY_S))
     {
-      glRotatef(-11, 0, 1, 0);
+      glRotatef(-1, 0, 1, 0);
     }
     if (g_keyInput.GetKey(GLFW_KEY_D))
     {
       glRotatef(-1, 1, 0, 0);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_O))
+    {
+      glTranslatef(0, 0, 1);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_P))
+    {
+      glTranslatef(0, 0, -1);
     }
   }
 

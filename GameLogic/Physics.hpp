@@ -31,6 +31,11 @@ class Physics
 private:
   void CheckFall()
   {
+    if (is_unuse_gravity)
+    {
+      return;
+    }
+
     if (y > FLOOR)
     {
       t = 0;
@@ -62,6 +67,7 @@ private:
   }
 
 public:
+  bool is_unuse_gravity;
   bool is_fall;
   bool is_jump;
 
@@ -76,6 +82,7 @@ public:
   {
     is_fall = false;
     is_jump = false;
+    is_unuse_gravity = false;
   }
 
   void Jump()

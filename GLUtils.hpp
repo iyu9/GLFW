@@ -98,7 +98,6 @@ namespace GLUtils
     };
 
     glPushMatrix();
-
     glBegin(GL_TRIANGLES);
 
     //forward

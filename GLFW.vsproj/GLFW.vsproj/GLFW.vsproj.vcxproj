@@ -75,8 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\mobiledev\Desktop\glew-2.1.0-win32\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\mobiledev\Desktop\glew-2.1.0-win32\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\mobiledev\Source\Repos\GLFW\deps\glfw-3.2.1.bin.WIN64\include;C:\Users\mobiledev\Source\Repos\GLFW\deps\glew-2.1.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\mobiledev\Source\Repos\GLFW\deps\glfw-3.2.1.bin.WIN64\lib-vc2013;C:\Users\mobiledev\Source\Repos\GLFW\deps\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>

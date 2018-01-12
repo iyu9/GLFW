@@ -54,7 +54,8 @@ public:
     GLVec2 siz_actor = { 1, 1 };
 
     player = new GLObject(pos_actor, siz_actor);
-    player->SetTexture(bmp_chara->texture);
+    //player->Set2DTexture(bmp_chara->texture);
+    player->Set3DCube();
     AddScene(player);
 
     //add Enemy1 to scene
@@ -62,12 +63,12 @@ public:
     GLVec2 siz_enemy1 = { 0.5, 0.5 };
 
     enemy1 = new GLObject(pos_enemy1, siz_enemy1);
-    enemy1->SetTexture(bmp_chara->texture);
+    enemy1->Set2DTexture(bmp_chara->texture);
     AddScene(enemy1);
 
     //add Enemy2 to scene
     enemy2 = new GLObject(pos_enemy1, siz_enemy1);
-    enemy2->SetTexture(bmp_chara->texture);
+    enemy2->Set2DTexture(bmp_chara->texture);
     AddScene(enemy2);
   }
 
@@ -139,6 +140,28 @@ public:
     if (g_keyInput.GetKey(GLFW_KEY_V))
     {
       physics.AddVelocity(Dir2D::RIGHT);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_SPACE))
+    {
+      physics.Jump();
+    }
+
+    //rotate
+    if (g_keyInput.GetKey(GLFW_KEY_W))
+    {
+      glRotatef(1, 0, 1, 0);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_A))
+    {
+      glRotatef(1, 1, 0, 0);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_S))
+    {
+      glRotatef(-11, 0, 1, 0);
+    }
+    if (g_keyInput.GetKey(GLFW_KEY_D))
+    {
+      glRotatef(-1, 1, 0, 0);
     }
   }
 

@@ -37,7 +37,12 @@ public:
     type = _type;
   }
 
-  void SetTexture(GLuint _textureID)
+  void Set3DCube()
+  {
+    type = RenderType::Cube;
+  }
+
+  void Set2DTexture(GLuint _textureID)
   {
     type = RenderType::Texture;
     textureID = _textureID;

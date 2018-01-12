@@ -40,18 +40,16 @@ public:
     bmp_chara = new BMP("Resources/player.bmp");
 
     //add Background to scene
-    /*
     GLVec2 pos_bg = { 0, 0 };
     GLVec2 siz_bg = { 2, 2 };
 
     bg = new GLObject(pos_bg, siz_bg);
-    bg->SetTexture(bmp_bg->texture);
-    Push(bg);
-    */
+    bg->Set2DTexture(bmp_bg->texture);
+    AddScene(bg);
 
     //add Actor to scene
     GLVec2 pos_actor = { 0, 0 };
-    GLVec2 siz_actor = { 1, 1 };
+    GLVec2 siz_actor = { 0.5, 0.5 };
 
     player = new GLObject(pos_actor, siz_actor);
     player->Set2DTexture(bmp_chara->texture);
@@ -146,7 +144,7 @@ public:
       physics.Jump();
     }
 
-    //check angle
+    //check rotation and translate
     if (g_keyInput.GetKey(GLFW_KEY_W))
     {
       glRotatef(1, 0, 1, 0);
@@ -177,6 +175,7 @@ public:
   {
     GLScene::Release();
 
+	delete bg;
     delete player;
     delete enemy1;
     delete enemy2;

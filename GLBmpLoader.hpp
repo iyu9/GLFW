@@ -4,8 +4,8 @@
 class BMP
 {
 public:
-  unsigned long sizeX;
-  unsigned long sizeY;
+  int sizeX;
+  int sizeY;
   char *Data;
   bool Load(const char *filename);
   GLuint texture;
@@ -38,7 +38,8 @@ bool BMP::Load(const char *FileName)
   unsigned short int bpp;
   char temp;
 
-  if ((File = fopen(FileName, "rb")) == NULL){
+  if ((File = fopen(FileName, "rb")) == NULL)
+  {
     printf("No File");
     return false;
   }
@@ -46,15 +47,18 @@ bool BMP::Load(const char *FileName)
   //Seek BMP Width
   fseek(File, 18, SEEK_CUR);
 
-  if ((i = fread(&sizeX, 4, 1, File)) != 1) {
+  if ((i = fread(&sizeX, 4, 1, File)) != 1)
+  {
     printf("Read Width Error");
     return false;
   }
+  std::cout << "sizeX = " << sizeX << std::endl;
 
   if ((i = fread(&sizeY, 4, 1, File)) != 1) {
     printf("Read Height Error");
     return false;
   }
+  std::cout << "sizeY = " << sizeY << std::endl;
 
   //Calc BMP Image Size
   size = sizeX * sizeY * 3;

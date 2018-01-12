@@ -36,7 +36,7 @@ public:
   {
     GLScene::Start();
 
-    //bmp_bg = new BMP("Resources/sample.bmp");
+    bmp_bg = new BMP("Resources/sample.bmp");
     bmp_chara = new BMP("Resources/player.bmp");
 
     //add Background to scene
@@ -54,8 +54,8 @@ public:
     GLVec2 siz_actor = { 1, 1 };
 
     player = new GLObject(pos_actor, siz_actor);
-    //player->Set2DTexture(bmp_chara->texture);
-    player->Set3DCube();
+    player->Set2DTexture(bmp_chara->texture);
+    //player->Set3DCube();
     AddScene(player);
 
     //add Enemy1 to scene

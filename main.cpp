@@ -9,16 +9,7 @@
 #include "Common/common.hpp"
 
 //include My GL Classes
-#include "GLComponents/GLVec.hpp"
-#include "GLComponents/GLUtils.hpp"
-
-#include "GLComponents/GLInput.hpp"
-#include "GLComponents/GLObject.hpp"
-#include "GLComponents/GLScene.hpp"
-#include "GLComponents/GLShader.hpp"
-#include "GLComponents/GLBuiltInCallback.hpp"
-#include "GLComponents/GLBmpLoader.hpp"
-#include "GLComponents/GLTimer.hpp"
+#include "GLComponents/GLComponents.hpp"
 
 //include My Scenes
 #include "MyView/InitView.hpp"
@@ -79,7 +70,7 @@ int main()
     glfwPollEvents();
   }
 
-  //delete currentScene;
+  delete currentScene;
 
   glfwTerminate();
   return 0;

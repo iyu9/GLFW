@@ -4,8 +4,6 @@
 #endif
 
 #include <GLFW/glfw3.h>
-#include <iostream>
-#include <string>
 #include "Common/common.hpp"
 
 //include My GL Classes

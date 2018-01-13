@@ -6,19 +6,19 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <string>
-#include "./Common/common.hpp"
+#include "Common/common.hpp"
 
 //include My GL Classes
-#include "GLVec.hpp"
-#include "GLUtils.hpp"
+#include "GLComponents/GLVec.hpp"
+#include "GLComponents/GLUtils.hpp"
 
-#include "GLInput.hpp"
-#include "GLObject.hpp"
-#include "GLScene.hpp"
-#include "GLShader.hpp"
-#include "GLBuiltInCallback.hpp"
-#include "GLBmpLoader.hpp"
-#include "GLTimer.hpp"
+#include "GLComponents/GLInput.hpp"
+#include "GLComponents/GLObject.hpp"
+#include "GLComponents/GLScene.hpp"
+#include "GLComponents/GLShader.hpp"
+#include "GLComponents/GLBuiltInCallback.hpp"
+#include "GLComponents/GLBmpLoader.hpp"
+#include "GLComponents/GLTimer.hpp"
 
 //include My Scenes
 #include "MyView/InitView.hpp"

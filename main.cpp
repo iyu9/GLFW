@@ -4,7 +4,7 @@
 #endif
 
 #include <GLFW/glfw3.h>
-#include "Common/common.hpp"
+#include "Common/Common.hpp"
 
 //include My GL Classes
 #include "GLComponents/GLComponents.hpp"

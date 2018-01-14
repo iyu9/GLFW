@@ -6,7 +6,7 @@
 #include <string>
 #include <list>
 
-#define LOG(X) (std::cout << X)
-#define REP(X) (for(int i = 0; i < X; i++))
+#define LOG(X) std::cout << X
+#define REP(X) for (int i = 0; i < X; i++)
 
 #endif

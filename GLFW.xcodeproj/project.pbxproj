@@ -7,17 +7,21 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D1AEF1BA1FAE036E004D8B62 /* GLBmpLoader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLBmpLoader.hpp; sourceTree = "<group>"; };
-		D1AEF1BB1FAE036E004D8B62 /* sample.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = sample.bmp; sourceTree = "<group>"; };
-		D1AEF1BC1FAE036E004D8B62 /* GLShader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLShader.hpp; sourceTree = "<group>"; };
-		D1AEF1BD1FAE036E004D8B62 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		D1AEF1BE1FAE036E004D8B62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D1AEF1BF1FAE036E004D8B62 /* GLUtils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLUtils.hpp; sourceTree = "<group>"; };
-		D1AEF1C01FAE036E004D8B62 /* fshader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fshader.txt; sourceTree = "<group>"; };
-		D1AEF1C11FAE036E004D8B62 /* GLBuiltInCallback.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLBuiltInCallback.hpp; sourceTree = "<group>"; };
-		D1AEF1C21FAE036E004D8B62 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
-		D1AEF1C31FAE036E004D8B62 /* GLVec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GLVec.hpp; sourceTree = "<group>"; };
-		D1AEF1C51FAE036E004D8B62 /* vshader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vshader.txt; sourceTree = "<group>"; };
+		D1672B30200B033700BE43FE /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		D1672B31200B033700BE43FE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D1672B32200B033700BE43FE /* Common */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Common; sourceTree = "<group>"; };
+		D1672B33200B033700BE43FE /* Testing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Testing; sourceTree = "<group>"; };
+		D1672B34200B033700BE43FE /* MyView */ = {isa = PBXFileReference; lastKnownFileType = folder; path = MyView; sourceTree = "<group>"; };
+		D1672B35200B033700BE43FE /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		D1672B36200B033700BE43FE /* GLFW.vsproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GLFW.vsproj; sourceTree = "<group>"; };
+		D1672B37200B033700BE43FE /* Shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shaders; sourceTree = "<group>"; };
+		D1672B38200B033700BE43FE /* tags */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tags; sourceTree = "<group>"; };
+		D1672B39200B033700BE43FE /* GameLogic */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GameLogic; sourceTree = "<group>"; };
+		D1672B3A200B033700BE43FE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D1672B3B200B033700BE43FE /* makefile_linux */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = makefile_linux; sourceTree = "<group>"; };
+		D1672B3C200B033800BE43FE /* GLComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GLComponents; sourceTree = "<group>"; };
+		D1672B3D200B033800BE43FE /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
+		D1672B3E200B033800BE43FE /* glew32.dll */ = {isa = PBXFileReference; lastKnownFileType = file; path = glew32.dll; sourceTree = "<group>"; };
 		D1AEF1C61FAE081E004D8B62 /* RunApp */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = RunApp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -25,18 +29,22 @@
 		D1AEF1AF1FAE02CD004D8B62 = {
 			isa = PBXGroup;
 			children = (
+				D1672B30200B033700BE43FE /* CMakeLists.txt */,
+				D1672B32200B033700BE43FE /* Common */,
+				D1672B39200B033700BE43FE /* GameLogic */,
+				D1672B3C200B033800BE43FE /* GLComponents */,
+				D1672B3E200B033800BE43FE /* glew32.dll */,
+				D1672B36200B033700BE43FE /* GLFW.vsproj */,
+				D1672B31200B033700BE43FE /* main.cpp */,
+				D1672B3D200B033800BE43FE /* makefile */,
+				D1672B3B200B033700BE43FE /* makefile_linux */,
+				D1672B34200B033700BE43FE /* MyView */,
+				D1672B3A200B033700BE43FE /* README.md */,
+				D1672B35200B033700BE43FE /* Resources */,
+				D1672B37200B033700BE43FE /* Shaders */,
+				D1672B38200B033700BE43FE /* tags */,
+				D1672B33200B033700BE43FE /* Testing */,
 				D1AEF1C61FAE081E004D8B62 /* RunApp */,
-				D1AEF1C01FAE036E004D8B62 /* fshader.txt */,
-				D1AEF1BA1FAE036E004D8B62 /* GLBmpLoader.hpp */,
-				D1AEF1C11FAE036E004D8B62 /* GLBuiltInCallback.hpp */,
-				D1AEF1BC1FAE036E004D8B62 /* GLShader.hpp */,
-				D1AEF1BF1FAE036E004D8B62 /* GLUtils.hpp */,
-				D1AEF1C31FAE036E004D8B62 /* GLVec.hpp */,
-				D1AEF1BD1FAE036E004D8B62 /* main.cpp */,
-				D1AEF1C21FAE036E004D8B62 /* makefile */,
-				D1AEF1BE1FAE036E004D8B62 /* README.md */,
-				D1AEF1BB1FAE036E004D8B62 /* sample.bmp */,
-				D1AEF1C51FAE036E004D8B62 /* vshader.txt */,
 			);
 			sourceTree = "<group>";
 		};

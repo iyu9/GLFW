@@ -3,76 +3,84 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-BMP	GLBmpLoader.hpp	/^BMP::BMP(const char *FileName)$/;"	f	class:BMP
-BMP	GLBmpLoader.hpp	/^class BMP$/;"	c
+!_TAG_PROGRAM_VERSION	5.8	//
+ADD_VELOCITY	GameLogic/Physics.hpp	/^  const double ADD_VELOCITY = 0.01;$/;"	m	namespace:PhysicsDef
+AddScene	GLComponents/GLScene.hpp	/^  void AddScene(GLObject* obj)$/;"	f	class:GLScene
+AddVelocity	GameLogic/Physics.hpp	/^  void AddVelocity(const int dir)$/;"	f	class:Physics
+BMP	GLComponents/GLBmpLoader.hpp	/^BMP::BMP(const char *FileName)$/;"	f	class:BMP
+BMP	GLComponents/GLBmpLoader.hpp	/^class BMP$/;"	c
 CheckFall	GameLogic/Physics.hpp	/^  void CheckFall()$/;"	f	class:Physics
-CheckRenderTexture	GLUtils.hpp	/^  static void CheckRenderTexture()$/;"	f	namespace:GLUtils
+CheckRenderTexture	GLComponents/GLUtils.hpp	/^  static void CheckRenderTexture()$/;"	f	namespace:GLUtils
 CleanMap	GameLogic/GridMap.hpp	/^  void CleanMap()$/;"	f	class:GridMap
 Close	GameLogic/MessageWindow.hpp	/^  void Close()$/;"	f	class:MessageWindow
-CompileAndLinkShader	GLShader.hpp	/^void CompileAndLinkShader()$/;"	f
+CompileAndLinkShader	GLComponents/GLShader.hpp	/^void CompileAndLinkShader()$/;"	f
 ConfigView	MyView/ConfigView.hpp	/^  ConfigView(){}$/;"	f	class:ConfigView
 ConfigView	MyView/ConfigView.hpp	/^class ConfigView : public GLScene$/;"	c
-Cube	GLObject.hpp	/^  const int Cube = 4;$/;"	m	namespace:RenderType
-DOWN	GameLogic/Physics.hpp	/^  const int DOWN = 3;$/;"	m	namespace:Direction2D
+Cube	GLComponents/GLObject.hpp	/^  const int Cube = 4;$/;"	m	namespace:RenderType
+DOWN	GameLogic/Physics.hpp	/^  const int DOWN  = 0x008;$/;"	m	namespace:Dir2D
 DW_STAIRS	GameLogic/GridMap.hpp	/^  const int DW_STAIRS = 2;$/;"	m	namespace:MapChip
-Data	GLBmpLoader.hpp	/^  char *Data;$/;"	m	class:BMP
-Direction2D	GameLogic/Physics.hpp	/^namespace Direction2D$/;"	n
-DrawCube	GLUtils.hpp	/^  static void DrawCube(GLVec3 pos, GLVec3 siz)$/;"	f	namespace:GLUtils
-DrawCube	GLUtils.hpp	/^  static void DrawCube(GLdouble x, GLdouble y, GLdouble z, GLdouble w, GLdouble h, GLdouble u)$/;"	f	namespace:GLUtils
-DrawLine	GLUtils.hpp	/^  static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)$/;"	f	namespace:GLUtils
-DrawLine	GLUtils.hpp	/^  static void DrawLine(GLdouble start_x, GLdouble start_y, GLdouble end_x, GLdouble end_y, GLdouble width)$/;"	f	namespace:GLUtils
-DrawPoint	GLUtils.hpp	/^  static void DrawPoint(GLVec2 pos, GLint width)$/;"	f	namespace:GLUtils
-DrawPoint	GLUtils.hpp	/^  static void DrawPoint(GLdouble x, GLdouble y, GLdouble width)$/;"	f	namespace:GLUtils
-DrawRect	GLUtils.hpp	/^  static void DrawRect(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
-DrawRect	GLUtils.hpp	/^  static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
-DrawShader	GLUtils.hpp	/^  static void DrawShader(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
-DrawShader	GLUtils.hpp	/^  static void DrawShader(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
-DrawTexture	GLUtils.hpp	/^  static void DrawTexture(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
-DrawTexture	GLUtils.hpp	/^  static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
-FLOOR	GameLogic/Physics.hpp	/^  const double FLOOR = -1000000;$/;"	m	namespace:PhysicsDef
-Fall	GameLogic/Physics.hpp	/^  void Fall(double deltaFrame)$/;"	f	class:Physics
-GLColor	GLVec.hpp	/^struct GLColor$/;"	s
-GLInput	GLInput.hpp	/^  GLInput()$/;"	f	class:GLInput
-GLInput	GLInput.hpp	/^class GLInput$/;"	c
-GLIntVec2	GLVec.hpp	/^struct GLIntVec2$/;"	s
-GLIntVec3	GLVec.hpp	/^struct GLIntVec3$/;"	s
-GLIntVec4	GLVec.hpp	/^struct GLIntVec4$/;"	s
-GLObject	GLObject.hpp	/^  GLObject(GLVec2 _pos, GLVec2 _siz)$/;"	f	class:GLObject
-GLObject	GLObject.hpp	/^class GLObject$/;"	c
-GLPoint	GLVec.hpp	/^struct GLPoint$/;"	s
-GLScene	GLScene.hpp	/^  GLScene()$/;"	f	class:GLScene
-GLScene	GLScene.hpp	/^class GLScene$/;"	c
-GLTimer	GLTimer.hpp	/^  GLTimer()$/;"	f	class:GLTimer
-GLTimer	GLTimer.hpp	/^class GLTimer$/;"	c
-GLUtils	GLUtils.hpp	/^namespace GLUtils$/;"	n
-GLVec2	GLVec.hpp	/^struct GLVec2$/;"	s
-GLVec3	GLVec.hpp	/^struct GLVec3$/;"	s
-GLVec4	GLVec.hpp	/^struct GLVec4$/;"	s
-GRV	GameLogic/Physics.hpp	/^  const double GRV = 0.001;$/;"	m	namespace:PhysicsDef
-GetFrameTime	GLTimer.hpp	/^  GLdouble GetFrameTime()$/;"	f	class:GLTimer
-GetKey	GLInput.hpp	/^  bool GetKey(GLint key)$/;"	f	class:GLInput
-GetKeyDown	GLInput.hpp	/^  bool GetKeyDown(GLint key)$/;"	f	class:GLInput
-GetKeyRepeat	GLInput.hpp	/^  bool GetKeyRepeat(GLint key)$/;"	f	class:GLInput
-GetKeyUp	GLInput.hpp	/^  bool GetKeyUp(GLint key)$/;"	f	class:GLInput
+Data	GLComponents/GLBmpLoader.hpp	/^  char *Data;$/;"	m	class:BMP
+Dir2D	GameLogic/Physics.hpp	/^namespace Dir2D$/;"	n
+DrawCube	GLComponents/GLUtils.hpp	/^  static void DrawCube(GLVec3 pos, GLVec3 siz)$/;"	f	namespace:GLUtils
+DrawCube	GLComponents/GLUtils.hpp	/^  static void DrawCube(GLdouble x, GLdouble y, GLdouble z, GLdouble w, GLdouble h, GLdouble u)$/;"	f	namespace:GLUtils
+DrawLine	GLComponents/GLUtils.hpp	/^  static void DrawLine(GLVec2 start_pos, GLVec2 end_pos, GLint width)$/;"	f	namespace:GLUtils
+DrawLine	GLComponents/GLUtils.hpp	/^  static void DrawLine(GLdouble start_x, GLdouble start_y, GLdouble end_x, GLdouble end_y, GLdouble width)$/;"	f	namespace:GLUtils
+DrawPoint	GLComponents/GLUtils.hpp	/^  static void DrawPoint(GLVec2 pos, GLint width)$/;"	f	namespace:GLUtils
+DrawPoint	GLComponents/GLUtils.hpp	/^  static void DrawPoint(GLdouble x, GLdouble y, GLdouble width)$/;"	f	namespace:GLUtils
+DrawRect	GLComponents/GLUtils.hpp	/^  static void DrawRect(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawRect	GLComponents/GLUtils.hpp	/^  static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+DrawShader	GLComponents/GLUtils.hpp	/^  static void DrawShader(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawShader	GLComponents/GLUtils.hpp	/^  static void DrawShader(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+DrawTexture	GLComponents/GLUtils.hpp	/^  static void DrawTexture(GLVec2 pos, GLVec2 siz)$/;"	f	namespace:GLUtils
+DrawTexture	GLComponents/GLUtils.hpp	/^  static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)$/;"	f	namespace:GLUtils
+Enemy	GameLogic/Enemy.hpp	/^  Enemy(){}$/;"	f	class:Enemy
+Enemy	GameLogic/Enemy.hpp	/^  Enemy(int id_, std::string name_)$/;"	f	class:Enemy
+Enemy	GameLogic/Enemy.hpp	/^class Enemy : public Actor$/;"	c
+Equipment	GameLogic/Player.hpp	/^class Equipment$/;"	c
+FLOOR	GameLogic/Physics.hpp	/^  const double FLOOR  = -0.5;$/;"	m	namespace:PhysicsDef
+GLColor	GLComponents/GLVec.hpp	/^struct GLColor$/;"	s
+GLInput	GLComponents/GLInput.hpp	/^  GLInput()$/;"	f	class:GLInput
+GLInput	GLComponents/GLInput.hpp	/^class GLInput$/;"	c
+GLIntVec2	GLComponents/GLVec.hpp	/^struct GLIntVec2$/;"	s
+GLIntVec3	GLComponents/GLVec.hpp	/^struct GLIntVec3$/;"	s
+GLIntVec4	GLComponents/GLVec.hpp	/^struct GLIntVec4$/;"	s
+GLObject	GLComponents/GLObject.hpp	/^  GLObject(GLVec2 _pos, GLVec2 _siz)$/;"	f	class:GLObject
+GLObject	GLComponents/GLObject.hpp	/^class GLObject$/;"	c
+GLPoint	GLComponents/GLVec.hpp	/^struct GLPoint$/;"	s
+GLScene	GLComponents/GLScene.hpp	/^  GLScene()$/;"	f	class:GLScene
+GLScene	GLComponents/GLScene.hpp	/^class GLScene$/;"	c
+GLTimer	GLComponents/GLTimer.hpp	/^  GLTimer()$/;"	f	class:GLTimer
+GLTimer	GLComponents/GLTimer.hpp	/^class GLTimer$/;"	c
+GLUtils	GLComponents/GLUtils.hpp	/^namespace GLUtils$/;"	n
+GLVec2	GLComponents/GLVec.hpp	/^struct GLVec2$/;"	s
+GLVec3	GLComponents/GLVec.hpp	/^struct GLVec3$/;"	s
+GLVec4	GLComponents/GLVec.hpp	/^struct GLVec4$/;"	s
+GRV	GameLogic/Physics.hpp	/^  const double GRV    = 0.001;$/;"	m	namespace:PhysicsDef
+GetFrameTime	GLComponents/GLTimer.hpp	/^  GLdouble GetFrameTime()$/;"	f	class:GLTimer
+GetKey	GLComponents/GLInput.hpp	/^  bool GetKey(GLint key)$/;"	f	class:GLInput
+GetKeyDown	GLComponents/GLInput.hpp	/^  bool GetKeyDown(GLint key)$/;"	f	class:GLInput
+GetKeyRepeat	GLComponents/GLInput.hpp	/^  bool GetKeyRepeat(GLint key)$/;"	f	class:GLInput
+GetKeyUp	GLComponents/GLInput.hpp	/^  bool GetKeyUp(GLint key)$/;"	f	class:GLInput
 GetMessage	GameLogic/MessageWindow.hpp	/^  std::string GetMessage()$/;"	f	class:MessageWindow
 GetName	GameLogic/Menu.hpp	/^  std::string GetName()$/;"	f	class:Menu
-GetTime	GLTimer.hpp	/^  GLdouble GetTime()$/;"	f	class:GLTimer
+GetTime	GLComponents/GLTimer.hpp	/^  GLdouble GetTime()$/;"	f	class:GLTimer
 GridMap	GameLogic/GridMap.hpp	/^  GridMap(int siz_x_, int siz_y_, int pos_x_, int pos_y_)$/;"	f	class:GridMap
 GridMap	GameLogic/GridMap.hpp	/^class GridMap$/;"	c
 InitView	MyView/InitView.hpp	/^  InitView() : GLScene()$/;"	f	class:InitView
 InitView	MyView/InitView.hpp	/^class InitView : public GLScene$/;"	c
 IsEndCharIndex	GameLogic/MessageWindow.hpp	/^  bool IsEndCharIndex()$/;"	f	class:MessageWindow
 IsEndMessageWindow	GameLogic/MessageWindow.hpp	/^  bool IsEndMessageWindow()$/;"	f	class:MessageWindow
-JUMP_VY	GameLogic/Physics.hpp	/^  const double JUMP_VY = 0.001;$/;"	m	namespace:PhysicsDef
+JMP_LIM	GameLogic/Physics.hpp	/^  const int JMP_LIM = 9;$/;"	m	namespace:PhysicsDef
+JUMP_V	GameLogic/Physics.hpp	/^  const double JUMP_V = 0.05;$/;"	m	namespace:PhysicsDef
 Jump	GameLogic/Physics.hpp	/^  void Jump()$/;"	f	class:Physics
-LEFT	GameLogic/Physics.hpp	/^  const int LEFT = 2;$/;"	m	namespace:Direction2D
-Link	GLShader.hpp	/^void Link(GLuint prog)$/;"	f
-Load	GLBmpLoader.hpp	/^bool BMP::Load(const char *FileName)$/;"	f	class:BMP
-MAX_MAP_H	GameLogic/GridMap.hpp	6;"	d
-MAX_MAP_W	GameLogic/GridMap.hpp	5;"	d
-MENU_MAX	GameLogic/Menu.hpp	4;"	d
-MSG_MAX	GameLogic/MessageWindow.hpp	5;"	d
+LEFT	GameLogic/Physics.hpp	/^  const int LEFT  = 0x004;$/;"	m	namespace:Dir2D
+LOG	Common/common.hpp	/^#define LOG(/;"	d
+Link	GLComponents/GLShader.hpp	/^void Link(GLuint prog)$/;"	f
+Load	GLComponents/GLBmpLoader.hpp	/^bool BMP::Load(const char *FileName)$/;"	f	class:BMP
+MAX_MAP_H	GameLogic/GridMap.hpp	/^#define MAX_MAP_H /;"	d
+MAX_MAP_W	GameLogic/GridMap.hpp	/^#define MAX_MAP_W /;"	d
+MENU_MAX	GameLogic/Menu.hpp	/^#define MENU_MAX /;"	d
+MSG_MAX	GameLogic/MessageWindow.hpp	/^#define MSG_MAX /;"	d
 MWOption	GameLogic/MessageWindow.hpp	/^namespace MWOption$/;"	n
 MainLoop	main.cpp	/^void MainLoop()$/;"	f
 MainView	MyView/MainView.hpp	/^  MainView(){}$/;"	f	class:MainView
@@ -83,13 +91,13 @@ Menu	GameLogic/Menu.hpp	/^class Menu$/;"	c
 MessageWait	main.cpp	/^void MessageWait()$/;"	f
 MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow() {}$/;"	f	class:MessageWindow
 MessageWindow	GameLogic/MessageWindow.hpp	/^class MessageWindow$/;"	c
+N	GameLogic/Physics.hpp	/^  const double N = 0.05;$/;"	m	namespace:PhysicsDef
 NONE	GameLogic/GridMap.hpp	/^  const int NONE = 0;$/;"	m	namespace:MapChip
 Next	GameLogic/Menu.hpp	/^  void Next()$/;"	f	class:Menu
 NextMessage	GameLogic/MessageWindow.hpp	/^  void NextMessage()$/;"	f	class:MessageWindow
 NextSubString	GameLogic/MessageWindow.hpp	/^  void NextSubString()$/;"	f	class:MessageWindow
-OnClickMenu	GameLogic/Menu.hpp	/^  void OnClickMenu()$/;"	f	class:Menu
 Open	GameLogic/MessageWindow.hpp	/^  void Open()$/;"	f	class:MessageWindow
-PLAYER_LIST_MAX	GameLogic/Player.hpp	4;"	d
+PLAYER_LIST_MAX	GameLogic/Player.hpp	/^#define PLAYER_LIST_MAX /;"	d
 Physics	GameLogic/Physics.hpp	/^  Physics()$/;"	f	class:Physics
 Physics	GameLogic/Physics.hpp	/^class Physics$/;"	c
 PhysicsDef	GameLogic/Physics.hpp	/^namespace PhysicsDef$/;"	n
@@ -98,169 +106,208 @@ Player	GameLogic/Player.hpp	/^  Player(int id_, std::string name_)$/;"	f	class:P
 Player	GameLogic/Player.hpp	/^class Player$/;"	c
 PlayerList	GameLogic/Player.hpp	/^  PlayerList(int siz_)$/;"	f	class:PlayerList
 PlayerList	GameLogic/Player.hpp	/^class PlayerList$/;"	c
-Polygon	GLObject.hpp	/^  const int Polygon = 2;$/;"	m	namespace:RenderType
-Pop	GLScene.hpp	/^  void Pop(GLObject* obj)$/;"	f	class:GLScene
+Polygon	GLComponents/GLObject.hpp	/^  const int Polygon = 2;$/;"	m	namespace:RenderType
+Pop	GLComponents/GLScene.hpp	/^  void Pop(GLObject* obj)$/;"	f	class:GLScene
 Pop	GameLogic/Player.hpp	/^  bool Pop()$/;"	f	class:PlayerList
 Prev	GameLogic/Menu.hpp	/^  void Prev()$/;"	f	class:Menu
 PrevMessage	GameLogic/MessageWindow.hpp	/^  void PrevMessage()$/;"	f	class:MessageWindow
-Push	GLScene.hpp	/^  void Push(GLObject* obj)$/;"	f	class:GLScene
 Push	GameLogic/Player.hpp	/^  bool Push(Player player)$/;"	f	class:PlayerList
-RIGHT	GameLogic/Physics.hpp	/^  const int RIGHT = 1;$/;"	m	namespace:Direction2D
-ReadShaderFileCompile	GLShader.hpp	/^void ReadShaderFileCompile(GLuint Shader, const char *File)$/;"	f
-Rect	GLObject.hpp	/^  const int Rect = 0;$/;"	m	namespace:RenderType
-Release	GLScene.hpp	/^  virtual void Release()$/;"	f	class:GLScene
-Render	GLObject.hpp	/^  bool Render()$/;"	f	class:GLObject
-Render	GLScene.hpp	/^  virtual bool Render()$/;"	f	class:GLScene
-RenderType	GLObject.hpp	/^namespace RenderType$/;"	n
-ScanKeyState	GLInput.hpp	/^  void ScanKeyState(GLint key, GLint action)$/;"	f	class:GLInput
-ScanMouseState	GLInput.hpp	/^  void ScanMouseState(GLdouble x, GLdouble y)$/;"	f	class:GLInput
-Search	GLScene.hpp	/^  void Search(const char* name)$/;"	f	class:GLScene
+REP	Common/common.hpp	/^#define REP(/;"	d
+RIGHT	GameLogic/Physics.hpp	/^  const int RIGHT = 0x002;$/;"	m	namespace:Dir2D
+ReadShaderFileCompile	GLComponents/GLShader.hpp	/^void ReadShaderFileCompile(GLuint Shader, const char *File)$/;"	f
+Rect	GLComponents/GLObject.hpp	/^  const int Rect = 0;$/;"	m	namespace:RenderType
+Release	GLComponents/GLBmpLoader.hpp	/^void BMP::Release()$/;"	f	class:BMP
+Release	GLComponents/GLScene.hpp	/^  virtual void Release()$/;"	f	class:GLScene
+Render	GLComponents/GLObject.hpp	/^  bool Render()$/;"	f	class:GLObject
+Render	GLComponents/GLScene.hpp	/^  virtual bool Render()$/;"	f	class:GLScene
+RenderType	GLComponents/GLObject.hpp	/^namespace RenderType$/;"	n
+ScanKeyState	GLComponents/GLInput.hpp	/^  void ScanKeyState(GLint key, GLint action)$/;"	f	class:GLInput
+ScanMouseState	GLComponents/GLInput.hpp	/^  void ScanMouseState(GLdouble x, GLdouble y)$/;"	f	class:GLInput
+Search	GLComponents/GLScene.hpp	/^  void Search(const char* name)$/;"	f	class:GLScene
+SelectMenu	GameLogic/Menu.hpp	/^  void SelectMenu()$/;"	f	class:Menu
+Set2DTexture	GLComponents/GLObject.hpp	/^  void Set2DTexture(GLuint _textureID)$/;"	f	class:GLObject
+Set3DCube	GLComponents/GLObject.hpp	/^  void Set3DCube()$/;"	f	class:GLObject
 SetMessage	GameLogic/MessageWindow.hpp	/^  void SetMessage(int msg_idx_)$/;"	f	class:MessageWindow
-SetTexture	GLBmpLoader.hpp	/^void BMP::SetTexture()$/;"	f	class:BMP
-SetTexture	GLObject.hpp	/^  void SetTexture(GLuint _textureID)$/;"	f	class:GLObject
-SetType	GLObject.hpp	/^  void SetType(GLint _type)$/;"	f	class:GLObject
-Shader	GLObject.hpp	/^  const int Shader = 3;$/;"	m	namespace:RenderType
-Start	GLScene.hpp	/^  virtual void Start(){}$/;"	f	class:GLScene
+SetTemplate	GameLogic/Player.hpp	/^  void SetTemplate(int type)$/;"	f	class:Player
+SetTexture	GLComponents/GLBmpLoader.hpp	/^void BMP::SetTexture()$/;"	f	class:BMP
+SetType	GLComponents/GLObject.hpp	/^  void SetType(GLint _type)$/;"	f	class:GLObject
+Shader	GLComponents/GLObject.hpp	/^  const int Shader = 3;$/;"	m	namespace:RenderType
+Skill	GameLogic/Player.hpp	/^class Skill$/;"	c
+Start	GLComponents/GLScene.hpp	/^  virtual void Start(){}$/;"	f	class:GLScene
 Start	MyView/ConfigView.hpp	/^  void Start(){}$/;"	f	class:ConfigView
 Start	MyView/MainView.hpp	/^  void Start(){}$/;"	f	class:MainView
 Start	MyView/TitleView.hpp	/^  void Start(){}$/;"	f	class:TitleView
 Start	MyView/_TemplateView.hpp	/^  void Start(){}$/;"	f	class:_TemplateView
 Status	GameLogic/Player.hpp	/^class Status$/;"	c
-TEST_TEX_HEIGHT	GLUtils.hpp	6;"	d
-TEST_TEX_WIDTH	GLUtils.hpp	7;"	d
-Texture	GLObject.hpp	/^  const int Texture = 1;$/;"	m	namespace:RenderType
+TEST_TEX_HEIGHT	GLComponents/GLUtils.hpp	/^#define TEST_TEX_HEIGHT /;"	d
+TEST_TEX_WIDTH	GLComponents/GLUtils.hpp	/^#define TEST_TEX_WIDTH /;"	d
+Texture	GLComponents/GLObject.hpp	/^  const int Texture = 1;$/;"	m	namespace:RenderType
 TitleView	MyView/TitleView.hpp	/^  TitleView(){}$/;"	f	class:TitleView
 TitleView	MyView/TitleView.hpp	/^class TitleView : public GLScene$/;"	c
-UP	GameLogic/Physics.hpp	/^  const int UP = 0;$/;"	m	namespace:Direction2D
+UP	GameLogic/Physics.hpp	/^  const int UP    = 0x001;$/;"	m	namespace:Dir2D
 UP_STAIRS	GameLogic/GridMap.hpp	/^  const int UP_STAIRS = 1;$/;"	m	namespace:MapChip
-Update	GLScene.hpp	/^  virtual void Update(){}$/;"	f	class:GLScene
-Update	GLTimer.hpp	/^  void Update()$/;"	f	class:GLTimer
+Update	GLComponents/GLScene.hpp	/^  virtual void Update(){}$/;"	f	class:GLScene
+Update	GLComponents/GLTimer.hpp	/^  void Update()$/;"	f	class:GLTimer
 Update	GameLogic/MessageWindow.hpp	/^  void Update(double frameTime)$/;"	f	class:MessageWindow
-Update	GameLogic/Physics.hpp	/^  void Update(double deltaFrame)$/;"	f	class:Physics
+Update	GameLogic/Physics.hpp	/^  void Update()$/;"	f	class:Physics
 Update	MyView/ConfigView.hpp	/^  void Update(){}$/;"	f	class:ConfigView
 Update	MyView/MainView.hpp	/^  void Update(){}$/;"	f	class:MainView
 Update	MyView/TitleView.hpp	/^  void Update(){}$/;"	f	class:TitleView
 Update	MyView/_TemplateView.hpp	/^  void Update(){}$/;"	f	class:_TemplateView
 UpdateKeysInput	MyView/InitView.hpp	/^  void UpdateKeysInput()$/;"	f	class:InitView
+UpdateMoving	GameLogic/Physics.hpp	/^  void UpdateMoving()$/;"	f	class:Physics
 WALL	GameLogic/GridMap.hpp	/^  const int WALL = -1;$/;"	m	namespace:MapChip
+WALL_L	GameLogic/Physics.hpp	/^  const double WALL_L = -1;$/;"	m	namespace:PhysicsDef
+WALL_R	GameLogic/Physics.hpp	/^  const double WALL_R = 1;$/;"	m	namespace:PhysicsDef
 WaitCharTime	GameLogic/MessageWindow.hpp	/^  const double WaitCharTime = 0.25;$/;"	m	namespace:MWOption
 WaitMsgTime	GameLogic/MessageWindow.hpp	/^  const double WaitMsgTime = 0.25;$/;"	m	namespace:MWOption
 _TemplateView	MyView/_TemplateView.hpp	/^  _TemplateView(){}$/;"	f	class:_TemplateView
 _TemplateView	MyView/_TemplateView.hpp	/^class _TemplateView : public GLScene$/;"	c
-__CONFIGVIEW_HPP__	MyView/ConfigView.hpp	2;"	d
-__GLBMPLOADER_HPP__	GLBmpLoader.hpp	2;"	d
-__GLBUILTINCALLBACK_HPP__	GLBuiltInCallback.hpp	2;"	d
-__GLINPUT_HPP__	GLInput.hpp	2;"	d
-__GLOBJECT_HPP__	GLObject.hpp	2;"	d
-__GLSCENE_HPP__	GLScene.hpp	2;"	d
-__GLSHADER_HPP__	GLShader.hpp	2;"	d
-__GLTIMER_HPP__	GLTimer.hpp	2;"	d
-__GLUTILS_HPP__	GLUtils.hpp	2;"	d
-__GLVEC_HPP__	GLVec.hpp	2;"	d
-__GRIDMAP_HPP__	GameLogic/GridMap.hpp	2;"	d
-__INITVIEW_HPP__	MyView/InitView.hpp	2;"	d
-__MAINVIEW_HPP__	MyView/MainView.hpp	2;"	d
-__MENU_HPP__	GameLogic/Menu.hpp	2;"	d
-__MESSAGE_WINDOW_HPP__	GameLogic/MessageWindow.hpp	2;"	d
-__PHYSICS_HPP__	GameLogic/Physics.hpp	2;"	d
-__PLAYER_HPP__	GameLogic/Player.hpp	2;"	d
-__TEMPLATEVIEW_HPP__	MyView/_TemplateView.hpp	2;"	d
-__TITLEVIEW_HPP__	MyView/TitleView.hpp	2;"	d
-a	GLVec.hpp	/^  GLdouble a;$/;"	m	struct:GLColor
-actor	MyView/InitView.hpp	/^  GLObject* actor;$/;"	m	class:InitView
+__COMMON_HPP__	Common/common.hpp	/^#define __COMMON_HPP__$/;"	d
+__CONFIGVIEW_HPP__	MyView/ConfigView.hpp	/^#define __CONFIGVIEW_HPP__$/;"	d
+__ENEMY_HPP__	GameLogic/Enemy.hpp	/^#define __ENEMY_HPP__$/;"	d
+__GLBMPLOADER_HPP__	GLComponents/GLBmpLoader.hpp	/^#define __GLBMPLOADER_HPP__$/;"	d
+__GLBUILTINCALLBACK_HPP__	GLComponents/GLBuiltInCallback.hpp	/^#define __GLBUILTINCALLBACK_HPP__$/;"	d
+__GLCOMPONENTS_HPP__	GLComponents/GLComponents.hpp	/^#define __GLCOMPONENTS_HPP__$/;"	d
+__GLINPUT_HPP__	GLComponents/GLInput.hpp	/^#define __GLINPUT_HPP__$/;"	d
+__GLOBJECT_HPP__	GLComponents/GLObject.hpp	/^#define __GLOBJECT_HPP__$/;"	d
+__GLSCENE_HPP__	GLComponents/GLScene.hpp	/^#define __GLSCENE_HPP__$/;"	d
+__GLSHADER_HPP__	GLComponents/GLShader.hpp	/^#define __GLSHADER_HPP__$/;"	d
+__GLTIMER_HPP__	GLComponents/GLTimer.hpp	/^#define __GLTIMER_HPP__$/;"	d
+__GLUTILS_HPP__	GLComponents/GLUtils.hpp	/^#define __GLUTILS_HPP__$/;"	d
+__GLVEC_HPP__	GLComponents/GLVec.hpp	/^#define __GLVEC_HPP__$/;"	d
+__GRIDMAP_HPP__	GameLogic/GridMap.hpp	/^#define __GRIDMAP_HPP__$/;"	d
+__INITVIEW_HPP__	MyView/InitView.hpp	/^#define __INITVIEW_HPP__$/;"	d
+__MAINVIEW_HPP__	MyView/MainView.hpp	/^#define __MAINVIEW_HPP__$/;"	d
+__MENU_HPP__	GameLogic/Menu.hpp	/^#define __MENU_HPP__$/;"	d
+__MESSAGE_WINDOW_HPP__	GameLogic/MessageWindow.hpp	/^#define __MESSAGE_WINDOW_HPP__$/;"	d
+__PHYSICS_HPP__	GameLogic/Physics.hpp	/^#define __PHYSICS_HPP__$/;"	d
+__PLAYER_HPP__	GameLogic/Player.hpp	/^#define __PLAYER_HPP__$/;"	d
+__TEMPLATEVIEW_HPP__	MyView/_TemplateView.hpp	/^#define __TEMPLATEVIEW_HPP__$/;"	d
+__TITLEVIEW_HPP__	MyView/TitleView.hpp	/^#define __TITLEVIEW_HPP__$/;"	d
+a	GLComponents/GLVec.hpp	/^  GLdouble a;$/;"	m	struct:GLColor
+accesary	GameLogic/Player.hpp	/^  int accesary;$/;"	m	class:Equipment
+armor	GameLogic/Player.hpp	/^  int armor;$/;"	m	class:Equipment
+atk	GameLogic/Player.hpp	/^  int atk;$/;"	m	class:Skill
 atk	GameLogic/Player.hpp	/^  int atk;$/;"	m	class:Status
+atk_max	GameLogic/Player.hpp	/^  int atk_max;$/;"	m	class:Status
 ax	GameLogic/Physics.hpp	/^  double ax, ay;$/;"	m	class:Physics
 ay	GameLogic/Physics.hpp	/^  double ax, ay;$/;"	m	class:Physics
-b	GLVec.hpp	/^  GLdouble b;$/;"	m	struct:GLColor
-bmp	MyView/InitView.hpp	/^  BMP* bmp;$/;"	m	class:InitView
+b	GLComponents/GLVec.hpp	/^  GLdouble b;$/;"	m	struct:GLColor
+bg	MyView/InitView.hpp	/^  GLObject* bg;$/;"	m	class:InitView
+bmp_bg	MyView/InitView.hpp	/^  BMP* bmp_bg;$/;"	m	class:InitView
+bmp_chara	MyView/InitView.hpp	/^  BMP* bmp_chara;$/;"	m	class:InitView
 callback	GameLogic/Menu.hpp	/^  void* callback[MENU_MAX];$/;"	m	class:Menu
 char_idx	GameLogic/MessageWindow.hpp	/^  int char_idx;$/;"	m	class:MessageWindow
-color	GLObject.hpp	/^  GLColor color;$/;"	m	class:GLObject
+color	GLComponents/GLObject.hpp	/^  GLColor color;$/;"	m	class:GLObject
 cond	GameLogic/Player.hpp	/^  int cond;$/;"	m	class:Status
 currentScene	main.cpp	/^GLScene* currentScene;$/;"	v
-currentState	GLInput.hpp	/^  int currentState;$/;"	m	class:GLInput
-cursor_pos_callback	GLBuiltInCallback.hpp	/^static void cursor_pos_callback(GLFWwindow* window, double x, double y)$/;"	f
+currentState	GLComponents/GLInput.hpp	/^  int currentState;$/;"	m	class:GLInput
+cursor_pos_callback	GLComponents/GLBuiltInCallback.hpp	/^static void cursor_pos_callback(GLFWwindow* window, double x, double y)$/;"	f
 def	GameLogic/Player.hpp	/^  int def;$/;"	m	class:Status
-error_callback	GLBuiltInCallback.hpp	/^static void error_callback(int error, const char* description)$/;"	f
-frameTime	GLTimer.hpp	/^  GLdouble frameTime;$/;"	m	class:GLTimer
+def_max	GameLogic/Player.hpp	/^  int def_max;$/;"	m	class:Status
+enemy1	MyView/InitView.hpp	/^  GLObject* enemy1;$/;"	m	class:InitView
+enemy2	MyView/InitView.hpp	/^  GLObject* enemy2;$/;"	m	class:InitView
+enemyInfo	MyView/InitView.hpp	/^  Player enemyInfo;$/;"	m	class:InitView
+equipment	GameLogic/Player.hpp	/^  Equipment equipment;$/;"	m	class:Player
+error_callback	GLComponents/GLBuiltInCallback.hpp	/^static void error_callback(int error, const char* description)$/;"	f
+frameTime	GLComponents/GLTimer.hpp	/^  GLdouble frameTime;$/;"	m	class:GLTimer
 frameTime	MyView/InitView.hpp	/^  double frameTime;$/;"	m	class:InitView
-g	GLVec.hpp	/^  GLdouble g;$/;"	m	struct:GLColor
-g_keyInput	GLInput.hpp	/^GLInput g_keyInput;$/;"	v
-g_timer	GLTimer.hpp	/^GLTimer g_timer;$/;"	v
+g	GLComponents/GLVec.hpp	/^  GLdouble g;$/;"	m	struct:GLColor
+g_keyInput	GLComponents/GLInput.hpp	/^GLInput g_keyInput;$/;"	v
+g_timer	GLComponents/GLTimer.hpp	/^GLTimer g_timer;$/;"	v
+g_winPos	main.cpp	/^const GLIntVec2 g_winPos  = {720, 420};$/;"	v
 g_winSize	main.cpp	/^const GLIntVec2 g_winSize = {300, 300};$/;"	v
+helmet	GameLogic/Player.hpp	/^  int helmet;$/;"	m	class:Equipment
 hp	GameLogic/Player.hpp	/^  int hp;$/;"	m	class:Status
 hp_max	GameLogic/Player.hpp	/^  int hp_max;$/;"	m	class:Status
-id	GLObject.hpp	/^  int id;$/;"	m	class:GLObject
+id	GLComponents/GLObject.hpp	/^  int id;$/;"	m	class:GLObject
 id	GameLogic/GridMap.hpp	/^  int id;$/;"	m	class:GridMap
 id	GameLogic/Player.hpp	/^  int id;$/;"	m	class:Player
+id	GameLogic/Player.hpp	/^  int id;$/;"	m	class:Skill
 idx	GameLogic/Menu.hpp	/^  int idx;$/;"	m	class:Menu
-image	GLUtils.hpp	/^  GLubyte image[TEST_TEX_HEIGHT][TEST_TEX_WIDTH][4];$/;"	m	namespace:GLUtils
+image	GLComponents/GLUtils.hpp	/^  GLubyte image[TEST_TEX_HEIGHT][TEST_TEX_WIDTH][4];$/;"	m	namespace:GLUtils
 is_fall	GameLogic/Physics.hpp	/^  bool is_fall;$/;"	m	class:Physics
-keyState	GLInput.hpp	/^  GLint keyState[GLFW_KEY_LAST];$/;"	m	class:GLInput
-key_callback	GLBuiltInCallback.hpp	/^static void key_callback(GLFWwindow* window, int key, int scanmode, int action, int mods)$/;"	f
+is_jump	GameLogic/Physics.hpp	/^  bool is_jump;$/;"	m	class:Physics
+is_unuse_gravity	GameLogic/Physics.hpp	/^  bool is_unuse_gravity;$/;"	m	class:Physics
+is_visible	GLComponents/GLObject.hpp	/^  bool is_visible;$/;"	m	class:GLObject
+jmp_cnt	GameLogic/Physics.hpp	/^  int jmp_cnt;$/;"	m	class:Physics
+keyState	GLComponents/GLInput.hpp	/^  GLint keyState[GLFW_KEY_LAST];$/;"	m	class:GLInput
+key_callback	GLComponents/GLBuiltInCallback.hpp	/^static void key_callback(GLFWwindow* window, int key, int scanmode, int action, int mods)$/;"	f
 luk	GameLogic/Player.hpp	/^  int luk;$/;"	m	class:Status
+luk_max	GameLogic/Player.hpp	/^  int luk_max;$/;"	m	class:Status
 lv	GameLogic/Player.hpp	/^  int lv;$/;"	m	class:Status
+lv_max	GameLogic/Player.hpp	/^  int lv_max;$/;"	m	class:Status
+main	Testing/main.cpp	/^int main (int argc, char** argv)$/;"	f
 main	main.cpp	/^int main()$/;"	f
 map	GameLogic/GridMap.hpp	/^  int map[MAX_MAP_W][MAX_MAP_H];$/;"	m	class:GridMap
 max_mp	GameLogic/Player.hpp	/^  int max_mp;$/;"	m	class:Status
 menues	GameLogic/Menu.hpp	/^  std::string menues[MENU_MAX];$/;"	m	class:Menu
 messages	GameLogic/MessageWindow.hpp	/^  std::string messages[MSG_MAX];$/;"	m	class:MessageWindow
-mouse_x	GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
-mouse_y	GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
+mouse_x	GLComponents/GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
+mouse_y	GLComponents/GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
+mov	GameLogic/Player.hpp	/^  int mov;$/;"	m	class:Status
+mov_max	GameLogic/Player.hpp	/^  int mov_max;$/;"	m	class:Status
 mp	GameLogic/Player.hpp	/^  int mp;$/;"	m	class:Status
 msg_idx	GameLogic/MessageWindow.hpp	/^  int msg_idx;$/;"	m	class:MessageWindow
 msg_siz	GameLogic/MessageWindow.hpp	/^  int msg_siz;$/;"	m	class:MessageWindow
-name	GLObject.hpp	/^  char* name;$/;"	m	class:GLObject
+msgwindow	MyView/InitView.hpp	/^  MessageWindow msgwindow;$/;"	m	class:InitView
+name	GLComponents/GLObject.hpp	/^  char* name;$/;"	m	class:GLObject
 name	GameLogic/GridMap.hpp	/^  std::string name;$/;"	m	class:GridMap
 name	GameLogic/Player.hpp	/^  std::string name;$/;"	m	class:Player
-objects	GLScene.hpp	/^  GLObject* objects[100];$/;"	m	class:GLScene
-order	GLObject.hpp	/^  int order;$/;"	m	class:GLObject
+object_cnt	GLComponents/GLScene.hpp	/^  int object_cnt;$/;"	m	class:GLScene
+objects	GLComponents/GLScene.hpp	/^  GLObject* objects[100];$/;"	m	class:GLScene
+order	GLComponents/GLObject.hpp	/^  int order;$/;"	m	class:GLObject
 physics	MyView/InitView.hpp	/^  Physics physics;$/;"	m	class:InitView
-player	MyView/InitView.hpp	/^  Player player;$/;"	m	class:InitView
+player	MyView/InitView.hpp	/^  GLObject* player;$/;"	m	class:InitView
+playerInfo	MyView/InitView.hpp	/^  Player playerInfo;$/;"	m	class:InitView
 players	GameLogic/Player.hpp	/^  Player players[PLAYER_LIST_MAX];$/;"	m	class:PlayerList
-pos	GLObject.hpp	/^  GLVec2 pos;$/;"	m	class:GLObject
+pos	GLComponents/GLObject.hpp	/^  GLVec2 pos;$/;"	m	class:GLObject
 pos_x	GameLogic/GridMap.hpp	/^  int pos_x, pos_y;$/;"	m	class:GridMap
 pos_y	GameLogic/GridMap.hpp	/^  int pos_x, pos_y;$/;"	m	class:GridMap
-prevGetTime	GLTimer.hpp	/^  GLdouble prevGetTime;$/;"	m	class:GLTimer
-r	GLVec.hpp	/^  GLdouble r;$/;"	m	struct:GLColor
-shader_program	GLShader.hpp	/^GLuint shader_program;$/;"	v
-siz	GLObject.hpp	/^  GLVec2 siz;$/;"	m	class:GLObject
-siz	GLScene.hpp	/^  int siz;$/;"	m	class:GLScene
+prevGetTime	GLComponents/GLTimer.hpp	/^  GLdouble prevGetTime;$/;"	m	class:GLTimer
+r	GLComponents/GLVec.hpp	/^  GLdouble r;$/;"	m	struct:GLColor
+shader_program	GLComponents/GLShader.hpp	/^GLuint shader_program;$/;"	v
+shield	GameLogic/Player.hpp	/^  int shield;$/;"	m	class:Equipment
+siz	GLComponents/GLObject.hpp	/^  GLVec2 siz;$/;"	m	class:GLObject
 siz	GameLogic/Menu.hpp	/^  int siz;$/;"	m	class:Menu
 siz	GameLogic/Player.hpp	/^  int siz;$/;"	m	class:PlayerList
 siz_x	GameLogic/GridMap.hpp	/^  int siz_x, siz_y;$/;"	m	class:GridMap
 siz_y	GameLogic/GridMap.hpp	/^  int siz_x, siz_y;$/;"	m	class:GridMap
-sizeX	GLBmpLoader.hpp	/^  unsigned long sizeX;$/;"	m	class:BMP
-sizeY	GLBmpLoader.hpp	/^  unsigned long sizeY;$/;"	m	class:BMP
+sizeX	GLComponents/GLBmpLoader.hpp	/^  int sizeX;$/;"	m	class:BMP
+sizeY	GLComponents/GLBmpLoader.hpp	/^  int sizeY;$/;"	m	class:BMP
 spd	GameLogic/Player.hpp	/^  int spd;$/;"	m	class:Status
+spd_max	GameLogic/Player.hpp	/^  int spd_max;$/;"	m	class:Status
 status	GameLogic/Player.hpp	/^  Status status;$/;"	m	class:Player
 t	GameLogic/Physics.hpp	/^  double t;$/;"	m	class:Physics
-texture	GLBmpLoader.hpp	/^  GLuint texture;$/;"	m	class:BMP
-textureID	GLObject.hpp	/^  GLuint textureID;$/;"	m	class:GLObject
+texture	GLComponents/GLBmpLoader.hpp	/^  GLuint texture;$/;"	m	class:BMP
+textureID	GLComponents/GLObject.hpp	/^  GLuint textureID;$/;"	m	class:GLObject
 timer	GameLogic/MessageWindow.hpp	/^  double timer;$/;"	m	class:MessageWindow
-type	GLObject.hpp	/^  int type;$/;"	m	class:GLObject
+type	GLComponents/GLObject.hpp	/^  int type;$/;"	m	class:GLObject
 vx	GameLogic/Physics.hpp	/^  double vx, vy;$/;"	m	class:Physics
 vy	GameLogic/Physics.hpp	/^  double vx, vy;$/;"	m	class:Physics
-w	GLVec.hpp	/^  GLdouble w;$/;"	m	struct:GLVec4
-w	GLVec.hpp	/^  GLint w;$/;"	m	struct:GLIntVec4
-x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLPoint
-x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec2
-x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec3
-x	GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec4
-x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec2
-x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec3
-x	GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec4
+w	GLComponents/GLVec.hpp	/^  GLdouble w;$/;"	m	struct:GLVec4
+w	GLComponents/GLVec.hpp	/^  GLint w;$/;"	m	struct:GLIntVec4
+weapon	GameLogic/Player.hpp	/^  int weapon;$/;"	m	class:Equipment
+x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLPoint
+x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec2
+x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec3
+x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec4
+x	GLComponents/GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec2
+x	GLComponents/GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec3
+x	GLComponents/GLVec.hpp	/^  GLint x;$/;"	m	struct:GLIntVec4
 x	GameLogic/Physics.hpp	/^  double x, y;$/;"	m	class:Physics
 x	GameLogic/Player.hpp	/^  int x, y;$/;"	m	class:Player
-y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec2
-y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec3
-y	GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec4
-y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec2
-y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec3
-y	GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec4
+y	GLComponents/GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec2
+y	GLComponents/GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec3
+y	GLComponents/GLVec.hpp	/^  GLdouble y;$/;"	m	struct:GLVec4
+y	GLComponents/GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec2
+y	GLComponents/GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec3
+y	GLComponents/GLVec.hpp	/^  GLint y;$/;"	m	struct:GLIntVec4
 y	GameLogic/Physics.hpp	/^  double x, y;$/;"	m	class:Physics
 y	GameLogic/Player.hpp	/^  int x, y;$/;"	m	class:Player
-z	GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec3
-z	GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec4
-z	GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec3
-z	GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec4
+z	GLComponents/GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec3
+z	GLComponents/GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec4
+z	GLComponents/GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec3
+z	GLComponents/GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec4
+~BMP	GLComponents/GLBmpLoader.hpp	/^BMP::~BMP()$/;"	f	class:BMP

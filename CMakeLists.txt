@@ -2,10 +2,12 @@
 cmake_minimum_required(VERSION 3.0)
 project(GLFW CXX)
 
-### Build Actions ###
-//include_directories()
-//link_directories()
+# リリースビルド用オプション
+SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
+# ビルドのタイプはリリース
+SET(CMAKE_BUILD_TYPE Release)
 
+### Build Actions ###
 find_package(OpenGL REQUIRED)
 add_executable(RunApp main.cpp)
 

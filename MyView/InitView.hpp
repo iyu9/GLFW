@@ -45,7 +45,7 @@ public:
 
     bg = new GLObject(pos_bg, siz_bg);
     bg->Set2DTexture(bmp_bg->texture);
-    //AddScene(bg);
+    AddScene(bg);
 
     //add Actor to scene
     GLVec2 pos_actor = { 0, 0 };
@@ -62,12 +62,12 @@ public:
 
     enemy1 = new GLObject(pos_enemy1, siz_enemy1);
     enemy1->Set2DTexture(bmp_chara->texture);
-    //AddScene(enemy1);
+    AddScene(enemy1);
 
     //add Enemy2 to scene
     enemy2 = new GLObject(pos_enemy1, siz_enemy1);
     enemy2->Set2DTexture(bmp_chara->texture);
-    //AddScene(enemy2);
+    AddScene(enemy2);
   }
 
   void Update() override

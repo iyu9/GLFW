@@ -2,7 +2,7 @@
 #define __MESSAGE_WINDOW_HPP__
 
 #include <string>
-#define MSG_MAX 100
+#include <vector>
 
 namespace MWOption
 {
@@ -36,11 +36,18 @@ public:
   int msg_siz;
 
   int char_idx;
-  std::string messages[MSG_MAX];
+  std::vector<std::string> messages;
 
   double timer;
 
-  MessageWindow() {}
+  MessageWindow()
+  {
+  }
+
+  MessageWindow(std::vector<std::string> messages)
+  {
+    messages = messages;
+  }
 
   std::string GetMessage()
   {

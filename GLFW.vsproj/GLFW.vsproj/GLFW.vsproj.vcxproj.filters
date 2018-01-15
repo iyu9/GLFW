@@ -25,32 +25,11 @@
     <Filter Include="ヘッダー ファイル\GameLogic">
       <UniqueIdentifier>{a3e3016e-de8f-436a-b547-642423230a9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\GLComponent">
+      <UniqueIdentifier>{208d91f9-d7bc-45b5-9134-83e8b40649ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\GLBmpLoader.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLBuiltInCallback.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLShader.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLUtils.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLVec.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLObject.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLScene.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\GLInput.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\MyView\_TemplateView.hpp">
       <Filter>ヘッダー ファイル\MyView</Filter>
     </ClInclude>
@@ -66,9 +45,6 @@
     <ClInclude Include="..\..\MyView\TitleView.hpp">
       <Filter>ヘッダー ファイル\MyView</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\GLTimer.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\GameLogic\Player.hpp">
       <Filter>ヘッダー ファイル\GameLogic</Filter>
     </ClInclude>
@@ -83,6 +59,39 @@
     </ClInclude>
     <ClInclude Include="..\..\GameLogic\MessageWindow.hpp">
       <Filter>ヘッダー ファイル\GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLBmpLoader.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLBuiltInCallback.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLComponents.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLInput.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLObject.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLScene.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLShader.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLTimer.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLUtils.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\GLComponents\GLVec.hpp">
+      <Filter>ヘッダー ファイル\GLComponent</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Common.hpp">
+      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

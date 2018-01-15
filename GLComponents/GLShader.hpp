@@ -1,3 +1,5 @@
+#define USE_PROG_SHADER
+
 #ifndef __GLSHADER_HPP__
 #define __GLSHADER_HPP__
 
@@ -5,6 +7,7 @@ GLuint shader_program;
 
 void ReadShaderFileCompile(GLuint Shader, const char *File)
 {
+#ifdef USE_PROG_SHADER
   FILE *fp;
   char *buf;
   GLsizei size, len;
@@ -46,10 +49,12 @@ void ReadShaderFileCompile(GLuint Shader, const char *File)
       free(buf);
     }
   }
+#endif
 }
 
 void Link(GLuint prog)
 {
+#ifdef USE_PROG_SHADER
   GLsizei size, len;
   GLint linked;
   char *infoLog;
@@ -69,10 +74,13 @@ void Link(GLuint prog)
       free(infoLog);
     }
   }
+#endif
 }
 
 void CompileAndLinkShader()
 {
+#ifdef USE_PROG_SHADER
+
 #ifdef WIN32
   //Init GLEW
   GLenum err = glewInit();
@@ -102,5 +110,6 @@ void CompileAndLinkShader()
   glDeleteShader(fshader);
 
   Link(shader_program);
+#endif
 }
 #endif

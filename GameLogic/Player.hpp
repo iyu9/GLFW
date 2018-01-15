@@ -1,8 +1,6 @@
 #ifndef __PLAYER_HPP__
 #define __PLAYER_HPP__
 
-#define PLAYER_LIST_MAX 5
-
 class Status
 {
 public:
@@ -59,17 +57,12 @@ public:
     id = id_;
     name = name_;
   }
-
-  void SetTemplate(int type)
-  {
-    //
-  }
 };
 
 class PlayerList
 {
 public:
-  Player players[PLAYER_LIST_MAX];
+  std::vector<Player> players;
   int siz;
 
   PlayerList(int siz_)
@@ -77,16 +70,19 @@ public:
     siz = siz_;
   }
 
-  bool Push(Player player)
+  void Push(Player player)
   {
-    players[siz++] = player;
-    return true;
+    players.push_back(player);
   }
 
-  bool Pop()
+  void Pop()
   {
-    siz--;
-    return true;
+    players.pop_back();
+  }
+
+  void Clear()
+  {
+    players.clear();
   }
 };
 

@@ -98,69 +98,55 @@ namespace GLUtils
     };
 
     glPushMatrix();
-    glBegin(GL_TRIANGLES);
 
-    //forward
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-
-    //rightside
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-
-    //leftside
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-
-    //backward
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-
-    //upper
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-    glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
-    glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
-    glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
-
-    //lower
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
-    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-    glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
-    glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
-    glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
-
+    glBegin(GL_QUADS);
+      //forward(fixed z)
+      glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+      glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+      glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+      glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
     glEnd();
+
+    glBegin(GL_QUADS);
+      //backward(fixed z+u)
+      glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+      glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+      glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+      glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+    glEnd();
+
+    glBegin(GL_QUADS);
+      //left(fixed x)
+      glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+      glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+      glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+      glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glEnd();
+
+    glBegin(GL_QUADS);
+      //right(fixed x+w)
+      glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+      glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+      glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+      glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+    glEnd();
+
+    glBegin(GL_QUADS);
+      //bottom(fixed y)
+      glVertex3d(vertices[0].x, vertices[0].y, vertices[0].z);
+      glVertex3d(vertices[1].x, vertices[1].y, vertices[1].z);
+      glVertex3d(vertices[5].x, vertices[5].y, vertices[5].z);
+      glVertex3d(vertices[4].x, vertices[4].y, vertices[4].z);
+    glEnd();
+
+    glBegin(GL_QUADS);
+      //top(fixed y+h)
+      glVertex3d(vertices[2].x, vertices[2].y, vertices[2].z);
+      glVertex3d(vertices[3].x, vertices[3].y, vertices[3].z);
+      glVertex3d(vertices[7].x, vertices[7].y, vertices[7].z);
+      glVertex3d(vertices[6].x, vertices[6].y, vertices[6].z);
+    glEnd();
+
     glPopMatrix();
   }
 

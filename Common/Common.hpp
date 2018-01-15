@@ -4,7 +4,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <list>
+#include <vector>
+#include <map>
 
 #define LOG(X) std::cout << X
 #define REP(X) for (int i = 0; i < X; i++)

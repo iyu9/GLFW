@@ -23,10 +23,7 @@ BMP::BMP(const char *FileName)
 
 BMP::~BMP()
 {
-  if (Data != NULL)
-  {
-    delete[] Data;
-  }
+  free(Data);
 }
 
 bool BMP::Load(const char *FileName)

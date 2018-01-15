@@ -1,17 +1,16 @@
 #ifndef __MENU_HPP__
 #define __MENU_HPP__
 
-#define MENU_MAX 9
-
 #include <string>
+#include <vector>
 
 class Menu
 {
 public:
   int idx;
   int siz;
-  std::string menues[MENU_MAX];
-  void* callback[MENU_MAX];
+  std::vector<std::string> menues;
+  std::vector<void*> callbacks;
 
   Menu(int siz_)
   {

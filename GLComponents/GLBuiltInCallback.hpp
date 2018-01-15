@@ -3,8 +3,8 @@
 
 static void error_callback(int error, const char* description)
 {
-  std::cout << "error_description = " << description << std::endl;
-  std::cout << "error_code = " << error << std::endl;
+  std::cout << "Error description = " << description << std::endl;
+  std::cout << "Error code = " << error << std::endl;
 
   switch (error)
   {

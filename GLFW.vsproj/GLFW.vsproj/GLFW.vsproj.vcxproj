@@ -158,20 +158,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Common\Common.hpp" />
     <ClInclude Include="..\..\GameLogic\GridMap.hpp" />
     <ClInclude Include="..\..\GameLogic\Menu.hpp" />
     <ClInclude Include="..\..\GameLogic\MessageWindow.hpp" />
     <ClInclude Include="..\..\GameLogic\Physics.hpp" />
     <ClInclude Include="..\..\GameLogic\Player.hpp" />
-    <ClInclude Include="..\..\GLBmpLoader.hpp" />
-    <ClInclude Include="..\..\GLBuiltInCallback.hpp" />
-    <ClInclude Include="..\..\GLInput.hpp" />
-    <ClInclude Include="..\..\GLObject.hpp" />
-    <ClInclude Include="..\..\GLScene.hpp" />
-    <ClInclude Include="..\..\GLShader.hpp" />
-    <ClInclude Include="..\..\GLTimer.hpp" />
-    <ClInclude Include="..\..\GLUtils.hpp" />
-    <ClInclude Include="..\..\GLVec.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLBmpLoader.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLBuiltInCallback.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLComponents.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLInput.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLObject.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLScene.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLShader.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLTimer.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLUtils.hpp" />
+    <ClInclude Include="..\..\GLComponents\GLVec.hpp" />
     <ClInclude Include="..\..\MyView\ConfigView.hpp" />
     <ClInclude Include="..\..\MyView\InitView.hpp" />
     <ClInclude Include="..\..\MyView\MainView.hpp" />

@@ -17,7 +17,7 @@
 
 GLScene* currentScene;
 const GLIntVec2 g_winSize = {300, 300};
-const GLIntVec2 g_winPos  = {720, 420};
+const GLIntVec2 g_winPos  = {1300, 640};
 
 void MessageWait()
 {

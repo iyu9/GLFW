@@ -80,6 +80,7 @@ public:
 
   Physics()
   {
+	t = x = y = vx = vy = ax = ay = 0;
     is_fall = false;
     is_jump = false;
     is_unuse_gravity = false;

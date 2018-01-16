@@ -53,7 +53,7 @@ public:
 
     player = new GLObject(pos_actor, siz_actor);
     player->Set2DTexture(bmp_chara->texture);
-    player->Set3DCube();
+    //player->Set3DCube();
     AddScene(player);
 
     //add Enemy1 to scene

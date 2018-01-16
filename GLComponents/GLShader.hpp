@@ -1,4 +1,4 @@
-#define USE_PROG_SHADER
+#define NOT_USE_PROG_SHADER
 
 #ifndef __GLSHADER_HPP__
 #define __GLSHADER_HPP__

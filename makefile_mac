@@ -1,6 +1,5 @@
 all:
 	g++ -std=c++11 -o RunApp main.cpp -framework OpenGL -lglfw
-
 run:
 	g++ -std=c++11 -o RunApp main.cpp -framework OpenGL -lglfw
 	./RunApp

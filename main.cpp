@@ -19,12 +19,6 @@ GLScene* currentScene;
 const GLIntVec2 g_winSize = {300, 300};
 const GLIntVec2 g_winPos  = {1300, 640};
 
-void MessageWait()
-{
-  std::string str;
-  std::cin >> str;
-}
-
 void MainLoop()
 {
   glClear(GL_COLOR_BUFFER_BIT);
@@ -37,7 +31,7 @@ int main()
   if (!glfwInit())
   {
     LOG("init failed");
-    MessageWait();
+    WaitInput();
     return 1;
   }
 
@@ -47,7 +41,7 @@ int main()
   if (!window)
   {
     LOG("create window failed");
-    MessageWait();
+    WaitInput();
     glfwTerminate();
     return 1;
   }

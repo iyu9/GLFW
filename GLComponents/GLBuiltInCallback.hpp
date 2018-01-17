@@ -45,8 +45,7 @@ static void error_callback(int error, const char* description)
     break;
   }
 
-  std::string inputStr;
-  std::cin >> inputStr;  
+  WaitInput();
 }
 
 static void cursor_pos_callback(GLFWwindow* window, double x, double y)

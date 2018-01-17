@@ -1,10 +1,6 @@
 #ifndef __GLOBJECT_HPP__
 #define __GLOBJECT_HPP__
 
-//test
-GLVec2 tex_pos = { 0, 0.5 };
-GLVec2 tex_siz = { 0.5, 0.5 };
-
 namespace RenderType
 {
   const int Rect = 0;

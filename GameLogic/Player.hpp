@@ -25,21 +25,37 @@ public:
   int mov;
 };
 
+class EquipBase
+{
+  int id;
+  int type;
+
+  int val1;
+  int val2;
+  int val3;
+};
+
 class Equipment
 {
 public:
-  int weapon;
-  int shield;
-  int armor;
-  int helmet;
-  int accesary;
+  EquipBase weapon;
+  EquipBase shield;
+  EquipBase armor;
+  EquipBase helmet;
+  EquipBase accesary;
+
+  void SetWeapon(){}
+  void SetShield(){}
+  void SetArmor(){}
+  void SetHelmet(){}
+  void SetAccessary(){}
 };
 
 class Skill
 {
 public:
   int id;
-  int atk;
+  int val;
 };
 
 class Player

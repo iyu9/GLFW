@@ -74,7 +74,7 @@ public:
   {
     GLScene::Update();
 
-    if (object_cnt <= 0)
+    if (objects.size() <= 0)
     {
       return;
     }

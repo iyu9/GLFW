@@ -186,7 +186,6 @@
   <ItemGroup>
     <None Include="..\..\.gitignore" />
     <None Include="..\..\makefile" />
-    <None Include="..\..\makefile_linux" />
     <None Include="..\..\README.md" />
   </ItemGroup>
   <ItemGroup>

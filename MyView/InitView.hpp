@@ -183,7 +183,7 @@ public:
   {
     GLScene::Release();
 
-	delete bg;
+    delete bg;
     delete player;
     delete enemy1;
     delete enemy2;

@@ -1,6 +1,10 @@
 #ifndef __GLOBJECT_HPP__
 #define __GLOBJECT_HPP__
 
+//test
+GLVec2 tex_pos = { 0, 0.5 };
+GLVec2 tex_siz = { 0.5, 0.5 };
+
 namespace RenderType
 {
   const int Rect = 0;
@@ -23,6 +27,10 @@ public:
 
   GLVec2 siz;
   GLVec2 pos;
+
+  GLVec2 tex_siz;
+  GLVec2 tex_pos;
+
   GLColor color;
 
   GLObject(GLVec2 _pos, GLVec2 _siz)
@@ -30,6 +38,8 @@ public:
     siz = _siz;
     pos = _pos;
     is_visible = true;
+    tex_siz = {1, 1};
+    tex_pos = {0, 0};
   }
 
   void SetType(GLint _type)
@@ -48,6 +58,14 @@ public:
     textureID = _textureID;
   }
 
+  void Set2DTexture(GLuint _textureID, GLVec2 _tex_pos, GLVec2 _tex_siz)
+  {
+    type = RenderType::Texture;
+    textureID = _textureID;
+    tex_siz = _tex_siz;
+    tex_pos = _tex_pos;
+  }
+
   bool Render()
   {
     if (!is_visible)
@@ -63,7 +81,8 @@ public:
 
     case RenderType::Texture:
       glBindTexture(GL_TEXTURE_2D, textureID);
-      GLUtils::DrawTexture(pos, siz);
+      //GLUtils::DrawTexture(pos, siz);
+      GLUtils::DrawTexture(pos, siz, tex_pos, tex_siz);
       break;
 
     case RenderType::Shader:

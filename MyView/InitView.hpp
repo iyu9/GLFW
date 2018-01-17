@@ -13,9 +13,11 @@ private:
   GLObject* player;
   GLObject* enemy1;
   GLObject* enemy2;
+  GLObject* font;
 
   BMP* bmp_bg;
   BMP* bmp_chara;
+  BMP* bmp_font;
 
   Player playerInfo;
   Player enemyInfo;
@@ -32,12 +34,20 @@ public:
     Start();
   }
 
+  void SetFont()
+  {
+    font = new GLObject({ 0, 0 }, {1, 1});
+    font->Set2DTexture(bmp_font->texture, {0.07, 0.78}, {0.1, 0.22});
+    AddScene(font);
+  }
+
   void Start() override
   {
     GLScene::Start();
 
     bmp_bg = new BMP("Resources/sample.bmp");
     bmp_chara = new BMP("Resources/player.bmp");
+    //bmp_font = new BMP("Resources/font.bmp");
 
     //add Background to scene
     GLVec2 pos_bg = { 0, 0 };
@@ -68,6 +78,9 @@ public:
     enemy2 = new GLObject(pos_enemy1, siz_enemy1);
     enemy2->Set2DTexture(bmp_chara->texture);
     AddScene(enemy2);
+
+    //add font to scene
+    //SetFont();
   }
 
   void Update() override
@@ -183,13 +196,15 @@ public:
   {
     GLScene::Release();
 
-	delete bg;
+    delete bg;
     delete player;
     delete enemy1;
     delete enemy2;
+    delete font;
 
     delete bmp_bg;
     delete bmp_chara;
+    delete bmp_font;
   }
 };
 

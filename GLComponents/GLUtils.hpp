@@ -16,6 +16,21 @@ namespace GLUtils
     glPopMatrix();
     glDisable(GL_TEXTURE_2D);
   }
+  static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h,
+    GLdouble ux, GLdouble uy, GLdouble uw, GLdouble uh)
+  {
+    glEnable(GL_TEXTURE_2D);
+    glPushMatrix();
+    glBegin(GL_QUADS);
+      glTexCoord2d(ux, uy);           glVertex3d(x, y, 0.0);
+      glTexCoord2d(ux, uy + uh);      glVertex3d(x, y + h, 0.0);
+      glTexCoord2d(ux + uw, uy + uh); glVertex3d(x + w, y + h, 0.0);
+      glTexCoord2d(ux + uw, uy);      glVertex3d(x + w, y, 0.0);
+    glEnd();
+    glPopMatrix();
+    glDisable(GL_TEXTURE_2D);
+  }
+
 
   static void DrawRect(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
@@ -110,6 +125,11 @@ namespace GLUtils
   static void DrawTexture(GLVec2 pos, GLVec2 siz)
   {
     DrawTexture(pos.x - (0.5 * siz.x), pos.y - (0.5 * siz.y), siz.x, siz.y);
+  }
+  static void DrawTexture(GLVec2 pos, GLVec2 siz, GLVec2 tex_pos, GLVec2 tex_siz)
+  {
+    DrawTexture(pos.x - (0.5 * siz.x), pos.y - (0.5 * siz.y), siz.x, siz.y,
+      tex_pos.x, tex_pos.y, tex_siz.x, tex_siz.y);
   }
 
   static void DrawRect(GLVec2 pos, GLVec2 siz)

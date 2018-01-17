@@ -6,9 +6,10 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <memory>
 
+#define REP(VAR, COUNT) for (int VAR = 0; i < COUNT; i++)
 #define LOG(X) std::cout << X
-#define REP(X) for (int i = 0; i < X; i++)
 
 std::string WaitInput()
 {

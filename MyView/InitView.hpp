@@ -50,32 +50,23 @@ public:
     //bmp_font = new BMP("Resources/font.bmp");
 
     //add Background to scene
-    GLVec2 pos_bg = { 0, 0 };
-    GLVec2 siz_bg = { 2, 2 };
-
-    bg = new GLObject(pos_bg, siz_bg);
+    bg = new GLObject({ 0, 0 }, {2,2});
     bg->Set2DTexture(bmp_bg->texture);
     AddScene(bg);
 
     //add Actor to scene
-    GLVec2 pos_actor = { 0, 0 };
-    GLVec2 siz_actor = { 0.5, 0.5 };
-
-    player = new GLObject(pos_actor, siz_actor);
+    player = new GLObject({ 0, 0 }, { 0.5, 0.5 });
     player->Set2DTexture(bmp_chara->texture);
     //player->Set3DCube();
     AddScene(player);
 
     //add Enemy1 to scene
-    GLVec2 pos_enemy1 = { -1, 0 };
-    GLVec2 siz_enemy1 = { 0.5, 0.5 };
-
-    enemy1 = new GLObject(pos_enemy1, siz_enemy1);
+    enemy1 = new GLObject({ -1, 0 }, { 0.5, 0.5 });
     enemy1->Set2DTexture(bmp_chara->texture);
     AddScene(enemy1);
 
     //add Enemy2 to scene
-    enemy2 = new GLObject(pos_enemy1, siz_enemy1);
+    enemy2 = new GLObject({ -1, 0 }, { 0.5, 0.5 });
     enemy2->Set2DTexture(bmp_chara->texture);
     AddScene(enemy2);
 

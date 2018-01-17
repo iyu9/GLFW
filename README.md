@@ -13,8 +13,8 @@
 1. GLFW.vsproj以下のプロジェクトファイルを開き実行
 
 ### Mac:
-- GLFW.xcode以下のプロジェクトファイルを開き実行
 - make または make run
+- GLFW.xcode以下のプロジェクトファイルを開き実行
 
 ### Linux:
 - make または make run

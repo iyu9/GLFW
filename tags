@@ -3,15 +3,21 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ADD_VELOCITY	GameLogic/Physics.hpp	/^  const double ADD_VELOCITY = 0.01;$/;"	m	namespace:PhysicsDef
+APIENTRY	include/GLFW/glfw3.h	100;"	d
+APIENTRY	include/GLFW/glfw3.h	98;"	d
+APIENTRY	include/GLFW/glfw3native.h	87;"	d
 AddScene	GLComponents/GLScene.hpp	/^  void AddScene(GLObject* obj)$/;"	f	class:GLScene
 AddVelocity	GameLogic/Physics.hpp	/^  void AddVelocity(const int dir)$/;"	f	class:Physics
 BMP	GLComponents/GLBmpLoader.hpp	/^BMP::BMP(const char *FileName)$/;"	f	class:BMP
 BMP	GLComponents/GLBmpLoader.hpp	/^class BMP$/;"	c
+BMPMultiple	GLComponents/GLBmpLoader.hpp	/^class BMPMultiple$/;"	c
+CALLBACK	include/GLFW/glfw3.h	114;"	d
+CALLBACK	include/GLFW/glfw3.h	4236;"	d
 CheckFall	GameLogic/Physics.hpp	/^  void CheckFall()$/;"	f	class:Physics
-CheckRenderTexture	GLComponents/GLUtils.hpp	/^  static void CheckRenderTexture()$/;"	f	namespace:GLUtils
 CleanMap	GameLogic/GridMap.hpp	/^  void CleanMap()$/;"	f	class:GridMap
+Clear	GameLogic/Player.hpp	/^  void Clear()$/;"	f	class:PlayerList
 Close	GameLogic/MessageWindow.hpp	/^  void Close()$/;"	f	class:MessageWindow
 CompileAndLinkShader	GLComponents/GLShader.hpp	/^void CompileAndLinkShader()$/;"	f
 ConfigView	MyView/ConfigView.hpp	/^  ConfigView(){}$/;"	f	class:ConfigView
@@ -20,6 +26,7 @@ Cube	GLComponents/GLObject.hpp	/^  const int Cube = 4;$/;"	m	namespace:RenderTyp
 DOWN	GameLogic/Physics.hpp	/^  const int DOWN  = 0x008;$/;"	m	namespace:Dir2D
 DW_STAIRS	GameLogic/GridMap.hpp	/^  const int DW_STAIRS = 2;$/;"	m	namespace:MapChip
 Data	GLComponents/GLBmpLoader.hpp	/^  char *Data;$/;"	m	class:BMP
+Data	GLComponents/GLBmpLoader.hpp	/^  char *Data;$/;"	m	class:BMPMultiple
 Dir2D	GameLogic/Physics.hpp	/^namespace Dir2D$/;"	n
 DrawCube	GLComponents/GLUtils.hpp	/^  static void DrawCube(GLVec3 pos, GLVec3 siz)$/;"	f	namespace:GLUtils
 DrawCube	GLComponents/GLUtils.hpp	/^  static void DrawCube(GLdouble x, GLdouble y, GLdouble z, GLdouble w, GLdouble h, GLdouble u)$/;"	f	namespace:GLUtils
@@ -39,6 +46,280 @@ Enemy	GameLogic/Enemy.hpp	/^class Enemy : public Actor$/;"	c
 Equipment	GameLogic/Player.hpp	/^class Equipment$/;"	c
 FLOOR	GameLogic/Physics.hpp	/^  const double FLOOR  = -0.5;$/;"	m	namespace:PhysicsDef
 GLColor	GLComponents/GLVec.hpp	/^struct GLColor$/;"	s
+GLFWAPI	include/GLFW/glfw3.h	194;"	d
+GLFWAPI	include/GLFW/glfw3.h	197;"	d
+GLFWAPI	include/GLFW/glfw3.h	200;"	d
+GLFWAPI	include/GLFW/glfw3.h	203;"	d
+GLFW_ACCUM_ALPHA_BITS	include/GLFW/glfw3.h	643;"	d
+GLFW_ACCUM_BLUE_BITS	include/GLFW/glfw3.h	642;"	d
+GLFW_ACCUM_GREEN_BITS	include/GLFW/glfw3.h	641;"	d
+GLFW_ACCUM_RED_BITS	include/GLFW/glfw3.h	640;"	d
+GLFW_ALPHA_BITS	include/GLFW/glfw3.h	637;"	d
+GLFW_ANY_RELEASE_BEHAVIOR	include/GLFW/glfw3.h	683;"	d
+GLFW_API_UNAVAILABLE	include/GLFW/glfw3.h	567;"	d
+GLFW_ARROW_CURSOR	include/GLFW/glfw3.h	701;"	d
+GLFW_AUTO_ICONIFY	include/GLFW/glfw3.h	630;"	d
+GLFW_AUX_BUFFERS	include/GLFW/glfw3.h	644;"	d
+GLFW_BLUE_BITS	include/GLFW/glfw3.h	636;"	d
+GLFW_CALLBACK_DEFINED	include/GLFW/glfw3.h	115;"	d
+GLFW_CALLBACK_DEFINED	include/GLFW/glfw3.h	4237;"	d
+GLFW_CLIENT_API	include/GLFW/glfw3.h	651;"	d
+GLFW_CONNECTED	include/GLFW/glfw3.h	729;"	d
+GLFW_CONTEXT_CREATION_API	include/GLFW/glfw3.h	661;"	d
+GLFW_CONTEXT_NO_ERROR	include/GLFW/glfw3.h	660;"	d
+GLFW_CONTEXT_RELEASE_BEHAVIOR	include/GLFW/glfw3.h	659;"	d
+GLFW_CONTEXT_REVISION	include/GLFW/glfw3.h	654;"	d
+GLFW_CONTEXT_ROBUSTNESS	include/GLFW/glfw3.h	655;"	d
+GLFW_CONTEXT_VERSION_MAJOR	include/GLFW/glfw3.h	652;"	d
+GLFW_CONTEXT_VERSION_MINOR	include/GLFW/glfw3.h	653;"	d
+GLFW_CROSSHAIR_CURSOR	include/GLFW/glfw3.h	711;"	d
+GLFW_CURSOR	include/GLFW/glfw3.h	675;"	d
+GLFW_CURSOR_DISABLED	include/GLFW/glfw3.h	681;"	d
+GLFW_CURSOR_HIDDEN	include/GLFW/glfw3.h	680;"	d
+GLFW_CURSOR_NORMAL	include/GLFW/glfw3.h	679;"	d
+GLFW_DECORATED	include/GLFW/glfw3.h	629;"	d
+GLFW_DEPTH_BITS	include/GLFW/glfw3.h	638;"	d
+GLFW_DISCONNECTED	include/GLFW/glfw3.h	730;"	d
+GLFW_DONT_CARE	include/GLFW/glfw3.h	732;"	d
+GLFW_DOUBLEBUFFER	include/GLFW/glfw3.h	649;"	d
+GLFW_EGL_CONTEXT_API	include/GLFW/glfw3.h	688;"	d
+GLFW_FALSE	include/GLFW/glfw3.h	250;"	d
+GLFW_FLOATING	include/GLFW/glfw3.h	631;"	d
+GLFW_FOCUSED	include/GLFW/glfw3.h	625;"	d
+GLFW_FORMAT_UNAVAILABLE	include/GLFW/glfw3.h	614;"	d
+GLFW_GREEN_BITS	include/GLFW/glfw3.h	635;"	d
+GLFW_HAND_CURSOR	include/GLFW/glfw3.h	716;"	d
+GLFW_HRESIZE_CURSOR	include/GLFW/glfw3.h	721;"	d
+GLFW_IBEAM_CURSOR	include/GLFW/glfw3.h	706;"	d
+GLFW_ICONIFIED	include/GLFW/glfw3.h	626;"	d
+GLFW_INVALID_ENUM	include/GLFW/glfw3.h	532;"	d
+GLFW_INVALID_VALUE	include/GLFW/glfw3.h	543;"	d
+GLFW_JOYSTICK_1	include/GLFW/glfw3.h	480;"	d
+GLFW_JOYSTICK_10	include/GLFW/glfw3.h	489;"	d
+GLFW_JOYSTICK_11	include/GLFW/glfw3.h	490;"	d
+GLFW_JOYSTICK_12	include/GLFW/glfw3.h	491;"	d
+GLFW_JOYSTICK_13	include/GLFW/glfw3.h	492;"	d
+GLFW_JOYSTICK_14	include/GLFW/glfw3.h	493;"	d
+GLFW_JOYSTICK_15	include/GLFW/glfw3.h	494;"	d
+GLFW_JOYSTICK_16	include/GLFW/glfw3.h	495;"	d
+GLFW_JOYSTICK_2	include/GLFW/glfw3.h	481;"	d
+GLFW_JOYSTICK_3	include/GLFW/glfw3.h	482;"	d
+GLFW_JOYSTICK_4	include/GLFW/glfw3.h	483;"	d
+GLFW_JOYSTICK_5	include/GLFW/glfw3.h	484;"	d
+GLFW_JOYSTICK_6	include/GLFW/glfw3.h	485;"	d
+GLFW_JOYSTICK_7	include/GLFW/glfw3.h	486;"	d
+GLFW_JOYSTICK_8	include/GLFW/glfw3.h	487;"	d
+GLFW_JOYSTICK_9	include/GLFW/glfw3.h	488;"	d
+GLFW_JOYSTICK_LAST	include/GLFW/glfw3.h	496;"	d
+GLFW_KEY_0	include/GLFW/glfw3.h	311;"	d
+GLFW_KEY_1	include/GLFW/glfw3.h	312;"	d
+GLFW_KEY_2	include/GLFW/glfw3.h	313;"	d
+GLFW_KEY_3	include/GLFW/glfw3.h	314;"	d
+GLFW_KEY_4	include/GLFW/glfw3.h	315;"	d
+GLFW_KEY_5	include/GLFW/glfw3.h	316;"	d
+GLFW_KEY_6	include/GLFW/glfw3.h	317;"	d
+GLFW_KEY_7	include/GLFW/glfw3.h	318;"	d
+GLFW_KEY_8	include/GLFW/glfw3.h	319;"	d
+GLFW_KEY_9	include/GLFW/glfw3.h	320;"	d
+GLFW_KEY_A	include/GLFW/glfw3.h	323;"	d
+GLFW_KEY_APOSTROPHE	include/GLFW/glfw3.h	306;"	d
+GLFW_KEY_B	include/GLFW/glfw3.h	324;"	d
+GLFW_KEY_BACKSLASH	include/GLFW/glfw3.h	350;"	d
+GLFW_KEY_BACKSPACE	include/GLFW/glfw3.h	360;"	d
+GLFW_KEY_C	include/GLFW/glfw3.h	325;"	d
+GLFW_KEY_CAPS_LOCK	include/GLFW/glfw3.h	371;"	d
+GLFW_KEY_COMMA	include/GLFW/glfw3.h	307;"	d
+GLFW_KEY_D	include/GLFW/glfw3.h	326;"	d
+GLFW_KEY_DELETE	include/GLFW/glfw3.h	362;"	d
+GLFW_KEY_DOWN	include/GLFW/glfw3.h	365;"	d
+GLFW_KEY_E	include/GLFW/glfw3.h	327;"	d
+GLFW_KEY_END	include/GLFW/glfw3.h	370;"	d
+GLFW_KEY_ENTER	include/GLFW/glfw3.h	358;"	d
+GLFW_KEY_EQUAL	include/GLFW/glfw3.h	322;"	d
+GLFW_KEY_ESCAPE	include/GLFW/glfw3.h	357;"	d
+GLFW_KEY_F	include/GLFW/glfw3.h	328;"	d
+GLFW_KEY_F1	include/GLFW/glfw3.h	376;"	d
+GLFW_KEY_F10	include/GLFW/glfw3.h	385;"	d
+GLFW_KEY_F11	include/GLFW/glfw3.h	386;"	d
+GLFW_KEY_F12	include/GLFW/glfw3.h	387;"	d
+GLFW_KEY_F13	include/GLFW/glfw3.h	388;"	d
+GLFW_KEY_F14	include/GLFW/glfw3.h	389;"	d
+GLFW_KEY_F15	include/GLFW/glfw3.h	390;"	d
+GLFW_KEY_F16	include/GLFW/glfw3.h	391;"	d
+GLFW_KEY_F17	include/GLFW/glfw3.h	392;"	d
+GLFW_KEY_F18	include/GLFW/glfw3.h	393;"	d
+GLFW_KEY_F19	include/GLFW/glfw3.h	394;"	d
+GLFW_KEY_F2	include/GLFW/glfw3.h	377;"	d
+GLFW_KEY_F20	include/GLFW/glfw3.h	395;"	d
+GLFW_KEY_F21	include/GLFW/glfw3.h	396;"	d
+GLFW_KEY_F22	include/GLFW/glfw3.h	397;"	d
+GLFW_KEY_F23	include/GLFW/glfw3.h	398;"	d
+GLFW_KEY_F24	include/GLFW/glfw3.h	399;"	d
+GLFW_KEY_F25	include/GLFW/glfw3.h	400;"	d
+GLFW_KEY_F3	include/GLFW/glfw3.h	378;"	d
+GLFW_KEY_F4	include/GLFW/glfw3.h	379;"	d
+GLFW_KEY_F5	include/GLFW/glfw3.h	380;"	d
+GLFW_KEY_F6	include/GLFW/glfw3.h	381;"	d
+GLFW_KEY_F7	include/GLFW/glfw3.h	382;"	d
+GLFW_KEY_F8	include/GLFW/glfw3.h	383;"	d
+GLFW_KEY_F9	include/GLFW/glfw3.h	384;"	d
+GLFW_KEY_G	include/GLFW/glfw3.h	329;"	d
+GLFW_KEY_GRAVE_ACCENT	include/GLFW/glfw3.h	352;"	d
+GLFW_KEY_H	include/GLFW/glfw3.h	330;"	d
+GLFW_KEY_HOME	include/GLFW/glfw3.h	369;"	d
+GLFW_KEY_I	include/GLFW/glfw3.h	331;"	d
+GLFW_KEY_INSERT	include/GLFW/glfw3.h	361;"	d
+GLFW_KEY_J	include/GLFW/glfw3.h	332;"	d
+GLFW_KEY_K	include/GLFW/glfw3.h	333;"	d
+GLFW_KEY_KP_0	include/GLFW/glfw3.h	401;"	d
+GLFW_KEY_KP_1	include/GLFW/glfw3.h	402;"	d
+GLFW_KEY_KP_2	include/GLFW/glfw3.h	403;"	d
+GLFW_KEY_KP_3	include/GLFW/glfw3.h	404;"	d
+GLFW_KEY_KP_4	include/GLFW/glfw3.h	405;"	d
+GLFW_KEY_KP_5	include/GLFW/glfw3.h	406;"	d
+GLFW_KEY_KP_6	include/GLFW/glfw3.h	407;"	d
+GLFW_KEY_KP_7	include/GLFW/glfw3.h	408;"	d
+GLFW_KEY_KP_8	include/GLFW/glfw3.h	409;"	d
+GLFW_KEY_KP_9	include/GLFW/glfw3.h	410;"	d
+GLFW_KEY_KP_ADD	include/GLFW/glfw3.h	415;"	d
+GLFW_KEY_KP_DECIMAL	include/GLFW/glfw3.h	411;"	d
+GLFW_KEY_KP_DIVIDE	include/GLFW/glfw3.h	412;"	d
+GLFW_KEY_KP_ENTER	include/GLFW/glfw3.h	416;"	d
+GLFW_KEY_KP_EQUAL	include/GLFW/glfw3.h	417;"	d
+GLFW_KEY_KP_MULTIPLY	include/GLFW/glfw3.h	413;"	d
+GLFW_KEY_KP_SUBTRACT	include/GLFW/glfw3.h	414;"	d
+GLFW_KEY_L	include/GLFW/glfw3.h	334;"	d
+GLFW_KEY_LAST	include/GLFW/glfw3.h	428;"	d
+GLFW_KEY_LEFT	include/GLFW/glfw3.h	364;"	d
+GLFW_KEY_LEFT_ALT	include/GLFW/glfw3.h	420;"	d
+GLFW_KEY_LEFT_BRACKET	include/GLFW/glfw3.h	349;"	d
+GLFW_KEY_LEFT_CONTROL	include/GLFW/glfw3.h	419;"	d
+GLFW_KEY_LEFT_SHIFT	include/GLFW/glfw3.h	418;"	d
+GLFW_KEY_LEFT_SUPER	include/GLFW/glfw3.h	421;"	d
+GLFW_KEY_M	include/GLFW/glfw3.h	335;"	d
+GLFW_KEY_MENU	include/GLFW/glfw3.h	426;"	d
+GLFW_KEY_MINUS	include/GLFW/glfw3.h	308;"	d
+GLFW_KEY_N	include/GLFW/glfw3.h	336;"	d
+GLFW_KEY_NUM_LOCK	include/GLFW/glfw3.h	373;"	d
+GLFW_KEY_O	include/GLFW/glfw3.h	337;"	d
+GLFW_KEY_P	include/GLFW/glfw3.h	338;"	d
+GLFW_KEY_PAGE_DOWN	include/GLFW/glfw3.h	368;"	d
+GLFW_KEY_PAGE_UP	include/GLFW/glfw3.h	367;"	d
+GLFW_KEY_PAUSE	include/GLFW/glfw3.h	375;"	d
+GLFW_KEY_PERIOD	include/GLFW/glfw3.h	309;"	d
+GLFW_KEY_PRINT_SCREEN	include/GLFW/glfw3.h	374;"	d
+GLFW_KEY_Q	include/GLFW/glfw3.h	339;"	d
+GLFW_KEY_R	include/GLFW/glfw3.h	340;"	d
+GLFW_KEY_RIGHT	include/GLFW/glfw3.h	363;"	d
+GLFW_KEY_RIGHT_ALT	include/GLFW/glfw3.h	424;"	d
+GLFW_KEY_RIGHT_BRACKET	include/GLFW/glfw3.h	351;"	d
+GLFW_KEY_RIGHT_CONTROL	include/GLFW/glfw3.h	423;"	d
+GLFW_KEY_RIGHT_SHIFT	include/GLFW/glfw3.h	422;"	d
+GLFW_KEY_RIGHT_SUPER	include/GLFW/glfw3.h	425;"	d
+GLFW_KEY_S	include/GLFW/glfw3.h	341;"	d
+GLFW_KEY_SCROLL_LOCK	include/GLFW/glfw3.h	372;"	d
+GLFW_KEY_SEMICOLON	include/GLFW/glfw3.h	321;"	d
+GLFW_KEY_SLASH	include/GLFW/glfw3.h	310;"	d
+GLFW_KEY_SPACE	include/GLFW/glfw3.h	305;"	d
+GLFW_KEY_T	include/GLFW/glfw3.h	342;"	d
+GLFW_KEY_TAB	include/GLFW/glfw3.h	359;"	d
+GLFW_KEY_U	include/GLFW/glfw3.h	343;"	d
+GLFW_KEY_UNKNOWN	include/GLFW/glfw3.h	302;"	d
+GLFW_KEY_UP	include/GLFW/glfw3.h	366;"	d
+GLFW_KEY_V	include/GLFW/glfw3.h	344;"	d
+GLFW_KEY_W	include/GLFW/glfw3.h	345;"	d
+GLFW_KEY_WORLD_1	include/GLFW/glfw3.h	353;"	d
+GLFW_KEY_WORLD_2	include/GLFW/glfw3.h	354;"	d
+GLFW_KEY_X	include/GLFW/glfw3.h	346;"	d
+GLFW_KEY_Y	include/GLFW/glfw3.h	347;"	d
+GLFW_KEY_Z	include/GLFW/glfw3.h	348;"	d
+GLFW_LOSE_CONTEXT_ON_RESET	include/GLFW/glfw3.h	669;"	d
+GLFW_MAXIMIZED	include/GLFW/glfw3.h	632;"	d
+GLFW_MOD_ALT	include/GLFW/glfw3.h	447;"	d
+GLFW_MOD_CONTROL	include/GLFW/glfw3.h	444;"	d
+GLFW_MOD_SHIFT	include/GLFW/glfw3.h	441;"	d
+GLFW_MOD_SUPER	include/GLFW/glfw3.h	450;"	d
+GLFW_MOUSE_BUTTON_1	include/GLFW/glfw3.h	460;"	d
+GLFW_MOUSE_BUTTON_2	include/GLFW/glfw3.h	461;"	d
+GLFW_MOUSE_BUTTON_3	include/GLFW/glfw3.h	462;"	d
+GLFW_MOUSE_BUTTON_4	include/GLFW/glfw3.h	463;"	d
+GLFW_MOUSE_BUTTON_5	include/GLFW/glfw3.h	464;"	d
+GLFW_MOUSE_BUTTON_6	include/GLFW/glfw3.h	465;"	d
+GLFW_MOUSE_BUTTON_7	include/GLFW/glfw3.h	466;"	d
+GLFW_MOUSE_BUTTON_8	include/GLFW/glfw3.h	467;"	d
+GLFW_MOUSE_BUTTON_LAST	include/GLFW/glfw3.h	468;"	d
+GLFW_MOUSE_BUTTON_LEFT	include/GLFW/glfw3.h	469;"	d
+GLFW_MOUSE_BUTTON_MIDDLE	include/GLFW/glfw3.h	471;"	d
+GLFW_MOUSE_BUTTON_RIGHT	include/GLFW/glfw3.h	470;"	d
+GLFW_NATIVE_CONTEXT_API	include/GLFW/glfw3.h	687;"	d
+GLFW_NOT_INITIALIZED	include/GLFW/glfw3.h	513;"	d
+GLFW_NO_API	include/GLFW/glfw3.h	663;"	d
+GLFW_NO_CURRENT_CONTEXT	include/GLFW/glfw3.h	523;"	d
+GLFW_NO_RESET_NOTIFICATION	include/GLFW/glfw3.h	668;"	d
+GLFW_NO_ROBUSTNESS	include/GLFW/glfw3.h	667;"	d
+GLFW_NO_WINDOW_CONTEXT	include/GLFW/glfw3.h	622;"	d
+GLFW_OPENGL_ANY_PROFILE	include/GLFW/glfw3.h	671;"	d
+GLFW_OPENGL_API	include/GLFW/glfw3.h	664;"	d
+GLFW_OPENGL_COMPAT_PROFILE	include/GLFW/glfw3.h	673;"	d
+GLFW_OPENGL_CORE_PROFILE	include/GLFW/glfw3.h	672;"	d
+GLFW_OPENGL_DEBUG_CONTEXT	include/GLFW/glfw3.h	657;"	d
+GLFW_OPENGL_ES_API	include/GLFW/glfw3.h	665;"	d
+GLFW_OPENGL_FORWARD_COMPAT	include/GLFW/glfw3.h	656;"	d
+GLFW_OPENGL_PROFILE	include/GLFW/glfw3.h	658;"	d
+GLFW_OUT_OF_MEMORY	include/GLFW/glfw3.h	551;"	d
+GLFW_PLATFORM_ERROR	include/GLFW/glfw3.h	595;"	d
+GLFW_PRESS	include/GLFW/glfw3.h	268;"	d
+GLFW_RED_BITS	include/GLFW/glfw3.h	634;"	d
+GLFW_REFRESH_RATE	include/GLFW/glfw3.h	648;"	d
+GLFW_RELEASE	include/GLFW/glfw3.h	261;"	d
+GLFW_RELEASE_BEHAVIOR_FLUSH	include/GLFW/glfw3.h	684;"	d
+GLFW_RELEASE_BEHAVIOR_NONE	include/GLFW/glfw3.h	685;"	d
+GLFW_REPEAT	include/GLFW/glfw3.h	275;"	d
+GLFW_RESIZABLE	include/GLFW/glfw3.h	627;"	d
+GLFW_SAMPLES	include/GLFW/glfw3.h	646;"	d
+GLFW_SRGB_CAPABLE	include/GLFW/glfw3.h	647;"	d
+GLFW_STENCIL_BITS	include/GLFW/glfw3.h	639;"	d
+GLFW_STEREO	include/GLFW/glfw3.h	645;"	d
+GLFW_STICKY_KEYS	include/GLFW/glfw3.h	676;"	d
+GLFW_STICKY_MOUSE_BUTTONS	include/GLFW/glfw3.h	677;"	d
+GLFW_TRUE	include/GLFW/glfw3.h	243;"	d
+GLFW_VERSION_MAJOR	include/GLFW/glfw3.h	218;"	d
+GLFW_VERSION_MINOR	include/GLFW/glfw3.h	225;"	d
+GLFW_VERSION_REVISION	include/GLFW/glfw3.h	232;"	d
+GLFW_VERSION_UNAVAILABLE	include/GLFW/glfw3.h	584;"	d
+GLFW_VISIBLE	include/GLFW/glfw3.h	628;"	d
+GLFW_VRESIZE_CURSOR	include/GLFW/glfw3.h	726;"	d
+GLFW_WINGDIAPI_DEFINED	include/GLFW/glfw3.h	108;"	d
+GLFW_WINGDIAPI_DEFINED	include/GLFW/glfw3.h	4232;"	d
+GLFWcharfun	include/GLFW/glfw3.h	/^typedef void (* GLFWcharfun)(GLFWwindow*,unsigned int);$/;"	t
+GLFWcharmodsfun	include/GLFW/glfw3.h	/^typedef void (* GLFWcharmodsfun)(GLFWwindow*,unsigned int,int);$/;"	t
+GLFWcursor	include/GLFW/glfw3.h	/^typedef struct GLFWcursor GLFWcursor;$/;"	t	typeref:struct:GLFWcursor
+GLFWcursorenterfun	include/GLFW/glfw3.h	/^typedef void (* GLFWcursorenterfun)(GLFWwindow*,int);$/;"	t
+GLFWcursorposfun	include/GLFW/glfw3.h	/^typedef void (* GLFWcursorposfun)(GLFWwindow*,double,double);$/;"	t
+GLFWdropfun	include/GLFW/glfw3.h	/^typedef void (* GLFWdropfun)(GLFWwindow*,int,const char**);$/;"	t
+GLFWerrorfun	include/GLFW/glfw3.h	/^typedef void (* GLFWerrorfun)(int,const char*);$/;"	t
+GLFWframebuffersizefun	include/GLFW/glfw3.h	/^typedef void (* GLFWframebuffersizefun)(GLFWwindow*,int,int);$/;"	t
+GLFWgammaramp	include/GLFW/glfw3.h	/^typedef struct GLFWgammaramp$/;"	s
+GLFWgammaramp	include/GLFW/glfw3.h	/^} GLFWgammaramp;$/;"	t	typeref:struct:GLFWgammaramp
+GLFWglproc	include/GLFW/glfw3.h	/^typedef void (*GLFWglproc)(void);$/;"	t
+GLFWimage	include/GLFW/glfw3.h	/^typedef struct GLFWimage$/;"	s
+GLFWimage	include/GLFW/glfw3.h	/^} GLFWimage;$/;"	t	typeref:struct:GLFWimage
+GLFWjoystickfun	include/GLFW/glfw3.h	/^typedef void (* GLFWjoystickfun)(int,int);$/;"	t
+GLFWkeyfun	include/GLFW/glfw3.h	/^typedef void (* GLFWkeyfun)(GLFWwindow*,int,int,int,int);$/;"	t
+GLFWmonitor	include/GLFW/glfw3.h	/^typedef struct GLFWmonitor GLFWmonitor;$/;"	t	typeref:struct:GLFWmonitor
+GLFWmonitorfun	include/GLFW/glfw3.h	/^typedef void (* GLFWmonitorfun)(GLFWmonitor*,int);$/;"	t
+GLFWmousebuttonfun	include/GLFW/glfw3.h	/^typedef void (* GLFWmousebuttonfun)(GLFWwindow*,int,int,int);$/;"	t
+GLFWscrollfun	include/GLFW/glfw3.h	/^typedef void (* GLFWscrollfun)(GLFWwindow*,double,double);$/;"	t
+GLFWvidmode	include/GLFW/glfw3.h	/^typedef struct GLFWvidmode$/;"	s
+GLFWvidmode	include/GLFW/glfw3.h	/^} GLFWvidmode;$/;"	t	typeref:struct:GLFWvidmode
+GLFWvkproc	include/GLFW/glfw3.h	/^typedef void (*GLFWvkproc)(void);$/;"	t
+GLFWwindow	include/GLFW/glfw3.h	/^typedef struct GLFWwindow GLFWwindow;$/;"	t	typeref:struct:GLFWwindow
+GLFWwindowclosefun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowclosefun)(GLFWwindow*);$/;"	t
+GLFWwindowfocusfun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowfocusfun)(GLFWwindow*,int);$/;"	t
+GLFWwindowiconifyfun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowiconifyfun)(GLFWwindow*,int);$/;"	t
+GLFWwindowposfun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowposfun)(GLFWwindow*,int,int);$/;"	t
+GLFWwindowrefreshfun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowrefreshfun)(GLFWwindow*);$/;"	t
+GLFWwindowsizefun	include/GLFW/glfw3.h	/^typedef void (* GLFWwindowsizefun)(GLFWwindow*,int,int);$/;"	t
 GLInput	GLComponents/GLInput.hpp	/^  GLInput()$/;"	f	class:GLInput
 GLInput	GLComponents/GLInput.hpp	/^class GLInput$/;"	c
 GLIntVec2	GLComponents/GLVec.hpp	/^struct GLIntVec2$/;"	s
@@ -55,6 +336,7 @@ GLUtils	GLComponents/GLUtils.hpp	/^namespace GLUtils$/;"	n
 GLVec2	GLComponents/GLVec.hpp	/^struct GLVec2$/;"	s
 GLVec3	GLComponents/GLVec.hpp	/^struct GLVec3$/;"	s
 GLVec4	GLComponents/GLVec.hpp	/^struct GLVec4$/;"	s
+GL_GLEXT_LEGACY	include/GLFW/glfw3.h	138;"	d
 GRV	GameLogic/Physics.hpp	/^  const double GRV    = 0.001;$/;"	m	namespace:PhysicsDef
 GetFrameTime	GLComponents/GLTimer.hpp	/^  GLdouble GetFrameTime()$/;"	f	class:GLTimer
 GetKey	GLComponents/GLInput.hpp	/^  bool GetKey(GLint key)$/;"	f	class:GLInput
@@ -74,13 +356,12 @@ JMP_LIM	GameLogic/Physics.hpp	/^  const int JMP_LIM = 9;$/;"	m	namespace:Physics
 JUMP_V	GameLogic/Physics.hpp	/^  const double JUMP_V = 0.05;$/;"	m	namespace:PhysicsDef
 Jump	GameLogic/Physics.hpp	/^  void Jump()$/;"	f	class:Physics
 LEFT	GameLogic/Physics.hpp	/^  const int LEFT  = 0x004;$/;"	m	namespace:Dir2D
-LOG	Common/common.hpp	/^#define LOG(/;"	d
+LOG	Common/Common.hpp	10;"	d
 Link	GLComponents/GLShader.hpp	/^void Link(GLuint prog)$/;"	f
+Load	GLComponents/GLBmpLoader.hpp	/^  bool Load(const char* FileName, int w_slice_, int h_slice_)$/;"	f	class:BMPMultiple
 Load	GLComponents/GLBmpLoader.hpp	/^bool BMP::Load(const char *FileName)$/;"	f	class:BMP
-MAX_MAP_H	GameLogic/GridMap.hpp	/^#define MAX_MAP_H /;"	d
-MAX_MAP_W	GameLogic/GridMap.hpp	/^#define MAX_MAP_W /;"	d
-MENU_MAX	GameLogic/Menu.hpp	/^#define MENU_MAX /;"	d
-MSG_MAX	GameLogic/MessageWindow.hpp	/^#define MSG_MAX /;"	d
+MAX_MAP_H	GameLogic/GridMap.hpp	6;"	d
+MAX_MAP_W	GameLogic/GridMap.hpp	5;"	d
 MWOption	GameLogic/MessageWindow.hpp	/^namespace MWOption$/;"	n
 MainLoop	main.cpp	/^void MainLoop()$/;"	f
 MainView	MyView/MainView.hpp	/^  MainView(){}$/;"	f	class:MainView
@@ -89,15 +370,16 @@ MapChip	GameLogic/GridMap.hpp	/^namespace MapChip$/;"	n
 Menu	GameLogic/Menu.hpp	/^  Menu(int siz_)$/;"	f	class:Menu
 Menu	GameLogic/Menu.hpp	/^class Menu$/;"	c
 MessageWait	main.cpp	/^void MessageWait()$/;"	f
-MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow() {}$/;"	f	class:MessageWindow
+MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow()$/;"	f	class:MessageWindow
+MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow(std::vector<std::string> messages)$/;"	f	class:MessageWindow
 MessageWindow	GameLogic/MessageWindow.hpp	/^class MessageWindow$/;"	c
 N	GameLogic/Physics.hpp	/^  const double N = 0.05;$/;"	m	namespace:PhysicsDef
 NONE	GameLogic/GridMap.hpp	/^  const int NONE = 0;$/;"	m	namespace:MapChip
+NOT_USE_PROG_SHADER	GLComponents/GLShader.hpp	1;"	d
 Next	GameLogic/Menu.hpp	/^  void Next()$/;"	f	class:Menu
 NextMessage	GameLogic/MessageWindow.hpp	/^  void NextMessage()$/;"	f	class:MessageWindow
 NextSubString	GameLogic/MessageWindow.hpp	/^  void NextSubString()$/;"	f	class:MessageWindow
 Open	GameLogic/MessageWindow.hpp	/^  void Open()$/;"	f	class:MessageWindow
-PLAYER_LIST_MAX	GameLogic/Player.hpp	/^#define PLAYER_LIST_MAX /;"	d
 Physics	GameLogic/Physics.hpp	/^  Physics()$/;"	f	class:Physics
 Physics	GameLogic/Physics.hpp	/^class Physics$/;"	c
 PhysicsDef	GameLogic/Physics.hpp	/^namespace PhysicsDef$/;"	n
@@ -108,11 +390,11 @@ PlayerList	GameLogic/Player.hpp	/^  PlayerList(int siz_)$/;"	f	class:PlayerList
 PlayerList	GameLogic/Player.hpp	/^class PlayerList$/;"	c
 Polygon	GLComponents/GLObject.hpp	/^  const int Polygon = 2;$/;"	m	namespace:RenderType
 Pop	GLComponents/GLScene.hpp	/^  void Pop(GLObject* obj)$/;"	f	class:GLScene
-Pop	GameLogic/Player.hpp	/^  bool Pop()$/;"	f	class:PlayerList
+Pop	GameLogic/Player.hpp	/^  void Pop()$/;"	f	class:PlayerList
 Prev	GameLogic/Menu.hpp	/^  void Prev()$/;"	f	class:Menu
 PrevMessage	GameLogic/MessageWindow.hpp	/^  void PrevMessage()$/;"	f	class:MessageWindow
-Push	GameLogic/Player.hpp	/^  bool Push(Player player)$/;"	f	class:PlayerList
-REP	Common/common.hpp	/^#define REP(/;"	d
+Push	GameLogic/Player.hpp	/^  void Push(Player player)$/;"	f	class:PlayerList
+REP	Common/Common.hpp	11;"	d
 RIGHT	GameLogic/Physics.hpp	/^  const int RIGHT = 0x002;$/;"	m	namespace:Dir2D
 ReadShaderFileCompile	GLComponents/GLShader.hpp	/^void ReadShaderFileCompile(GLuint Shader, const char *File)$/;"	f
 Rect	GLComponents/GLObject.hpp	/^  const int Rect = 0;$/;"	m	namespace:RenderType
@@ -128,7 +410,6 @@ SelectMenu	GameLogic/Menu.hpp	/^  void SelectMenu()$/;"	f	class:Menu
 Set2DTexture	GLComponents/GLObject.hpp	/^  void Set2DTexture(GLuint _textureID)$/;"	f	class:GLObject
 Set3DCube	GLComponents/GLObject.hpp	/^  void Set3DCube()$/;"	f	class:GLObject
 SetMessage	GameLogic/MessageWindow.hpp	/^  void SetMessage(int msg_idx_)$/;"	f	class:MessageWindow
-SetTemplate	GameLogic/Player.hpp	/^  void SetTemplate(int type)$/;"	f	class:Player
 SetTexture	GLComponents/GLBmpLoader.hpp	/^void BMP::SetTexture()$/;"	f	class:BMP
 SetType	GLComponents/GLObject.hpp	/^  void SetType(GLint _type)$/;"	f	class:GLObject
 Shader	GLComponents/GLObject.hpp	/^  const int Shader = 3;$/;"	m	namespace:RenderType
@@ -139,11 +420,10 @@ Start	MyView/MainView.hpp	/^  void Start(){}$/;"	f	class:MainView
 Start	MyView/TitleView.hpp	/^  void Start(){}$/;"	f	class:TitleView
 Start	MyView/_TemplateView.hpp	/^  void Start(){}$/;"	f	class:_TemplateView
 Status	GameLogic/Player.hpp	/^class Status$/;"	c
-TEST_TEX_HEIGHT	GLComponents/GLUtils.hpp	/^#define TEST_TEX_HEIGHT /;"	d
-TEST_TEX_WIDTH	GLComponents/GLUtils.hpp	/^#define TEST_TEX_WIDTH /;"	d
 Texture	GLComponents/GLObject.hpp	/^  const int Texture = 1;$/;"	m	namespace:RenderType
 TitleView	MyView/TitleView.hpp	/^  TitleView(){}$/;"	f	class:TitleView
 TitleView	MyView/TitleView.hpp	/^class TitleView : public GLScene$/;"	c
+UNAME	makefile	/^UNAME = $(shell uname)$/;"	m
 UP	GameLogic/Physics.hpp	/^  const int UP    = 0x001;$/;"	m	namespace:Dir2D
 UP_STAIRS	GameLogic/GridMap.hpp	/^  const int UP_STAIRS = 1;$/;"	m	namespace:MapChip
 Update	GLComponents/GLScene.hpp	/^  virtual void Update(){}$/;"	f	class:GLScene
@@ -159,32 +439,37 @@ UpdateMoving	GameLogic/Physics.hpp	/^  void UpdateMoving()$/;"	f	class:Physics
 WALL	GameLogic/GridMap.hpp	/^  const int WALL = -1;$/;"	m	namespace:MapChip
 WALL_L	GameLogic/Physics.hpp	/^  const double WALL_L = -1;$/;"	m	namespace:PhysicsDef
 WALL_R	GameLogic/Physics.hpp	/^  const double WALL_R = 1;$/;"	m	namespace:PhysicsDef
+WINGDIAPI	include/GLFW/glfw3.h	107;"	d
+WINGDIAPI	include/GLFW/glfw3.h	4231;"	d
 WaitCharTime	GameLogic/MessageWindow.hpp	/^  const double WaitCharTime = 0.25;$/;"	m	namespace:MWOption
 WaitMsgTime	GameLogic/MessageWindow.hpp	/^  const double WaitMsgTime = 0.25;$/;"	m	namespace:MWOption
 _TemplateView	MyView/_TemplateView.hpp	/^  _TemplateView(){}$/;"	f	class:_TemplateView
 _TemplateView	MyView/_TemplateView.hpp	/^class _TemplateView : public GLScene$/;"	c
-__COMMON_HPP__	Common/common.hpp	/^#define __COMMON_HPP__$/;"	d
-__CONFIGVIEW_HPP__	MyView/ConfigView.hpp	/^#define __CONFIGVIEW_HPP__$/;"	d
-__ENEMY_HPP__	GameLogic/Enemy.hpp	/^#define __ENEMY_HPP__$/;"	d
-__GLBMPLOADER_HPP__	GLComponents/GLBmpLoader.hpp	/^#define __GLBMPLOADER_HPP__$/;"	d
-__GLBUILTINCALLBACK_HPP__	GLComponents/GLBuiltInCallback.hpp	/^#define __GLBUILTINCALLBACK_HPP__$/;"	d
-__GLCOMPONENTS_HPP__	GLComponents/GLComponents.hpp	/^#define __GLCOMPONENTS_HPP__$/;"	d
-__GLINPUT_HPP__	GLComponents/GLInput.hpp	/^#define __GLINPUT_HPP__$/;"	d
-__GLOBJECT_HPP__	GLComponents/GLObject.hpp	/^#define __GLOBJECT_HPP__$/;"	d
-__GLSCENE_HPP__	GLComponents/GLScene.hpp	/^#define __GLSCENE_HPP__$/;"	d
-__GLSHADER_HPP__	GLComponents/GLShader.hpp	/^#define __GLSHADER_HPP__$/;"	d
-__GLTIMER_HPP__	GLComponents/GLTimer.hpp	/^#define __GLTIMER_HPP__$/;"	d
-__GLUTILS_HPP__	GLComponents/GLUtils.hpp	/^#define __GLUTILS_HPP__$/;"	d
-__GLVEC_HPP__	GLComponents/GLVec.hpp	/^#define __GLVEC_HPP__$/;"	d
-__GRIDMAP_HPP__	GameLogic/GridMap.hpp	/^#define __GRIDMAP_HPP__$/;"	d
-__INITVIEW_HPP__	MyView/InitView.hpp	/^#define __INITVIEW_HPP__$/;"	d
-__MAINVIEW_HPP__	MyView/MainView.hpp	/^#define __MAINVIEW_HPP__$/;"	d
-__MENU_HPP__	GameLogic/Menu.hpp	/^#define __MENU_HPP__$/;"	d
-__MESSAGE_WINDOW_HPP__	GameLogic/MessageWindow.hpp	/^#define __MESSAGE_WINDOW_HPP__$/;"	d
-__PHYSICS_HPP__	GameLogic/Physics.hpp	/^#define __PHYSICS_HPP__$/;"	d
-__PLAYER_HPP__	GameLogic/Player.hpp	/^#define __PLAYER_HPP__$/;"	d
-__TEMPLATEVIEW_HPP__	MyView/_TemplateView.hpp	/^#define __TEMPLATEVIEW_HPP__$/;"	d
-__TITLEVIEW_HPP__	MyView/TitleView.hpp	/^#define __TITLEVIEW_HPP__$/;"	d
+_WIN32	include/GLFW/glfw3.h	90;"	d
+__COMMON_HPP__	Common/Common.hpp	2;"	d
+__CONFIGVIEW_HPP__	MyView/ConfigView.hpp	2;"	d
+__ENEMY_HPP__	GameLogic/Enemy.hpp	2;"	d
+__GLBMPLOADER_HPP__	GLComponents/GLBmpLoader.hpp	2;"	d
+__GLBUILTINCALLBACK_HPP__	GLComponents/GLBuiltInCallback.hpp	2;"	d
+__GLCOMPONENTS_HPP__	GLComponents/GLComponents.hpp	2;"	d
+__GLINPUT_HPP__	GLComponents/GLInput.hpp	2;"	d
+__GLOBJECT_HPP__	GLComponents/GLObject.hpp	2;"	d
+__GLSCENE_HPP__	GLComponents/GLScene.hpp	2;"	d
+__GLSHADER_HPP__	GLComponents/GLShader.hpp	4;"	d
+__GLTIMER_HPP__	GLComponents/GLTimer.hpp	2;"	d
+__GLUTILS_HPP__	GLComponents/GLUtils.hpp	2;"	d
+__GLVEC_HPP__	GLComponents/GLVec.hpp	2;"	d
+__GRIDMAP_HPP__	GameLogic/GridMap.hpp	2;"	d
+__INITVIEW_HPP__	MyView/InitView.hpp	2;"	d
+__MAINVIEW_HPP__	MyView/MainView.hpp	2;"	d
+__MENU_HPP__	GameLogic/Menu.hpp	2;"	d
+__MESSAGE_WINDOW_HPP__	GameLogic/MessageWindow.hpp	2;"	d
+__PHYSICS_HPP__	GameLogic/Physics.hpp	2;"	d
+__PLAYER_HPP__	GameLogic/Player.hpp	2;"	d
+__TEMPLATEVIEW_HPP__	MyView/_TemplateView.hpp	2;"	d
+__TITLEVIEW_HPP__	MyView/TitleView.hpp	2;"	d
+_glfw3_h_	include/GLFW/glfw3.h	30;"	d
+_glfw3_native_h_	include/GLFW/glfw3native.h	30;"	d
 a	GLComponents/GLVec.hpp	/^  GLdouble a;$/;"	m	struct:GLColor
 accesary	GameLogic/Player.hpp	/^  int accesary;$/;"	m	class:Equipment
 armor	GameLogic/Player.hpp	/^  int armor;$/;"	m	class:Equipment
@@ -195,9 +480,12 @@ ax	GameLogic/Physics.hpp	/^  double ax, ay;$/;"	m	class:Physics
 ay	GameLogic/Physics.hpp	/^  double ax, ay;$/;"	m	class:Physics
 b	GLComponents/GLVec.hpp	/^  GLdouble b;$/;"	m	struct:GLColor
 bg	MyView/InitView.hpp	/^  GLObject* bg;$/;"	m	class:InitView
+blue	include/GLFW/glfw3.h	/^    unsigned short* blue;$/;"	m	struct:GLFWgammaramp
+blueBits	include/GLFW/glfw3.h	/^    int blueBits;$/;"	m	struct:GLFWvidmode
 bmp_bg	MyView/InitView.hpp	/^  BMP* bmp_bg;$/;"	m	class:InitView
 bmp_chara	MyView/InitView.hpp	/^  BMP* bmp_chara;$/;"	m	class:InitView
-callback	GameLogic/Menu.hpp	/^  void* callback[MENU_MAX];$/;"	m	class:Menu
+bmps	GLComponents/GLBmpLoader.hpp	/^  std::vector<BMP*> bmps;$/;"	m	class:BMPMultiple
+callbacks	GameLogic/Menu.hpp	/^  std::vector<void*> callbacks;$/;"	m	class:Menu
 char_idx	GameLogic/MessageWindow.hpp	/^  int char_idx;$/;"	m	class:MessageWindow
 color	GLComponents/GLObject.hpp	/^  GLColor color;$/;"	m	class:GLObject
 cond	GameLogic/Player.hpp	/^  int cond;$/;"	m	class:Status
@@ -216,8 +504,13 @@ frameTime	MyView/InitView.hpp	/^  double frameTime;$/;"	m	class:InitView
 g	GLComponents/GLVec.hpp	/^  GLdouble g;$/;"	m	struct:GLColor
 g_keyInput	GLComponents/GLInput.hpp	/^GLInput g_keyInput;$/;"	v
 g_timer	GLComponents/GLTimer.hpp	/^GLTimer g_timer;$/;"	v
-g_winPos	main.cpp	/^const GLIntVec2 g_winPos  = {720, 420};$/;"	v
+g_winPos	main.cpp	/^const GLIntVec2 g_winPos  = {1300, 640};$/;"	v
 g_winSize	main.cpp	/^const GLIntVec2 g_winSize = {300, 300};$/;"	v
+green	include/GLFW/glfw3.h	/^    unsigned short* green;$/;"	m	struct:GLFWgammaramp
+greenBits	include/GLFW/glfw3.h	/^    int greenBits;$/;"	m	struct:GLFWvidmode
+h_slice	GLComponents/GLBmpLoader.hpp	/^  int h_slice;$/;"	m	class:BMPMultiple
+height	include/GLFW/glfw3.h	/^    int height;$/;"	m	struct:GLFWimage
+height	include/GLFW/glfw3.h	/^    int height;$/;"	m	struct:GLFWvidmode
 helmet	GameLogic/Player.hpp	/^  int helmet;$/;"	m	class:Equipment
 hp	GameLogic/Player.hpp	/^  int hp;$/;"	m	class:Status
 hp_max	GameLogic/Player.hpp	/^  int hp_max;$/;"	m	class:Status
@@ -225,8 +518,8 @@ id	GLComponents/GLObject.hpp	/^  int id;$/;"	m	class:GLObject
 id	GameLogic/GridMap.hpp	/^  int id;$/;"	m	class:GridMap
 id	GameLogic/Player.hpp	/^  int id;$/;"	m	class:Player
 id	GameLogic/Player.hpp	/^  int id;$/;"	m	class:Skill
+id	include/GLFW/glfw3native.h	/^  typedef void* id;$/;"	t
 idx	GameLogic/Menu.hpp	/^  int idx;$/;"	m	class:Menu
-image	GLComponents/GLUtils.hpp	/^  GLubyte image[TEST_TEX_HEIGHT][TEST_TEX_WIDTH][4];$/;"	m	namespace:GLUtils
 is_fall	GameLogic/Physics.hpp	/^  bool is_fall;$/;"	m	class:Physics
 is_jump	GameLogic/Physics.hpp	/^  bool is_jump;$/;"	m	class:Physics
 is_unuse_gravity	GameLogic/Physics.hpp	/^  bool is_unuse_gravity;$/;"	m	class:Physics
@@ -242,8 +535,8 @@ main	Testing/main.cpp	/^int main (int argc, char** argv)$/;"	f
 main	main.cpp	/^int main()$/;"	f
 map	GameLogic/GridMap.hpp	/^  int map[MAX_MAP_W][MAX_MAP_H];$/;"	m	class:GridMap
 max_mp	GameLogic/Player.hpp	/^  int max_mp;$/;"	m	class:Status
-menues	GameLogic/Menu.hpp	/^  std::string menues[MENU_MAX];$/;"	m	class:Menu
-messages	GameLogic/MessageWindow.hpp	/^  std::string messages[MSG_MAX];$/;"	m	class:MessageWindow
+menues	GameLogic/Menu.hpp	/^  std::vector<std::string> menues;$/;"	m	class:Menu
+messages	GameLogic/MessageWindow.hpp	/^  std::vector<std::string> messages;$/;"	m	class:MessageWindow
 mouse_x	GLComponents/GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
 mouse_y	GLComponents/GLInput.hpp	/^  GLdouble mouse_x, mouse_y;$/;"	m	class:GLInput
 mov	GameLogic/Player.hpp	/^  int mov;$/;"	m	class:Status
@@ -259,14 +552,18 @@ object_cnt	GLComponents/GLScene.hpp	/^  int object_cnt;$/;"	m	class:GLScene
 objects	GLComponents/GLScene.hpp	/^  GLObject* objects[100];$/;"	m	class:GLScene
 order	GLComponents/GLObject.hpp	/^  int order;$/;"	m	class:GLObject
 physics	MyView/InitView.hpp	/^  Physics physics;$/;"	m	class:InitView
+pixels	include/GLFW/glfw3.h	/^    unsigned char* pixels;$/;"	m	struct:GLFWimage
 player	MyView/InitView.hpp	/^  GLObject* player;$/;"	m	class:InitView
 playerInfo	MyView/InitView.hpp	/^  Player playerInfo;$/;"	m	class:InitView
-players	GameLogic/Player.hpp	/^  Player players[PLAYER_LIST_MAX];$/;"	m	class:PlayerList
+players	GameLogic/Player.hpp	/^  std::vector<Player> players;$/;"	m	class:PlayerList
 pos	GLComponents/GLObject.hpp	/^  GLVec2 pos;$/;"	m	class:GLObject
 pos_x	GameLogic/GridMap.hpp	/^  int pos_x, pos_y;$/;"	m	class:GridMap
 pos_y	GameLogic/GridMap.hpp	/^  int pos_x, pos_y;$/;"	m	class:GridMap
 prevGetTime	GLComponents/GLTimer.hpp	/^  GLdouble prevGetTime;$/;"	m	class:GLTimer
 r	GLComponents/GLVec.hpp	/^  GLdouble r;$/;"	m	struct:GLColor
+red	include/GLFW/glfw3.h	/^    unsigned short* red;$/;"	m	struct:GLFWgammaramp
+redBits	include/GLFW/glfw3.h	/^    int redBits;$/;"	m	struct:GLFWvidmode
+refreshRate	include/GLFW/glfw3.h	/^    int refreshRate;$/;"	m	struct:GLFWvidmode
 shader_program	GLComponents/GLShader.hpp	/^GLuint shader_program;$/;"	v
 shield	GameLogic/Player.hpp	/^  int shield;$/;"	m	class:Equipment
 siz	GLComponents/GLObject.hpp	/^  GLVec2 siz;$/;"	m	class:GLObject
@@ -274,13 +571,17 @@ siz	GameLogic/Menu.hpp	/^  int siz;$/;"	m	class:Menu
 siz	GameLogic/Player.hpp	/^  int siz;$/;"	m	class:PlayerList
 siz_x	GameLogic/GridMap.hpp	/^  int siz_x, siz_y;$/;"	m	class:GridMap
 siz_y	GameLogic/GridMap.hpp	/^  int siz_x, siz_y;$/;"	m	class:GridMap
+size	include/GLFW/glfw3.h	/^    unsigned int size;$/;"	m	struct:GLFWgammaramp
 sizeX	GLComponents/GLBmpLoader.hpp	/^  int sizeX;$/;"	m	class:BMP
+sizeX	GLComponents/GLBmpLoader.hpp	/^  int sizeX;$/;"	m	class:BMPMultiple
 sizeY	GLComponents/GLBmpLoader.hpp	/^  int sizeY;$/;"	m	class:BMP
+sizeY	GLComponents/GLBmpLoader.hpp	/^  int sizeY;$/;"	m	class:BMPMultiple
 spd	GameLogic/Player.hpp	/^  int spd;$/;"	m	class:Status
 spd_max	GameLogic/Player.hpp	/^  int spd_max;$/;"	m	class:Status
 status	GameLogic/Player.hpp	/^  Status status;$/;"	m	class:Player
 t	GameLogic/Physics.hpp	/^  double t;$/;"	m	class:Physics
 texture	GLComponents/GLBmpLoader.hpp	/^  GLuint texture;$/;"	m	class:BMP
+texture	GLComponents/GLBmpLoader.hpp	/^  GLuint texture;$/;"	m	class:BMPMultiple
 textureID	GLComponents/GLObject.hpp	/^  GLuint textureID;$/;"	m	class:GLObject
 timer	GameLogic/MessageWindow.hpp	/^  double timer;$/;"	m	class:MessageWindow
 type	GLComponents/GLObject.hpp	/^  int type;$/;"	m	class:GLObject
@@ -288,7 +589,10 @@ vx	GameLogic/Physics.hpp	/^  double vx, vy;$/;"	m	class:Physics
 vy	GameLogic/Physics.hpp	/^  double vx, vy;$/;"	m	class:Physics
 w	GLComponents/GLVec.hpp	/^  GLdouble w;$/;"	m	struct:GLVec4
 w	GLComponents/GLVec.hpp	/^  GLint w;$/;"	m	struct:GLIntVec4
+w_slice	GLComponents/GLBmpLoader.hpp	/^  int w_slice;$/;"	m	class:BMPMultiple
 weapon	GameLogic/Player.hpp	/^  int weapon;$/;"	m	class:Equipment
+width	include/GLFW/glfw3.h	/^    int width;$/;"	m	struct:GLFWimage
+width	include/GLFW/glfw3.h	/^    int width;$/;"	m	struct:GLFWvidmode
 x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLPoint
 x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec2
 x	GLComponents/GLVec.hpp	/^  GLdouble x;$/;"	m	struct:GLVec3

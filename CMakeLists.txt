@@ -2,9 +2,7 @@
 cmake_minimum_required(VERSION 3.0)
 project(GLFW CXX)
 
-# リリースビルド用オプション
 SET(CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
-# ビルドのタイプはリリース
 SET(CMAKE_BUILD_TYPE Release)
 
 ### Build Actions ###

@@ -1,34 +1,32 @@
-�ԗւ̍Ĕ����Q�[�����C�u����
+﻿車輪の再発明なゲームライブラリ
 
 ## ToDo
 
-* cmake�Ή�
-* �e�N�X�`�������Ή�
-* �����Đ��Ή�
+* cmake対応
+* テクスチャ分割対応
+* 音声再生対応
 
-## ���s���@
+## 実行方法
 
 ### Windows:
 
-1. GLFW.vsproj�ȉ��̃v���W�F�N�g�t�@�C�����J��
-2. glfw, glew��dll, lib�Q�Ƃɒ��ӂ��Ď��s
+1. GLFW.vsproj以下のプロジェクトファイルを開き実行
 
 ### Mac:
-- GLFW.xcode�ȉ��̃v���W�F�N�g�t�@�C�����J��
-- �܂���make���s, ./RunApp
+- GLFW.xcode以下のプロジェクトファイルを開き実行
+- make または make run
 
 ### Linux:
-- make -f makefile_linux
+- make または make run
 
+## 著作権表示について
 
-## ���쌠�\���ɂ���
++ 画像お借り先
 
-+ �摜���؂��
-
-### �w�i�ʐ^�⊮�̉� �l
+### 背景写真補完の会 様
 http://masato.ciao.jp/haikei/furemu.html
 
-### �҂ۂ�q�� �l
+### ぴぽや倉庫 様
 http://piposozai.wiki.fc2.com/
 
-�����؂��̑f�ޗ��p�K��̓��e�ɏ����܂��B
+※お借り先の素材利用規約の内容に準じます。

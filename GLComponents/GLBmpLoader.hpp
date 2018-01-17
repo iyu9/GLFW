@@ -139,7 +139,7 @@ public:
 
     //set division 
     w_slice = w_slice_;
-    h_slice = h_slice;
+    h_slice = h_slice_;
 
     if ((File = fopen(FileName, "rb")) == NULL)
     {

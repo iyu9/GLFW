@@ -13,6 +13,7 @@ ifeq ($(UNAME), "Linux")
 	./RunApp
 else
 	g++ -std=c++11 -o RunApp main.cpp -framework OpenGL -lglfw
+	./RunApp
 endif
 
 git:

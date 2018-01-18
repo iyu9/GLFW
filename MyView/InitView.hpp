@@ -36,8 +36,12 @@ public:
 
   void SetFont()
   {
-    font = new GLObject({ 0, 0 }, {1, 1});
-    font->Set2DTexture(bmp_font->texture, {0.07, 0.78}, {0.1, 0.22});
+    GLVec2 div_pos = { 0.08, 0.85 };
+    GLVec2 div_siz = { 0.1, 0.15 };
+    GLVec2 pos = {-0.8, 0.8};
+
+    font = new GLObject(pos, div_siz);
+    font->Set2DTexture(bmp_font->texture, div_pos, div_siz);
     AddScene(font);
   }
 

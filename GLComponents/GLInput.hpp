@@ -41,7 +41,7 @@ public:
   bool GetKeyUp(GLint key)
   {
     //TBD...
-    return (keyState[key] == GLFW_PRESS);
+    return (keyState[key] == GLFW_RELEASE);
   }
 
   bool GetKeyRepeat(GLint key)

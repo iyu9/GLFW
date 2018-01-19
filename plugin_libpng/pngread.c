@@ -1,5 +1,3 @@
-#pragma warning(disable : 4996)
-
 /* pngread.c - read a PNG file
  *
  * Last changed in libpng 1.6.32 [August 24, 2017]
@@ -14,6 +12,8 @@
  * This file contains routines that an application calls directly to
  * read a PNG file or stream.
  */
+
+#pragma warning(disable : 4996)
 
 #include "pngpriv.h"
 #if defined(PNG_SIMPLIFIED_READ_SUPPORTED) && defined(PNG_STDIO_SUPPORTED)

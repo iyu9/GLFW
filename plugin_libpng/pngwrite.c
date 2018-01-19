@@ -1,4 +1,3 @@
-#pragma warning(disable : 4996)
 
 /* pngwrite.c - general routines to write a PNG file
  *
@@ -12,6 +11,7 @@
  * and license in png.h
  */
 
+#pragma warning(disable : 4996)
 
 #include "pngpriv.h"
 #ifdef PNG_SIMPLIFIED_WRITE_STDIO_SUPPORTED

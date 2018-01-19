@@ -369,7 +369,6 @@ MainView	MyView/MainView.hpp	/^class MainView : public GLScene$/;"	c
 MapChip	GameLogic/GridMap.hpp	/^namespace MapChip$/;"	n
 Menu	GameLogic/Menu.hpp	/^  Menu(int siz_)$/;"	f	class:Menu
 Menu	GameLogic/Menu.hpp	/^class Menu$/;"	c
-MessageWait	main.cpp	/^void MessageWait()$/;"	f
 MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow()$/;"	f	class:MessageWindow
 MessageWindow	GameLogic/MessageWindow.hpp	/^  MessageWindow(std::vector<std::string> messages)$/;"	f	class:MessageWindow
 MessageWindow	GameLogic/MessageWindow.hpp	/^class MessageWindow$/;"	c
@@ -389,7 +388,7 @@ Player	GameLogic/Player.hpp	/^class Player$/;"	c
 PlayerList	GameLogic/Player.hpp	/^  PlayerList(int siz_)$/;"	f	class:PlayerList
 PlayerList	GameLogic/Player.hpp	/^class PlayerList$/;"	c
 Polygon	GLComponents/GLObject.hpp	/^  const int Polygon = 2;$/;"	m	namespace:RenderType
-Pop	GLComponents/GLScene.hpp	/^  void Pop(GLObject* obj)$/;"	f	class:GLScene
+Pop	GLComponents/GLScene.hpp	/^  void Pop()$/;"	f	class:GLScene
 Pop	GameLogic/Player.hpp	/^  void Pop()$/;"	f	class:PlayerList
 Prev	GameLogic/Menu.hpp	/^  void Prev()$/;"	f	class:Menu
 PrevMessage	GameLogic/MessageWindow.hpp	/^  void PrevMessage()$/;"	f	class:MessageWindow
@@ -442,6 +441,7 @@ WALL_R	GameLogic/Physics.hpp	/^  const double WALL_R = 1;$/;"	m	namespace:Physic
 WINGDIAPI	include/GLFW/glfw3.h	107;"	d
 WINGDIAPI	include/GLFW/glfw3.h	4231;"	d
 WaitCharTime	GameLogic/MessageWindow.hpp	/^  const double WaitCharTime = 0.25;$/;"	m	namespace:MWOption
+WaitInput	Common/Common.hpp	/^std::string WaitInput()$/;"	f
 WaitMsgTime	GameLogic/MessageWindow.hpp	/^  const double WaitMsgTime = 0.25;$/;"	m	namespace:MWOption
 _TemplateView	MyView/_TemplateView.hpp	/^  _TemplateView(){}$/;"	f	class:_TemplateView
 _TemplateView	MyView/_TemplateView.hpp	/^class _TemplateView : public GLScene$/;"	c
@@ -548,8 +548,7 @@ msgwindow	MyView/InitView.hpp	/^  MessageWindow msgwindow;$/;"	m	class:InitView
 name	GLComponents/GLObject.hpp	/^  char* name;$/;"	m	class:GLObject
 name	GameLogic/GridMap.hpp	/^  std::string name;$/;"	m	class:GridMap
 name	GameLogic/Player.hpp	/^  std::string name;$/;"	m	class:Player
-object_cnt	GLComponents/GLScene.hpp	/^  int object_cnt;$/;"	m	class:GLScene
-objects	GLComponents/GLScene.hpp	/^  GLObject* objects[100];$/;"	m	class:GLScene
+objects	GLComponents/GLScene.hpp	/^  std::vector<GLObject*> objects;$/;"	m	class:GLScene
 order	GLComponents/GLObject.hpp	/^  int order;$/;"	m	class:GLObject
 physics	MyView/InitView.hpp	/^  Physics physics;$/;"	m	class:InitView
 pixels	include/GLFW/glfw3.h	/^    unsigned char* pixels;$/;"	m	struct:GLFWimage
@@ -615,3 +614,4 @@ z	GLComponents/GLVec.hpp	/^  GLdouble z;$/;"	m	struct:GLVec4
 z	GLComponents/GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec3
 z	GLComponents/GLVec.hpp	/^  GLint z;$/;"	m	struct:GLIntVec4
 ~BMP	GLComponents/GLBmpLoader.hpp	/^BMP::~BMP()$/;"	f	class:BMP
+~GLScene	GLComponents/GLScene.hpp	/^  ~GLScene()$/;"	f	class:GLScene

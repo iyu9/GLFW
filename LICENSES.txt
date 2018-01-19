@@ -1,0 +1,2 @@
+## GLFW
+- zlib/libpng license

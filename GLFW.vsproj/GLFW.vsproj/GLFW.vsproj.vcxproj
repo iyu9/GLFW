@@ -185,8 +185,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\.gitignore" />
-    <None Include="..\..\dll\glew32.dll" />
-    <None Include="..\..\dll\zlibwapi.dll" />
     <None Include="..\..\makefile" />
     <None Include="..\..\README.md" />
   </ItemGroup>
@@ -198,11 +196,6 @@
     <Text Include="..\..\CMakeLists.txt" />
     <Text Include="..\..\Shaders\fshader.txt" />
     <Text Include="..\..\Shaders\vshader.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Library Include="..\..\lib\zlibstat.lib" />
-    <Library Include="..\..\lib\zlibwapi.lib" />
-    <Library Include="..\..\lib\zlib_bor.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

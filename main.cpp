@@ -19,13 +19,6 @@ GLScene* currentScene;
 const GLIntVec2 g_winSize = {300, 300};
 const GLIntVec2 g_winPos  = {1300, 640};
 
-void MainLoop()
-{
-  glClear(GL_COLOR_BUFFER_BIT);
-    currentScene->Render();
-  glFlush();
-}
-
 int main()
 {
   if (!glfwInit())
@@ -53,15 +46,15 @@ int main()
   glfwSetWindowPos(window, g_winPos.x, g_winPos.y);
 
   currentScene = new InitView();
-
   while (!glfwWindowShouldClose(window))
   {
-    MainLoop();
+    glClear(GL_COLOR_BUFFER_BIT);
+      currentScene->Render();
+    glFlush();
 
     glfwSwapBuffers(window);
     glfwPollEvents();
   }
-
   delete currentScene;
 
   glfwTerminate();

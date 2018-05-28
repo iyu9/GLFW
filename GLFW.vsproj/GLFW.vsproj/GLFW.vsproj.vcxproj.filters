@@ -28,6 +28,12 @@
     <Filter Include="ヘッダー ファイル\GLComponent">
       <UniqueIdentifier>{208d91f9-d7bc-45b5-9134-83e8b40649ba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="リソース ファイル\dll">
+      <UniqueIdentifier>{f5b952b6-f165-4434-9e19-c980bff9b24f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="リソース ファイル\lib">
+      <UniqueIdentifier>{9b6e4bee-72aa-42e8-8b81-a94bbd0a628e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\MyView\_TemplateView.hpp">
@@ -109,6 +115,12 @@
     <None Include="..\..\makefile">
       <Filter>リソース ファイル</Filter>
     </None>
+    <None Include="..\..\dll\glew32.dll">
+      <Filter>リソース ファイル\dll</Filter>
+    </None>
+    <None Include="..\..\dll\zlibwapi.dll">
+      <Filter>リソース ファイル\dll</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\Resources\sample.bmp">
@@ -128,5 +140,16 @@
     <Text Include="..\..\CMakeLists.txt">
       <Filter>リソース ファイル</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\lib\zlib_bor.lib">
+      <Filter>リソース ファイル\lib</Filter>
+    </Library>
+    <Library Include="..\..\lib\zlibstat.lib">
+      <Filter>リソース ファイル\lib</Filter>
+    </Library>
+    <Library Include="..\..\lib\zlibwapi.lib">
+      <Filter>リソース ファイル\lib</Filter>
+    </Library>
   </ItemGroup>
 </Project>

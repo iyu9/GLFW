@@ -4,10 +4,9 @@
 class GLInput
 {
 private:
-  GLint keyState[GLFW_KEY_LAST];
-  int currentState;
-
-  GLdouble mouse_x, mouse_y;
+  GLint keyPrevState[GLFW_KEY_LAST];    //1フレーム前のキー押下情報
+  GLint keyState[GLFW_KEY_LAST];        //現在のフレームのキー押下情報
+  GLdouble mouse_x, mouse_y;            //マウス座標
 
 public:
   GLInput()
@@ -40,8 +39,7 @@ public:
 
   bool GetKeyUp(GLint key)
   {
-    //TBD...
-    return (keyState[key] == GLFW_RELEASE);
+    return (keyPrevState[key] == GLFW_PRESS && keyState[key] == GLFW_RELEASE);
   }
 
   bool GetKeyRepeat(GLint key)

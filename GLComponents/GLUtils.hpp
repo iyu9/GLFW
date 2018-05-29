@@ -3,6 +3,10 @@
 
 namespace GLUtils
 {
+  //-------------------------------
+  // World Space: x = [-0.5, 0.5]
+  //              y = [-0.5, 0.5]
+  //-------------------------------
   static void DrawTexture(GLdouble x, GLdouble y, GLdouble w, GLdouble h)
   {
     glEnable(GL_TEXTURE_2D);

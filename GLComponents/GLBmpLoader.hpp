@@ -6,9 +6,10 @@ class BMP
 public:
   int sizeX;
   int sizeY;
-  char *Data;
-  bool Load(const char *filename);
+  char *data;
   GLuint texture;
+
+  bool Load(const char *filename);
   void SetTexture();
   BMP(const char *FileName);
   ~BMP();
@@ -23,7 +24,7 @@ BMP::BMP(const char *FileName)
 
 BMP::~BMP()
 {
-  free(Data);
+  free(data);
 }
 
 bool BMP::Load(const char *FileName)
@@ -81,21 +82,21 @@ bool BMP::Load(const char *FileName)
   //Read RGB
   fseek(File, 24, SEEK_CUR);
   printf("memory allocated = %lu Bytes", size);
-  Data = (char *)malloc(size);
-  if (Data == NULL) {
+  data = (char *)malloc(size);
+  if (data == NULL) {
     printf("Cannnot Allocate BMP Memory");
     return false;
   }
-  if ((i = fread(Data, size, 1, File)) != 1) {
+  if ((i = fread(data, size, 1, File)) != 1) {
     printf("Cannot Read BMP Data");
     return false;
   }
 
   //BGR convert RGB
   for (i = 0; i < size; i += 3) {
-    temp = Data[i];
-    Data[i] = Data[i + 2];
-    Data[i + 2] = temp;
+    temp = data[i];
+    data[i] = data[i + 2];
+    data[i + 2] = temp;
   }
   return true;
 }
@@ -106,12 +107,12 @@ void BMP::SetTexture()
   glBindTexture(GL_TEXTURE_2D, texture);
   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
   glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-  glTexImage2D(GL_TEXTURE_2D, 0, 3, sizeX, sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, Data);
+  glTexImage2D(GL_TEXTURE_2D, 0, 3, sizeX, sizeY, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
 }
 
 void BMP::Release()
 {
-  delete[] Data;
+  delete[] data;
 }
 
 //NOT WORK

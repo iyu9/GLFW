@@ -13,7 +13,6 @@
  * This file contains routines that an application calls directly to
  * read a PNG file or stream.
  */
-#pragma warning(disable : 4996) //ignore fopen_s warning
 
 #include "pngpriv.h"
 #if defined(PNG_SIMPLIFIED_READ_SUPPORTED) && defined(PNG_STDIO_SUPPORTED)

@@ -1,6 +1,5 @@
 /*
 #ifdef WIN32
-  #pragma warning(disable : 4996) //ignore fopen_s warning
   #include <GL/glew.h>
 #endif
 

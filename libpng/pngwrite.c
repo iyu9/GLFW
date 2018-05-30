@@ -11,8 +11,6 @@
  * and license in png.h
  */
 
-#pragma warning(disable : 4996) //ignore fopen_s warning
-
 #include "pngpriv.h"
 #ifdef PNG_SIMPLIFIED_WRITE_STDIO_SUPPORTED
 #  include <errno.h>

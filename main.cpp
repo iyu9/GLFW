@@ -63,9 +63,9 @@ int main()
 }
 */
 
-//Read PNG check
-#include "libpng/png.h"
+//Check libpng Working//
 #include "libpng/zlib.h"
+#include "libpng/png.h"
 
 int main()
 {
@@ -74,8 +74,7 @@ int main()
 
   if (png_image_begin_read_from_file(&image, "test.png") != 0)
   {
-    png_image_free(&image);
+  //  png_image_free(&image);
   }
   return 0;
 }
-//---

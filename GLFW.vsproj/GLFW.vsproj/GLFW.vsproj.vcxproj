@@ -177,6 +177,13 @@
     <ClInclude Include="..\..\GLComponents\GLTimer.hpp" />
     <ClInclude Include="..\..\GLComponents\GLUtils.hpp" />
     <ClInclude Include="..\..\GLComponents\GLVec.hpp" />
+    <ClInclude Include="..\..\libpng\crc32.h" />
+    <ClInclude Include="..\..\libpng\deflate.h" />
+    <ClInclude Include="..\..\libpng\gzguts.h" />
+    <ClInclude Include="..\..\libpng\inffast.h" />
+    <ClInclude Include="..\..\libpng\inffixed.h" />
+    <ClInclude Include="..\..\libpng\inflate.h" />
+    <ClInclude Include="..\..\libpng\inftrees.h" />
     <ClInclude Include="..\..\libpng\png.h" />
     <ClInclude Include="..\..\libpng\pngconf.h" />
     <ClInclude Include="..\..\libpng\pngdebug.h" />
@@ -184,8 +191,10 @@
     <ClInclude Include="..\..\libpng\pnglibconf.h" />
     <ClInclude Include="..\..\libpng\pngpriv.h" />
     <ClInclude Include="..\..\libpng\pngstruct.h" />
+    <ClInclude Include="..\..\libpng\trees.h" />
     <ClInclude Include="..\..\libpng\zconf.h" />
     <ClInclude Include="..\..\libpng\zlib.h" />
+    <ClInclude Include="..\..\libpng\zutil.h" />
     <ClInclude Include="..\..\MyView\ConfigView.hpp" />
     <ClInclude Include="..\..\MyView\InitView.hpp" />
     <ClInclude Include="..\..\MyView\MainView.hpp" />
@@ -193,6 +202,18 @@
     <ClInclude Include="..\..\MyView\_TemplateView.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\libpng\adler32.c" />
+    <ClCompile Include="..\..\libpng\compress.c" />
+    <ClCompile Include="..\..\libpng\crc32.c" />
+    <ClCompile Include="..\..\libpng\deflate.c" />
+    <ClCompile Include="..\..\libpng\gzclose.c" />
+    <ClCompile Include="..\..\libpng\gzlib.c" />
+    <ClCompile Include="..\..\libpng\gzread.c" />
+    <ClCompile Include="..\..\libpng\gzwrite.c" />
+    <ClCompile Include="..\..\libpng\infback.c" />
+    <ClCompile Include="..\..\libpng\inffast.c" />
+    <ClCompile Include="..\..\libpng\inflate.c" />
+    <ClCompile Include="..\..\libpng\inftrees.c" />
     <ClCompile Include="..\..\libpng\png.c" />
     <ClCompile Include="..\..\libpng\pngerror.c" />
     <ClCompile Include="..\..\libpng\pngget.c" />
@@ -203,12 +224,14 @@
     <ClCompile Include="..\..\libpng\pngrtran.c" />
     <ClCompile Include="..\..\libpng\pngrutil.c" />
     <ClCompile Include="..\..\libpng\pngset.c" />
-    <ClCompile Include="..\..\libpng\pngtest.c" />
     <ClCompile Include="..\..\libpng\pngtrans.c" />
     <ClCompile Include="..\..\libpng\pngwio.c" />
     <ClCompile Include="..\..\libpng\pngwrite.c" />
     <ClCompile Include="..\..\libpng\pngwtran.c" />
     <ClCompile Include="..\..\libpng\pngwutil.c" />
+    <ClCompile Include="..\..\libpng\trees.c" />
+    <ClCompile Include="..\..\libpng\uncompr.c" />
+    <ClCompile Include="..\..\libpng\zutil.c" />
     <ClCompile Include="..\..\main.cpp" />
   </ItemGroup>
   <ItemGroup>

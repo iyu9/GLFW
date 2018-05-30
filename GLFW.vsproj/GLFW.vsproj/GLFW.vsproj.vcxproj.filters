@@ -29,7 +29,7 @@
       <UniqueIdentifier>{208d91f9-d7bc-45b5-9134-83e8b40649ba}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル\libpng">
-      <UniqueIdentifier>{8158d400-432a-4b7e-b624-40a261dcb7e1}</UniqueIdentifier>
+      <UniqueIdentifier>{62776f1e-45f7-4a50-a8a3-481953856014}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +96,27 @@
     <ClInclude Include="..\..\Common\Common.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\libpng\crc32.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\deflate.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\gzguts.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\inffast.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\inffixed.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\inflate.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\libpng\inftrees.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\libpng\png.h">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClInclude>
@@ -117,16 +138,58 @@
     <ClInclude Include="..\..\libpng\pngstruct.h">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\libpng\trees.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\libpng\zconf.h">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClInclude>
     <ClInclude Include="..\..\libpng\zlib.h">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\libpng\zutil.h">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\main.cpp">
       <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\adler32.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\compress.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\crc32.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\deflate.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\gzclose.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\gzlib.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\gzread.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\gzwrite.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\infback.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\inffast.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\inflate.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\inftrees.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
     </ClCompile>
     <ClCompile Include="..\..\libpng\png.c">
       <Filter>ヘッダー ファイル\libpng</Filter>
@@ -158,9 +221,6 @@
     <ClCompile Include="..\..\libpng\pngset.c">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\libpng\pngtest.c">
-      <Filter>ヘッダー ファイル\libpng</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\libpng\pngtrans.c">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClCompile>
@@ -174,6 +234,15 @@
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClCompile>
     <ClCompile Include="..\..\libpng\pngwutil.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\trees.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\uncompr.c">
+      <Filter>ヘッダー ファイル\libpng</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\libpng\zutil.c">
       <Filter>ヘッダー ファイル\libpng</Filter>
     </ClCompile>
   </ItemGroup>

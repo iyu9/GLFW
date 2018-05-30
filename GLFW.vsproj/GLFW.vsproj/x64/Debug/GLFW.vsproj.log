@@ -1,4 +1,4 @@
-﻿2018/05/30 16:46:41 にビルドを開始しました。
+﻿2018/05/30 18:26:23 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\GLFW.vsproj\GLFW.vsproj.vcxproj" (Build ターゲット)。
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl- /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TC /errorReport:prompt ..\..\libpng\adler32.c ..\..\libpng\compress.c ..\..\libpng\crc32.c ..\..\libpng\deflate.c ..\..\libpng\gzclose.c ..\..\libpng\gzlib.c ..\..\libpng\gzread.c ..\..\libpng\gzwrite.c ..\..\libpng\infback.c ..\..\libpng\inffast.c ..\..\libpng\inflate.c ..\..\libpng\inftrees.c ..\..\libpng\png.c ..\..\libpng\pngerror.c ..\..\libpng\pngget.c ..\..\libpng\pngmem.c ..\..\libpng\pngpread.c ..\..\libpng\pngread.c ..\..\libpng\pngrio.c ..\..\libpng\pngrtran.c ..\..\libpng\pngrutil.c ..\..\libpng\pngset.c ..\..\libpng\pngtrans.c ..\..\libpng\pngwio.c ..\..\libpng\pngwrite.c ..\..\libpng\pngwtran.c ..\..\libpng\pngwutil.c ..\..\libpng\trees.c ..\..\libpng\uncompr.c ..\..\libpng\zutil.c
@@ -119,4 +119,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:06.84
+経過時間 00:00:07.35

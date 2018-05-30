@@ -1,13 +1,60 @@
-﻿2018/05/28 17:29:17 にビルドを開始しました。
+﻿2018/05/30 11:49:09 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\GLFW.vsproj\GLFW.vsproj.vcxproj" (Build ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ..\..\main.cpp
-         main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /Od /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TC /errorReport:prompt ..\..\libpng\png.c ..\..\libpng\pngerror.c ..\..\libpng\pngget.c ..\..\libpng\pngmem.c ..\..\libpng\pngpread.c ..\..\libpng\pngread.c ..\..\libpng\pngrio.c ..\..\libpng\pngrtran.c ..\..\libpng\pngrutil.c ..\..\libpng\pngset.c ..\..\libpng\pngtest.c ..\..\libpng\pngtrans.c ..\..\libpng\pngwio.c ..\..\libpng\pngwrite.c ..\..\libpng\pngwtran.c ..\..\libpng\pngwutil.c
+         pngwutil.c
+         pngwtran.c
+         pngwrite.c
+         pngwio.c
+         pngtrans.c
+         pngtest.c
+         pngset.c
+         pngrutil.c
+         pngrtran.c
+         pngrio.c
+         pngread.c
+         pngpread.c
+         pngmem.c
+         pngget.c
+         pngerror.c
+         png.c
+         コードを生成中...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.exe" /INCREMENTAL /NOLOGO glew32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.lib" /MACHINE:X64 x64\Debug\main.obj
-         GLFW.vsproj.vcxproj -> C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.exe
-     1>プロジェクト "C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\GLFW.vsproj\GLFW.vsproj.vcxproj" (Build ターゲット) のビルドが完了しました。
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.exe" /INCREMENTAL:NO /NOLOGO /LTCG:NOSTATUS zlib.lib libpng16.lib glew32.lib glfw3.lib opengl32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.lib" /MACHINE:X64 x64\Debug\png.obj
+         x64\Debug\pngerror.obj
+         x64\Debug\pngget.obj
+         x64\Debug\pngmem.obj
+         x64\Debug\pngpread.obj
+         x64\Debug\pngread.obj
+         x64\Debug\pngrio.obj
+         x64\Debug\pngrtran.obj
+         x64\Debug\pngrutil.obj
+         x64\Debug\pngset.obj
+         x64\Debug\pngtest.obj
+         x64\Debug\pngtrans.obj
+         x64\Debug\pngwio.obj
+         x64\Debug\pngwrite.obj
+         x64\Debug\pngwtran.obj
+         x64\Debug\pngwutil.obj
+         x64\Debug\main.obj
+     1>main.obj : error LNK2005: main は既に pngtest.obj で定義されています。
+     1>png.obj : error LNK2001: 外部シンボル "inflateReset" は未解決です。
+     1>pngrutil.obj : error LNK2001: 外部シンボル "inflateReset" は未解決です。
+     1>png.obj : error LNK2001: 外部シンボル "adler32" は未解決です。
+     1>png.obj : error LNK2001: 外部シンボル "crc32" は未解決です。
+     1>pngread.obj : error LNK2001: 外部シンボル "inflateEnd" は未解決です。
+     1>pngrutil.obj : error LNK2001: 外部シンボル "inflate" は未解決です。
+     1>pngrutil.obj : error LNK2001: 外部シンボル "inflateReset2" は未解決です。
+     1>pngrutil.obj : error LNK2001: 外部シンボル "inflateInit2_" は未解決です。
+     1>pngrutil.obj : error LNK2001: 外部シンボル "inflateValidate" は未解決です。
+     1>pngwrite.obj : error LNK2001: 外部シンボル "deflateEnd" は未解決です。
+     1>pngwutil.obj : error LNK2001: 外部シンボル "deflateEnd" は未解決です。
+     1>pngwutil.obj : error LNK2001: 外部シンボル "deflate" は未解決です。
+     1>pngwutil.obj : error LNK2001: 外部シンボル "deflateReset" は未解決です。
+     1>pngwutil.obj : error LNK2001: 外部シンボル "deflateInit2_" は未解決です。
+     1>C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\x64\Debug\GLFW.vsproj.exe : fatal error LNK1120: 12 件の未解決の外部参照
+     1>プロジェクト "C:\Users\mobiledev\Source\Repos\GLFW\GLFW.vsproj\GLFW.vsproj\GLFW.vsproj.vcxproj" (Build ターゲット) のビルドが終了しました -- 失敗。
 
-ビルドに成功しました。
+ビルドに失敗しました。
 
-経過時間 00:00:01.58
+経過時間 00:00:05.09

@@ -1,3 +1,4 @@
+/*
 #ifdef WIN32
   #pragma warning(disable : 4996) //ignore fopen_s warning
   #include <GL/glew.h>
@@ -60,3 +61,21 @@ int main()
   glfwTerminate();
   return 0;
 }
+*/
+
+//Read PNG check
+#include "libpng/png.h"
+#include "libpng/zlib.h"
+
+int main()
+{
+  png_image image;
+  image.version = PNG_IMAGE_VERSION;
+
+  if (png_image_begin_read_from_file(&image, "test.png") != 0)
+  {
+    png_image_free(&image);
+  }
+  return 0;
+}
+//---

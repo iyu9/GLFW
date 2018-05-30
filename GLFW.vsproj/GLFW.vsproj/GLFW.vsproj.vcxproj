@@ -74,10 +74,10 @@
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
     <IncludePath>C:\Users\mobiledev\Source\Repos\GLFW\deps\glfw-3.2.1.bin.WIN64\include;C:\Users\mobiledev\Source\Repos\GLFW\deps\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\mobiledev\Source\Repos\GLFW\deps\glfw-3.2.1.bin.WIN64\lib-vc2013;C:\Users\mobiledev\Source\Repos\GLFW\deps\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
-    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>C:\Users\mobiledev\Source\Repos\GLFW\lib;C:\Users\mobiledev\Source\Repos\GLFW\deps\glfw-3.2.1.bin.WIN64\lib-vc2013;C:\Users\mobiledev\Source\Repos\GLFW\deps\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>C:\Users\mobiledev\Source\Repos\GLFW\dll;$(ExecutablePath)</ExecutablePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -112,12 +112,15 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glew32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>zlib.lib;libpng16.lib;glew32.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkStatus>false</LinkStatus>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -174,6 +177,15 @@
     <ClInclude Include="..\..\GLComponents\GLTimer.hpp" />
     <ClInclude Include="..\..\GLComponents\GLUtils.hpp" />
     <ClInclude Include="..\..\GLComponents\GLVec.hpp" />
+    <ClInclude Include="..\..\libpng\png.h" />
+    <ClInclude Include="..\..\libpng\pngconf.h" />
+    <ClInclude Include="..\..\libpng\pngdebug.h" />
+    <ClInclude Include="..\..\libpng\pnginfo.h" />
+    <ClInclude Include="..\..\libpng\pnglibconf.h" />
+    <ClInclude Include="..\..\libpng\pngpriv.h" />
+    <ClInclude Include="..\..\libpng\pngstruct.h" />
+    <ClInclude Include="..\..\libpng\zconf.h" />
+    <ClInclude Include="..\..\libpng\zlib.h" />
     <ClInclude Include="..\..\MyView\ConfigView.hpp" />
     <ClInclude Include="..\..\MyView\InitView.hpp" />
     <ClInclude Include="..\..\MyView\MainView.hpp" />
@@ -181,6 +193,22 @@
     <ClInclude Include="..\..\MyView\_TemplateView.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\libpng\png.c" />
+    <ClCompile Include="..\..\libpng\pngerror.c" />
+    <ClCompile Include="..\..\libpng\pngget.c" />
+    <ClCompile Include="..\..\libpng\pngmem.c" />
+    <ClCompile Include="..\..\libpng\pngpread.c" />
+    <ClCompile Include="..\..\libpng\pngread.c" />
+    <ClCompile Include="..\..\libpng\pngrio.c" />
+    <ClCompile Include="..\..\libpng\pngrtran.c" />
+    <ClCompile Include="..\..\libpng\pngrutil.c" />
+    <ClCompile Include="..\..\libpng\pngset.c" />
+    <ClCompile Include="..\..\libpng\pngtest.c" />
+    <ClCompile Include="..\..\libpng\pngtrans.c" />
+    <ClCompile Include="..\..\libpng\pngwio.c" />
+    <ClCompile Include="..\..\libpng\pngwrite.c" />
+    <ClCompile Include="..\..\libpng\pngwtran.c" />
+    <ClCompile Include="..\..\libpng\pngwutil.c" />
     <ClCompile Include="..\..\main.cpp" />
   </ItemGroup>
   <ItemGroup>

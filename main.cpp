@@ -1,4 +1,6 @@
-/*
+#define RUN_ALL
+#ifdef RUN_ALL
+
 #ifdef WIN32
   #include <GL/glew.h>
 #endif
@@ -60,9 +62,47 @@ int main()
   glfwTerminate();
   return 0;
 }
-*/
 
-//Check libpng Working//
+#endif
+
+#ifdef UNITTEST_MIN_GLFW
+#include <GLFW/glfw3.h>
+#include <iostream>
+
+int main()
+{
+  if (!glfwInit())
+  {
+    return 1;
+  }
+
+  GLFWwindow *window = glfwCreateWindow(680, 480, "Minimal_GLFW3_RunCheck", NULL, NULL);
+
+  if (!window)
+  {
+    glfwTerminate();
+    return 1;
+  }
+
+  glfwMakeContextCurrent(window);
+
+  while (!glfwWindowShouldClose(window))
+  {
+    glClear(GL_COLOR_BUFFER_BIT);
+    glFlush();
+
+    glfwSwapBuffers(window);
+    glfwPollEvents();
+  }
+
+  glfwTerminate();
+  return 0;
+}
+
+#endif
+
+#ifdef UNITTEST_MIN_LIBPNG
+
 #include "libpng/zlib.h"
 #include "libpng/png.h"
 #include <memory.h>
@@ -91,7 +131,7 @@ int main()
     }
   }
 
-  // “Ç‚Ýo‚µ‚½î•ñ‚É‡‚í‚¹‚ÄAƒf[ƒ^•”‚ðŠi”[‚·‚éƒoƒbƒtƒ@‚ðŠm•Û
+  // èª­ã¿å‡ºã—ãŸæƒ…å ±ã«åˆã‚ã›ã¦ã€ãƒ‡ãƒ¼ã‚¿éƒ¨ã‚’æ ¼ç´ã™ã‚‹ãƒãƒƒãƒ•ã‚¡ã‚’ç¢ºä¿
   png_uint_32 stride = PNG_IMAGE_ROW_STRIDE(image);
   png_uint_16* buffer = new png_uint_16[PNG_IMAGE_BUFFER_SIZE(image, stride)];
 
@@ -102,3 +142,4 @@ int main()
   std::cin >> temp;
   return 0;
 }
+#endif
